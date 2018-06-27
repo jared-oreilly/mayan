@@ -129,7 +129,7 @@ public class Node
         numEdges++;
     }
 
-    public Node getFirstNodeAlongEdgeTemp()
+    public Node getFirstNodeAlongEdge()
     {
         if (edges.isEmpty())
         {
@@ -137,6 +137,27 @@ public class Node
         } else
         {
             return edges.get(0).getEnd();
+        }
+    }
+
+    public Node takeRandomPath()
+    {
+        if (edges.isEmpty())
+        {
+            return null;
+        } else
+        {
+            double rand = Math.random();
+            System.out.println(rand);
+            int i = -1;
+            double count = 0;
+            while (rand > count)
+            {
+                i++;
+                count += edges.get(i).getProb();
+                System.out.println(count);
+            }
+            return edges.get(i).getEnd();
         }
     }
 

@@ -163,7 +163,7 @@ public class Manager
         while (node != null)
         {
             fs += node.generateFlowStep();
-            node = node.getFirstNodeAlongEdgeTemp();
+            node = node.takeRandomPath();
         }
         return fs;
     }

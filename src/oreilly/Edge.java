@@ -84,4 +84,5 @@ public class Edge
         b += start.getId() + ":" + start.getTitle() + " -> " + end.getId() + ":" + end.getTitle();    
         return b;
     }
+    
 }
