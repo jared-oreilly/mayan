@@ -288,5 +288,29 @@ public class Graph
             System.out.println("Parse Error: " + e);
         }
     }
+    
+    public boolean nodeTaken(String title, String type)
+    {
+        for(int i = 0; i < numNodes; i++)
+        {
+            if(nodes.get(i).getTitle().equals(title) && nodes.get(i).getType().equals(type))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public boolean edgeTaken(String title, String s, String e)
+    {
+        for(int i = 0; i < numEdges; i++)
+        {
+            if(edges.get(i).getTitle().equals(title) && edges.get(i).getStart().getId() == Integer.parseInt(s) && edges.get(i).getEnd().getId() == Integer.parseInt(e))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 
 }

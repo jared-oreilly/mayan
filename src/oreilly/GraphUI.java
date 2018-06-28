@@ -26,16 +26,18 @@ public class GraphUI extends javax.swing.JFrame
         initComponents();
         updateDisplays();
         //System.out.println(m);
+
+        //new DiagramUI(m).setVisible(true);
     }
-    
+
     public GraphUI(String filename)
     {
         m = new Graph("");
         m.importGraph(filename);
         initComponents();
         updateDisplays();
-        txfFilename.setText(filename.substring(0, filename.length()-5));
-        txfMayan.setText(filename.substring(0, filename.length()-5));
+        txfFilename.setText(filename.substring(0, filename.length() - 5));
+        txfMayan.setText(filename.substring(0, filename.length() - 5));
         //System.out.println(m);
     }
 
@@ -50,57 +52,69 @@ public class GraphUI extends javax.swing.JFrame
     {
 
         lblAddNode = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
+        lblURL = new javax.swing.JLabel();
+        lblType = new javax.swing.JLabel();
+        lblCookie = new javax.swing.JLabel();
+        lblJSON = new javax.swing.JLabel();
+        lblForm = new javax.swing.JLabel();
         txfCookie = new javax.swing.JTextField();
         txfJSON = new javax.swing.JTextField();
         txfURL = new javax.swing.JTextField();
         txfTitleNode = new javax.swing.JTextField();
         txfForm = new javax.swing.JTextField();
-        txfType = new javax.swing.JTextField();
         btnAddNode = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
+        lblProb = new javax.swing.JLabel();
         txfStart = new javax.swing.JTextField();
         txfProb = new javax.swing.JTextField();
         txfTitleEdge = new javax.swing.JTextField();
         txfEnd = new javax.swing.JTextField();
         btnAddEdge = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        lblAddAction = new javax.swing.JLabel();
+        lblTitleAction = new javax.swing.JLabel();
+        lblStartID = new javax.swing.JLabel();
+        lblEndID = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txaEdges = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         txaNodes = new javax.swing.JTextArea();
         btnMA = new javax.swing.JButton();
         btnExport = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        lbljson = new javax.swing.JLabel();
         txfFilename = new javax.swing.JTextField();
         txfMayan = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
+        lbltxt = new javax.swing.JLabel();
+        cbxType = new javax.swing.JComboBox<>();
+        lblTitleFeedback = new javax.swing.JLabel();
+        lblURLFeedback = new javax.swing.JLabel();
+        lblCookieFeedback = new javax.swing.JLabel();
+        lblJSONFeedback = new javax.swing.JLabel();
+        lblFormFeedback = new javax.swing.JLabel();
+        lblTitleActionFeedback = new javax.swing.JLabel();
+        lblProbFeedback = new javax.swing.JLabel();
+        lblStartIDFeedback = new javax.swing.JLabel();
+        lblEndIDFeedback = new javax.swing.JLabel();
+        lblTypeFeedback = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Mayan - Create Graph");
+        setBackground(new java.awt.Color(0, 204, 0));
+        setForeground(new java.awt.Color(0, 204, 0));
 
         lblAddNode.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblAddNode.setText("Add Webpage/Request");
 
-        jLabel2.setText("Title");
+        lblTitle.setText("Title");
 
-        jLabel3.setText("URL");
+        lblURL.setText("URL");
 
-        jLabel4.setText("Type ");
+        lblType.setText("Type ");
 
-        jLabel5.setText("Cookie");
+        lblCookie.setText("Cookie");
 
-        jLabel6.setText("JSON");
+        lblJSON.setText("JSON");
 
-        jLabel7.setText("Form ");
+        lblForm.setText("Form ");
 
         btnAddNode.setText("Add");
         btnAddNode.addActionListener(new java.awt.event.ActionListener()
@@ -111,7 +125,7 @@ public class GraphUI extends javax.swing.JFrame
             }
         });
 
-        jLabel8.setText("Prob ");
+        lblProb.setText("Prob ");
 
         btnAddEdge.setText("Add");
         btnAddEdge.addActionListener(new java.awt.event.ActionListener()
@@ -122,14 +136,14 @@ public class GraphUI extends javax.swing.JFrame
             }
         });
 
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("Add Action/Link");
+        lblAddAction.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAddAction.setText("Add Action/Link");
 
-        jLabel11.setText("Title");
+        lblTitleAction.setText("Title");
 
-        jLabel13.setText("StartID");
+        lblStartID.setText("StartID");
 
-        jLabel14.setText("EndID");
+        lblEndID.setText("EndID");
 
         txaEdges.setColumns(20);
         txaEdges.setRows(5);
@@ -157,9 +171,12 @@ public class GraphUI extends javax.swing.JFrame
             }
         });
 
-        jLabel1.setText(".json");
+        lbljson.setText(".json");
 
-        jLabel9.setText(".txt");
+        lbltxt.setText(".txt");
+
+        cbxType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "GET", "POST" }));
+        cbxType.setPreferredSize(new java.awt.Dimension(6, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -167,65 +184,87 @@ public class GraphUI extends javax.swing.JFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(55, 55, 55)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblAddNode, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txfTitleNode)
-                            .addComponent(txfCookie)
-                            .addComponent(txfForm)
-                            .addComponent(txfJSON)
-                            .addComponent(txfType)
-                            .addComponent(txfURL))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnAddNode, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel14)
-                            .addComponent(jLabel13)
-                            .addComponent(jLabel11))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(lblForm)
+                            .addComponent(lblJSON)
+                            .addComponent(lblCookie)
+                            .addComponent(lblTitle)
+                            .addComponent(lblURL)
+                            .addComponent(lblType))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txfURL, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
+                            .addComponent(cbxType, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txfJSON, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txfForm, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txfCookie, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txfTitleNode))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txfTitleEdge, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(txfProb)
-                                    .addComponent(txfEnd, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txfStart, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnAddEdge, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(63, 63, 63))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblTitleFeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(4, 4, 4)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblFormFeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(lblJSONFeedback, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                                        .addComponent(lblURLFeedback, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(lblCookieFeedback, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(lblTypeFeedback, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(93, 93, 93)
+                        .addComponent(btnAddNode, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnAddEdge, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(166, 166, 166))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblAddNode, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblProb)
+                                    .addComponent(lblEndID)
+                                    .addComponent(lblStartID)
+                                    .addComponent(lblTitleAction))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txfTitleEdge, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(txfProb)
+                                        .addComponent(txfEnd, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txfStart, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lblTitleActionFeedback, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblStartIDFeedback, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblProbFeedback, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblEndIDFeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(lblAddAction, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE))
+                        .addGap(69, 69, 69))))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnExport, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txfFilename)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnMA)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txfMayan)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnExport, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txfFilename)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbljson)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnMA)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txfMayan)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbltxt, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -236,62 +275,87 @@ public class GraphUI extends javax.swing.JFrame
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(txfTitleNode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblTitle)
+                                    .addComponent(txfTitleNode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblTitleFeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblURL)
+                                    .addComponent(txfURL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblURLFeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblType)
+                                        .addComponent(cbxType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lblTypeFeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblCookieFeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblCookie)
+                                        .addComponent(txfCookie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(8, 8, 8)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblJSON)
+                                        .addComponent(txfJSON, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lblJSONFeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblFormFeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblForm)
+                                        .addComponent(txfForm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(btnAddNode)
+                                    .addComponent(btnAddEdge))
+                                .addGap(17, 17, 17))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblTitleAction)
+                                        .addComponent(txfTitleEdge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lblTitleActionFeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblStartID)
+                                        .addComponent(txfStart, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lblStartIDFeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblEndIDFeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblEndID)
+                                        .addComponent(txfEnd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblProb)
+                                        .addComponent(txfProb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lblProbFeedback, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
+                            .addComponent(jScrollPane2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(txfURL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(txfType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnAddNode))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(txfCookie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(txfJSON, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
-                            .addComponent(txfForm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnMA)
+                            .addComponent(btnExport)
+                            .addComponent(lbljson)
+                            .addComponent(txfFilename, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txfMayan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbltxt)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel11)
-                            .addComponent(txfTitleEdge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel13)
-                            .addComponent(txfStart, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnAddEdge))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel14)
-                            .addComponent(txfEnd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
-                            .addComponent(txfProb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnMA)
-                    .addComponent(btnExport)
-                    .addComponent(jLabel1)
-                    .addComponent(txfFilename, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txfMayan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(lblAddAction)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
         pack();
@@ -300,42 +364,140 @@ public class GraphUI extends javax.swing.JFrame
 
     private void btnAddNodeActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnAddNodeActionPerformed
     {//GEN-HEADEREND:event_btnAddNodeActionPerformed
-        if (txfType.getText().equals("POST"))
+        //do validation on node fields
+        boolean submit = true;
+        //txfTitleNode
+        String t = txfTitleNode.getText().trim();
+        String ty = (cbxType.getSelectedItem() + "");
+        if (t.equals(""))
         {
-            String title = txfTitleNode.getText();
-            String URL = txfURL.getText();
-            String type = txfType.getText();
-            String cookie = txfCookie.getText();
-            String JSON = txfJSON.getText();
-            if (JSON.equals(""))
-            {
-                JSON = null;
-            }
-            String form = txfForm.getText();
-            if (form.equals(""))
-            {
-                form = null;
-            }
-            int id = m.addNode(title, URL, type, cookie, JSON, form);
-        } else if (txfType.getText().equals("GET"))
+            lblTitleFeedback.setText("Required!");
+            submit = false;
+        } else
         {
-            String title = txfTitleNode.getText();
-            String URL = txfURL.getText();
-            String type = txfType.getText();
-            String cookie = txfCookie.getText();
-            int id = m.addNode(title, URL, type, cookie);
+            lblTitleFeedback.setText("");
+            lblTypeFeedback.setText("");
         }
-        updateDisplays();
+        //txfURL
+        if (txfURL.getText().trim().equals(""))
+        {
+            lblURLFeedback.setText("Required!");
+            submit = false;
+        } else
+        {
+            lblURLFeedback.setText("");
+        }
+        //txfCookie
+        //txfJSON
+        //txfForm
+
+        if (submit && m.nodeTaken(t, ty))
+        {
+            lblTitleFeedback.setText("Taken!");
+            lblTypeFeedback.setText("Taken!");
+            submit = false;
+        } 
+        
+        
+        if (submit)
+        {
+            if ((cbxType.getSelectedItem() + "").equals("POST"))
+            {
+                String title = txfTitleNode.getText();
+                String URL = txfURL.getText();
+                String type = (cbxType.getSelectedItem() + "");
+                String cookie = txfCookie.getText();
+                String JSON = txfJSON.getText();
+                if (JSON.equals(""))
+                {
+                    JSON = null;
+                }
+                String form = txfForm.getText();
+                if (form.equals(""))
+                {
+                    form = null;
+                }
+                int id = m.addNode(title, URL, type, cookie, JSON, form);
+            } else if ((cbxType.getSelectedItem() + "").equals("GET"))
+            {
+                String title = txfTitleNode.getText();
+                String URL = txfURL.getText();
+                String type = (cbxType.getSelectedItem() + "");
+                String cookie = txfCookie.getText();
+                int id = m.addNode(title, URL, type, cookie);
+            }
+            updateDisplays();
+        } else
+        {
+
+        }
     }//GEN-LAST:event_btnAddNodeActionPerformed
 
     private void btnAddEdgeActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnAddEdgeActionPerformed
     {//GEN-HEADEREND:event_btnAddEdgeActionPerformed
-        String title = txfTitleEdge.getText();
-        int startID = Integer.parseInt(txfStart.getText());
-        int endID = Integer.parseInt(txfEnd.getText());
-        double prob = Double.parseDouble(txfProb.getText());
-        int id = m.addEdge(title, startID, endID, prob);
-        updateDisplays();
+        //do validation on edge fields
+        boolean submit = true;
+        String t = txfTitleEdge.getText().trim();
+        String s = txfStart.getText().trim();
+        String e = txfEnd.getText().trim();
+        String p = txfProb.getText().trim();
+        //Title
+        if (t.equals(""))
+        {
+            lblTitleActionFeedback.setText("Required!");
+            submit = false;
+        } else
+        {
+            lblTitleActionFeedback.setText("");
+        }
+        //StartID
+        if (s.equals(""))
+        {
+            lblStartIDFeedback.setText("Required!");
+            submit = false;
+        } else
+        {
+            lblStartIDFeedback.setText("");
+        }
+        //EndID
+        if (e.equals(""))
+        {
+            lblEndIDFeedback.setText("Required!");
+            submit = false;
+        } else
+        {
+            lblEndIDFeedback.setText("");
+        }
+        //Prob
+        if (p.equals(""))
+        {
+            lblProbFeedback.setText("Required!");
+            submit = false;
+        } else
+        {
+            lblProbFeedback.setText("");
+        }
+        
+        if (submit && m.edgeTaken(t, s, e))
+        {
+            lblTitleActionFeedback.setText("Taken!");
+            lblStartIDFeedback.setText("Taken!");
+            lblEndIDFeedback.setText("Taken!");
+            submit = false;
+        } 
+
+        if (submit)
+        {
+            String title = txfTitleEdge.getText();
+            int startID = Integer.parseInt(txfStart.getText());
+            int endID = Integer.parseInt(txfEnd.getText());
+            double prob = Double.parseDouble(txfProb.getText());
+            int id = m.addEdge(title, startID, endID, prob);
+            updateDisplays();
+        } else
+        {
+
+        }
     }//GEN-LAST:event_btnAddEdgeActionPerformed
 
     private void btnMAActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnMAActionPerformed
@@ -355,6 +517,7 @@ public class GraphUI extends javax.swing.JFrame
         updateNodesDisplay();
         updateEdgesDisplay();
     }
+
     private void updateNodesDisplay()
     {
         txaNodes.setText(m.printNodes());
@@ -415,22 +578,33 @@ public class GraphUI extends javax.swing.JFrame
     private javax.swing.JButton btnAddNode;
     private javax.swing.JButton btnExport;
     private javax.swing.JButton btnMA;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JComboBox<String> cbxType;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblAddAction;
     private javax.swing.JLabel lblAddNode;
+    private javax.swing.JLabel lblCookie;
+    private javax.swing.JLabel lblCookieFeedback;
+    private javax.swing.JLabel lblEndID;
+    private javax.swing.JLabel lblEndIDFeedback;
+    private javax.swing.JLabel lblForm;
+    private javax.swing.JLabel lblFormFeedback;
+    private javax.swing.JLabel lblJSON;
+    private javax.swing.JLabel lblJSONFeedback;
+    private javax.swing.JLabel lblProb;
+    private javax.swing.JLabel lblProbFeedback;
+    private javax.swing.JLabel lblStartID;
+    private javax.swing.JLabel lblStartIDFeedback;
+    private javax.swing.JLabel lblTitle;
+    private javax.swing.JLabel lblTitleAction;
+    private javax.swing.JLabel lblTitleActionFeedback;
+    private javax.swing.JLabel lblTitleFeedback;
+    private javax.swing.JLabel lblType;
+    private javax.swing.JLabel lblTypeFeedback;
+    private javax.swing.JLabel lblURL;
+    private javax.swing.JLabel lblURLFeedback;
+    private javax.swing.JLabel lbljson;
+    private javax.swing.JLabel lbltxt;
     private javax.swing.JTextArea txaEdges;
     private javax.swing.JTextArea txaNodes;
     private javax.swing.JTextField txfCookie;
@@ -443,7 +617,6 @@ public class GraphUI extends javax.swing.JFrame
     private javax.swing.JTextField txfStart;
     private javax.swing.JTextField txfTitleEdge;
     private javax.swing.JTextField txfTitleNode;
-    private javax.swing.JTextField txfType;
     private javax.swing.JTextField txfURL;
     // End of variables declaration//GEN-END:variables
 }
