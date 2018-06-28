@@ -96,11 +96,11 @@ public class Manager
     {
         String[] names =
         {
-            "T1"
+            "Test1", "Test2"
         };
         int[] weights =
         {
-            1
+            1, 1
         };
         String ma = "";
         ma += generateConfig();
