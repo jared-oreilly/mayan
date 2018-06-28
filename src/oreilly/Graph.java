@@ -120,14 +120,16 @@ public class Graph
     //piece config and scenarios together - needs work
     public String mayanArtillery(String filename)
     {
-        String[] names =
+        int s = 5;
+        String[] names = new String[s];
+        int[] weights = new int[s];
+
+        for (int i = 0; i < s; i++)
         {
-            "Test1", "Test2"
-        };
-        int[] weights =
-        {
-            1, 1
-        };
+            names[i] = "Test" + i;
+            weights[i] = 1;
+        }
+
         String ma = "";
         ma += generateConfig();
         ma += generateScenarios(names, weights);
@@ -230,11 +232,11 @@ public class Graph
         return b;
     }
 
-    public void importGraph(String filename)
+    public void importGraph(String filename) throws IOException
     {
         try
         {
-            
+
             JSONParser parser = new JSONParser();
             Object obj = parser.parse(new FileReader("graphs/" + filename));
             JSONObject jsonObject = (JSONObject) obj;
@@ -244,31 +246,29 @@ public class Graph
             //numEdges = Integer.parseInt((String) jsonObject.get("numEdges"));
             numNodes = 0;
             numEdges = 0;
-            
-            
+
             JSONArray nodes = (JSONArray) jsonObject.get("nodes");
-            for(int i = 0; i < nodes.size(); i++)
+            for (int i = 0; i < nodes.size(); i++)
             {
                 JSONObject cur = (JSONObject) nodes.get(i);
                 //System.out.println(cur);
                 String j = (String) cur.get("json");
-                if(j.equals("null"))
+                if (j.equals("null"))
                 {
                     j = null;
                 }
                 String f = (String) cur.get("form");
-                if(f.equals("null"))
+                if (f.equals("null"))
                 {
                     f = null;
                 }
                 int d = addNode((String) cur.get("title"), (String) cur.get("url"), (String) cur.get("type"), (String) cur.get("cookie"), j, f);
                 //System.out.println(getNode(d));
             }
-            
+
             //System.out.println("");
-            
             JSONArray edges = (JSONArray) jsonObject.get("edges");
-            for(int i = 0; i < edges.size(); i++)
+            for (int i = 0; i < edges.size(); i++)
             {
                 JSONObject cur = (JSONObject) edges.get(i);
                 //System.out.println(cur);
@@ -280,53 +280,50 @@ public class Graph
                 //System.out.println(getEdge(d));
             }
 
-        } catch (IOException e)
-        {
-            System.out.println("IO Error: " + e);
         } catch (ParseException e)
         {
             System.out.println("Parse Error: " + e);
         }
     }
-    
+
     public boolean nodeTaken(String title, String type)
     {
-        for(int i = 0; i < numNodes; i++)
+        for (int i = 0; i < numNodes; i++)
         {
-            if(nodes.get(i).getTitle().equals(title) && nodes.get(i).getType().equals(type))
+            if (nodes.get(i).getTitle().equals(title) && nodes.get(i).getType().equals(type))
             {
                 return true;
             }
         }
         return false;
     }
-    
+
     public boolean edgeTaken(String title, String s, String e)
     {
-        for(int i = 0; i < numEdges; i++)
+        for (int i = 0; i < numEdges; i++)
         {
-            if(edges.get(i).getTitle().equals(title) && edges.get(i).getStart().getId() == Integer.parseInt(s) && edges.get(i).getEnd().getId() == Integer.parseInt(e))
+            if (edges.get(i).getTitle().equals(title) && edges.get(i).getStart().getId() == Integer.parseInt(s) && edges.get(i).getEnd().getId() == Integer.parseInt(e))
             {
                 return true;
             }
         }
         return false;
     }
-    
+
     public int[] getNodeIDs()
     {
         int[] arr = new int[numNodes];
-        for(int i = 0; i < numNodes; i++)
+        for (int i = 0; i < numNodes; i++)
         {
             arr[i] = nodes.get(i).getId();
         }
         return arr;
     }
-    
+
     public int[] getEdgeIDs()
     {
         int[] arr = new int[numEdges];
-        for(int i = 0; i < numEdges; i++)
+        for (int i = 0; i < numEdges; i++)
         {
             arr[i] = edges.get(i).getId();
         }

@@ -5,6 +5,8 @@
  */
 package oreilly;
 
+import java.io.IOException;
+
 /**
  *
  * @author jared.oreilly
@@ -112,7 +114,14 @@ public class StartUI extends javax.swing.JFrame
         if(!txfFilename.getText().equals(""))
         {
             lblFeedback.setText("");
+            try
+            {
             new GraphUI(txfFilename.getText() + ".json").setVisible(true);
+            }
+            catch(IOException e)
+            {
+                lblFeedback.setText("No file with that name!");
+            }
         }
         else
         {

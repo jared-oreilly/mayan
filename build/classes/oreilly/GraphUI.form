@@ -64,40 +64,42 @@
                           <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="btnUpdateNode" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btnUpdateNode" alignment="1" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="lblNodeNewValue" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txfNodeNewValue" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblNodeIDSelect" alignment="0" min="-2" pref="19" max="-2" attributes="0"/>
-                                  <Component id="lblNodeFieldSelect" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="lblNodeFieldSelect" max="32767" attributes="0"/>
+                                  <Component id="lblNodeNewValue" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="cbNodeFieldSelect" min="-2" pref="170" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="cbNodeFieldSelect" min="-2" pref="184" max="-2" attributes="0"/>
+                                  <Component id="txfNodeNewValue" min="-2" pref="184" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
-                      <Component id="btnAddNode" alignment="0" min="-2" pref="225" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblForm" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblCookie" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblTitle" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblURL" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblType" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblJSON" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="txfURL" alignment="0" max="32767" attributes="0"/>
-                              <Component id="cbxType" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txfCookie" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txfTitleNode" max="32767" attributes="0"/>
-                              <Component id="txfJSON" alignment="1" min="-2" pref="172" max="-2" attributes="0"/>
-                              <Component id="txfForm" alignment="1" min="-2" pref="172" max="-2" attributes="0"/>
+                              <Component id="btnAddNode" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblForm" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblCookie" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblTitle" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblURL" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblType" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblJSON" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="txfURL" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="cbxType" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txfCookie" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txfTitleNode" max="32767" attributes="0"/>
+                                      <Component id="txfJSON" alignment="1" min="-2" pref="172" max="-2" attributes="0"/>
+                                      <Component id="txfForm" alignment="1" min="-2" pref="172" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -110,63 +112,70 @@
                           </Group>
                       </Group>
                   </Group>
-                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="lblNodeIDSelect" min="-2" pref="19" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                          <Component id="cbxNodeIDSelect" max="32767" attributes="0"/>
+                      </Group>
                       <Component id="lblUpdateNode" min="-2" pref="224" max="-2" attributes="0"/>
-                      <Component id="cbxNodeIDSelect" min="-2" pref="170" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="lblUpdateEdge" min="-2" pref="154" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblEdgeIDSelect" min="-2" pref="19" max="-2" attributes="0"/>
-                              <Component id="lblFieldSelect1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="32" pref="32" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="cbxEdgeIDSelect" max="32767" attributes="0"/>
-                              <Component id="cbxEdgeFieldSelect" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="btnAddEdge" max="32767" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblProb" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblEndID" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblStartID" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblTitleAction" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txfTitleEdge" min="-2" pref="115" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="txfProb" max="32767" attributes="0"/>
-                                  <Component id="txfEnd" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txfStart" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="lblAddAction" alignment="1" min="-2" pref="148" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblProb" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblEndID" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblStartID" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblTitleAction" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txfTitleEdge" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="txfProb" max="32767" attributes="0"/>
+                                      <Component id="txfEnd" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txfStart" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
-                      <Component id="lblAddAction" min="-2" pref="154" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="lblTitleActionFeedback" max="32767" attributes="0"/>
+                          <Component id="lblStartIDFeedback" max="32767" attributes="0"/>
+                          <Component id="lblProbFeedback" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblEndIDFeedback" min="-2" pref="60" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="lblEdgeNewValue" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="txfEdgeNewValue" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="lblUpdateEdge" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btnAddEdge" alignment="0" pref="166" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="lblEdgeIDSelect" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="32" max="32767" attributes="0"/>
+                          <Component id="cbxEdgeIDSelect" min="-2" pref="123" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <Component id="btnUpdateEdge" alignment="1" min="-2" pref="160" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="btnUpdateEdge" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="lblEdgeNewValue" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="txfEdgeNewValue" min="-2" pref="123" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="lblFieldSelect1" min="-2" pref="31" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="cbxEdgeFieldSelect" min="-2" pref="123" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="lblTitleActionFeedback" max="32767" attributes="0"/>
-                  <Component id="lblStartIDFeedback" max="32767" attributes="0"/>
-                  <Component id="lblProbFeedback" alignment="0" max="32767" attributes="0"/>
-                  <Component id="lblEndIDFeedback" min="-2" pref="60" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -189,86 +198,86 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblURLFeedback" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lblURL" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txfURL" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="lblURLFeedback" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="lblURL" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txfURL" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="lblType" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cbxType" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblTypeFeedback" min="-2" pref="20" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="lblCookie" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txfCookie" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="lblCookieFeedback" min="-2" pref="20" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="lblJSON" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txfJSON" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="lblJSONFeedback" min="-2" pref="20" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="lblForm" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txfForm" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblType" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cbxType" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblTypeFeedback" min="-2" pref="20" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lblCookie" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txfCookie" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                              <Component id="lblTitleAction" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txfTitleEdge" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="lblTitleActionFeedback" min="-2" pref="20" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                              <Component id="lblStartID" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txfStart" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="lblStartIDFeedback" min="-2" pref="20" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="lblEndIDFeedback" min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                              <Component id="lblEndID" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txfEnd" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                              <Component id="lblProb" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txfProb" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="lblProbFeedback" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <Component id="lblCookieFeedback" min="-2" pref="20" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lblJSON" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txfJSON" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="lblJSONFeedback" min="-2" pref="20" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="lblForm" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txfForm" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="lblFormFeedback" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnAddNode" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                      <Component id="lblTitleAction" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txfTitleEdge" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="lblTitleActionFeedback" min="-2" pref="20" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                      <Component id="lblStartID" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txfStart" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="lblStartIDFeedback" min="-2" pref="20" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="lblEndIDFeedback" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                      <Component id="lblEndID" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txfEnd" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                      <Component id="lblProb" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txfProb" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="lblProbFeedback" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="lblAddAction" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnAddEdge" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="lblAddAction" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnAddNode" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAddEdge" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -291,7 +300,6 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnUpdateNode" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="lblUpdateEdge" min="-2" max="-2" attributes="0"/>
@@ -312,9 +320,10 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnUpdateEdge" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="jScrollPane1" pref="264" max="32767" attributes="0"/>
                   <Component id="jScrollPane2" max="32767" attributes="0"/>
@@ -574,7 +583,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblNodeNewValue">
       <Properties>
-        <Property name="text" type="java.lang.String" value="New Value"/>
+        <Property name="text" type="java.lang.String" value="New"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txfNodeNewValue">
@@ -634,7 +643,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblEdgeNewValue">
       <Properties>
-        <Property name="text" type="java.lang.String" value="New Value"/>
+        <Property name="text" type="java.lang.String" value="New"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txfEdgeNewValue">
