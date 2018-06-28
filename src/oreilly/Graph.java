@@ -312,5 +312,25 @@ public class Graph
         }
         return false;
     }
+    
+    public int[] getNodeIDs()
+    {
+        int[] arr = new int[numNodes];
+        for(int i = 0; i < numNodes; i++)
+        {
+            arr[i] = nodes.get(i).getId();
+        }
+        return arr;
+    }
+    
+    public int[] getEdgeIDs()
+    {
+        int[] arr = new int[numEdges];
+        for(int i = 0; i < numEdges; i++)
+        {
+            arr[i] = edges.get(i).getId();
+        }
+        return arr;
+    }
 
 }
