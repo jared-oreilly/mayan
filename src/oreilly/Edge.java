@@ -85,4 +85,15 @@ public class Edge
         return b;
     }
     
+    public String exportEdge()
+    {
+        String b = "{";
+        b += "\"id\": \"" + id + "\", "; 
+        b += "\"title\": \"" + title + "\", "; 
+        b += "\"startID\": " + start.getId() + ", "; 
+        b += "\"endID\": " + end.getId() + ", "; 
+        b += "\"prob\": " + prob + "}"; 
+        return b;
+    }
+    
 }

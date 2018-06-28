@@ -148,14 +148,14 @@ public class Node
         } else
         {
             double rand = Math.random();
-            System.out.println(rand);
+            //System.out.println(rand);
             int i = -1;
             double count = 0;
             while (rand > count)
             {
                 i++;
                 count += edges.get(i).getProb();
-                System.out.println(count);
+                //System.out.println(count);
             }
             return edges.get(i).getEnd();
         }
@@ -191,5 +191,30 @@ public class Node
         afs += "            Cookie: '" + cookie + "'\n";
         return afs;
     }
+    
+    public String exportNode()
+    {
+        String b = "{";
+        b += "\"id\": \"" + id + "\", "; 
+        b += "\"title\": \"" + title + "\", "; 
+        b += "\"url\": \"" + url + "\", "; 
+        /*
+        b += "\"edges\": [";
+        for(int i = 0; i < numEdges; i++)
+        {
+            b += edges.get(0).getId() + ", ";
+        }
+        b = b.substring(0, b.length()-2);
+        b += "], ";
+        b += "\"numEdges\": " + numEdges + ", "; 
+        */
+        b += "\"type\": \"" + type + "\", "; 
+        b += "\"cookie\": \"" + cookie + "\", "; 
+        b += "\"json\": \"" + json + "\", "; 
+        b += "\"form\": \"" + form + "\"}"; 
+        return b;
+    }
+    
+    
 
 }

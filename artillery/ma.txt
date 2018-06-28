@@ -1,0 +1,48 @@
+config:
+  target: 'http://tagsuatappservice.azurewebsites.net'
+  phases:
+    - duration: 1
+      arrivalRate: 1
+    - duration: 1
+      arrivalRate: 1
+    - duration: 2
+      arrivalRate: 1
+scenarios:
+  - name: 'Test1'
+    weight: 1
+    flow:
+      - log: 'Test1'
+      - get:
+          url: '/Account/LogOn?ReturnUrl=%2F'
+          headers:
+            Cookie: '__utmz=118717...'
+      - post:
+          url: '/Account/LogOn?ReturnUrl=%2F'
+          form:
+             UserName: 'user13'
+             Password: 'sgat900'
+          headers:
+            Cookie: '__utmz=118717...'
+      - get:
+          url: '/User/Index'
+          headers:
+            Cookie: '__utmz=118717...'
+  - name: 'Test2'
+    weight: 1
+    flow:
+      - log: 'Test2'
+      - get:
+          url: '/Account/LogOn?ReturnUrl=%2F'
+          headers:
+            Cookie: '__utmz=118717...'
+      - post:
+          url: '/Account/LogOn?ReturnUrl=%2F'
+          form:
+             UserName: 'user13'
+             Password: 'sgat900'
+          headers:
+            Cookie: '__utmz=118717...'
+      - get:
+          url: '/User/Index'
+          headers:
+            Cookie: '__utmz=118717...'

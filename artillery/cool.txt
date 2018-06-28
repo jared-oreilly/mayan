@@ -13,30 +13,30 @@ scenarios:
     flow:
       - log: 'Test1'
       - get:
-          url: 'd'
+          url: '/a'
           headers:
-            Cookie: 'd'
+            Cookie: 'abc'
       - get:
-          url: 'e'
+          url: '/b'
           headers:
-            Cookie: 'e'
+            Cookie: 'abc'
       - get:
-          url: 'f'
+          url: '/c'
           headers:
-            Cookie: 'f'
+            Cookie: 'abc'
   - name: 'Test2'
     weight: 1
     flow:
       - log: 'Test2'
       - get:
-          url: 'd'
+          url: '/a'
           headers:
-            Cookie: 'd'
+            Cookie: 'abc'
       - get:
-          url: 'e'
+          url: '/b'
           headers:
-            Cookie: 'e'
+            Cookie: 'abc'
       - get:
-          url: 'f'
+          url: '/c'
           headers:
-            Cookie: 'f'
+            Cookie: 'abc'

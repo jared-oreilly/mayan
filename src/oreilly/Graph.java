@@ -2,6 +2,8 @@ package oreilly;
 
 import java.io.*;
 import java.util.*;
+import org.json.simple.parser.*;
+import org.json.simple.*;
 
 /**
  *
@@ -80,7 +82,7 @@ public class Graph
         b += "----------------------";
         return b;
     }
-    
+
     public String printNodes()
     {
         String b = "";
@@ -92,7 +94,7 @@ public class Graph
         b += "----------------------";
         return b;
     }
-    
+
     public String printEdges()
     {
         String b = "";
@@ -116,7 +118,7 @@ public class Graph
     }
 
     //piece config and scenarios together - needs work
-    public String mayanArtillery()
+    public String mayanArtillery(String filename)
     {
         String[] names =
         {
@@ -132,11 +134,11 @@ public class Graph
 
         try
         {
-            String filema = ma.substring(0, ma.length()-1);
+            String filema = ma.substring(0, ma.length() - 1);
             String nl = System.getProperty("line.separator");
             filema = filema.replace("\n", nl);
 
-            PrintWriter writer = new PrintWriter("ma.txt", "UTF-8");
+            PrintWriter writer = new PrintWriter("artillery/" + filename, "UTF-8");
             writer.print(filema);
             writer.close();
         } catch (IOException e)
@@ -190,6 +192,101 @@ public class Graph
             node = node.takeRandomPath();
         }
         return fs;
+    }
+
+    public String exportGraph(String filename)
+    {
+        String b = "{";
+        b += "\"baseUrl\": \"" + baseUrl + "\", ";
+        b += "\"numNodes\": \"" + numNodes + "\", ";
+        b += "\"nodes\": [";
+        for (int i = 0; i < numNodes; i++)
+        {
+            b += nodes.get(i).exportNode() + ", ";
+        }
+        b = b.substring(0, b.length() - 2) + "], ";
+        b += "\"numEdges\": \"" + numEdges + "\", ";
+        b += "\"edges\": [";
+        for (int i = 0; i < numEdges; i++)
+        {
+            b += edges.get(i).exportEdge() + ", ";
+        }
+        b = b.substring(0, b.length() - 2) + "]}";
+
+        try
+        {
+            String fileb = b;
+            String nl = System.getProperty("line.separator");
+            fileb = fileb.replace("\n", nl);
+
+            PrintWriter writer = new PrintWriter("graphs/" + filename, "UTF-8");
+            writer.print(fileb);
+            writer.close();
+        } catch (IOException e)
+        {
+            System.out.println("Problem with writing to file: " + e);
+        }
+
+        return b;
+    }
+
+    public void importGraph(String filename)
+    {
+        try
+        {
+            
+            JSONParser parser = new JSONParser();
+            Object obj = parser.parse(new FileReader("graphs/" + filename));
+            JSONObject jsonObject = (JSONObject) obj;
+
+            baseUrl = (String) jsonObject.get("baseUrl");
+            //numNodes = Integer.parseInt((String) jsonObject.get("numNodes"));
+            //numEdges = Integer.parseInt((String) jsonObject.get("numEdges"));
+            numNodes = 0;
+            numEdges = 0;
+            
+            
+            JSONArray nodes = (JSONArray) jsonObject.get("nodes");
+            for(int i = 0; i < nodes.size(); i++)
+            {
+                JSONObject cur = (JSONObject) nodes.get(i);
+                //System.out.println(cur);
+                String j = (String) cur.get("json");
+                if(j.equals("null"))
+                {
+                    j = null;
+                }
+                String f = (String) cur.get("form");
+                if(f.equals("null"))
+                {
+                    f = null;
+                }
+                int d = addNode((String) cur.get("title"), (String) cur.get("url"), (String) cur.get("type"), (String) cur.get("cookie"), j, f);
+                //System.out.println(getNode(d));
+            }
+            
+            //System.out.println("");
+            
+            JSONArray edges = (JSONArray) jsonObject.get("edges");
+            for(int i = 0; i < edges.size(); i++)
+            {
+                JSONObject cur = (JSONObject) edges.get(i);
+                //System.out.println(cur);
+                String t = (String) cur.get("title");
+                int s = Integer.parseInt(cur.get("startID") + "");
+                int e = Integer.parseInt(cur.get("endID") + "");
+                double p = Double.parseDouble(cur.get("prob") + "");
+                int d = addEdge(t, s, e, p);
+                //System.out.println(getEdge(d));
+            }
+
+        } catch (IOException e)
+        {
+            System.out.println("IO Error: " + e);
+        } catch (ParseException e)
+        {
+            System.out.println("Parse Error: " + e);
+        }
     }
 
 }

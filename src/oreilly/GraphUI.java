@@ -5,6 +5,9 @@
  */
 package oreilly;
 
+import java.awt.Color;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author jared.oreilly
@@ -21,6 +24,19 @@ public class GraphUI extends javax.swing.JFrame
     {
         m = new Graph("http://tagsuatappservice.azurewebsites.net");
         initComponents();
+        updateDisplays();
+        //System.out.println(m);
+    }
+    
+    public GraphUI(String filename)
+    {
+        m = new Graph("");
+        m.importGraph(filename);
+        initComponents();
+        updateDisplays();
+        txfFilename.setText(filename.substring(0, filename.length()-5));
+        txfMayan.setText(filename.substring(0, filename.length()-5));
+        //System.out.println(m);
     }
 
     /**
@@ -62,8 +78,13 @@ public class GraphUI extends javax.swing.JFrame
         jScrollPane2 = new javax.swing.JScrollPane();
         txaNodes = new javax.swing.JTextArea();
         btnMA = new javax.swing.JButton();
+        btnExport = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        txfFilename = new javax.swing.JTextField();
+        txfMayan = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Mayan - Create Graph");
 
         lblAddNode.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -91,14 +112,6 @@ public class GraphUI extends javax.swing.JFrame
         });
 
         jLabel8.setText("Prob ");
-
-        txfStart.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                txfStartActionPerformed(evt);
-            }
-        });
 
         btnAddEdge.setText("Add");
         btnAddEdge.addActionListener(new java.awt.event.ActionListener()
@@ -135,19 +148,23 @@ public class GraphUI extends javax.swing.JFrame
             }
         });
 
+        btnExport.setText("Export Graph");
+        btnExport.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btnExportActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText(".json");
+
+        jLabel9.setText(".txt");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(btnMA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(55, 55, 55)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -190,6 +207,26 @@ public class GraphUI extends javax.swing.JFrame
                                 .addComponent(btnAddEdge, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(63, 63, 63))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnExport, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txfFilename)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnMA)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txfMayan)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -246,9 +283,15 @@ public class GraphUI extends javax.swing.JFrame
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
                     .addComponent(jScrollPane2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnMA)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnMA)
+                    .addComponent(btnExport)
+                    .addComponent(jLabel1)
+                    .addComponent(txfFilename, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txfMayan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -297,14 +340,15 @@ public class GraphUI extends javax.swing.JFrame
 
     private void btnMAActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnMAActionPerformed
     {//GEN-HEADEREND:event_btnMAActionPerformed
-        System.out.println(m.mayanArtillery());
-        //System.exit(0);
+        m.mayanArtillery(txfMayan.getText() + ".txt");
+        JOptionPane.showMessageDialog(null, txfMayan.getText() + ".txt generated!");
     }//GEN-LAST:event_btnMAActionPerformed
 
-    private void txfStartActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_txfStartActionPerformed
-    {//GEN-HEADEREND:event_txfStartActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txfStartActionPerformed
+    private void btnExportActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnExportActionPerformed
+    {//GEN-HEADEREND:event_btnExportActionPerformed
+        m.exportGraph(txfFilename.getText() + ".json");
+        JOptionPane.showMessageDialog(null, txfFilename.getText() + ".json exported!");
+    }//GEN-LAST:event_btnExportActionPerformed
 
     private void updateDisplays()
     {
@@ -369,7 +413,9 @@ public class GraphUI extends javax.swing.JFrame
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddEdge;
     private javax.swing.JButton btnAddNode;
+    private javax.swing.JButton btnExport;
     private javax.swing.JButton btnMA;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
@@ -381,6 +427,7 @@ public class GraphUI extends javax.swing.JFrame
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblAddNode;
@@ -388,8 +435,10 @@ public class GraphUI extends javax.swing.JFrame
     private javax.swing.JTextArea txaNodes;
     private javax.swing.JTextField txfCookie;
     private javax.swing.JTextField txfEnd;
+    private javax.swing.JTextField txfFilename;
     private javax.swing.JTextField txfForm;
     private javax.swing.JTextField txfJSON;
+    private javax.swing.JTextField txfMayan;
     private javax.swing.JTextField txfProb;
     private javax.swing.JTextField txfStart;
     private javax.swing.JTextField txfTitleEdge;
