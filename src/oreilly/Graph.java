@@ -7,7 +7,7 @@ import java.util.*;
  *
  * @author jared.oreilly
  */
-public class Manager
+public class Graph
 {
 
     private String baseUrl;
@@ -16,7 +16,7 @@ public class Manager
     private ArrayList<Edge> edges;
     private int numEdges;
 
-    public Manager(String baseUrl)
+    public Graph(String baseUrl)
     {
         this.baseUrl = baseUrl;
         nodes = new ArrayList<Node>();
@@ -73,6 +73,30 @@ public class Manager
             b += nodes.get(i) + "\n";
         }
         b += "\nEDGES\t-> " + numEdges + " <-\n";
+        for (int i = 0; i < numEdges; i++)
+        {
+            b += edges.get(i) + "\n";
+        }
+        b += "----------------------";
+        return b;
+    }
+    
+    public String printNodes()
+    {
+        String b = "";
+        b += "NODES\t-> " + numNodes + " <-\n";
+        for (int i = 0; i < numNodes; i++)
+        {
+            b += nodes.get(i) + "\n";
+        }
+        b += "----------------------";
+        return b;
+    }
+    
+    public String printEdges()
+    {
+        String b = "";
+        b += "EDGES\t-> " + numEdges + " <-\n";
         for (int i = 0; i < numEdges; i++)
         {
             b += edges.get(i) + "\n";
