@@ -34,14 +34,14 @@ public class GraphUI extends javax.swing.JFrame
     public GraphUI(String filename) throws IOException
     {
         m = new Graph("");
-        
+
         m.importGraph(filename);
         initComponents();
         updateDisplays();
         txfFilename.setText(filename.substring(0, filename.length() - 5));
         txfMayan.setText(filename.substring(0, filename.length() - 5));
         //System.out.println(m);
-        
+
     }
 
     /**
@@ -114,6 +114,7 @@ public class GraphUI extends javax.swing.JFrame
         lblEdgeNewValue = new javax.swing.JLabel();
         txfEdgeNewValue = new javax.swing.JTextField();
         btnUpdateEdge = new javax.swing.JButton();
+        lblActionFeedback = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Mayan - Create Graph");
@@ -145,6 +146,14 @@ public class GraphUI extends javax.swing.JFrame
         });
 
         lblProb.setText("Prob ");
+
+        txfStart.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                fetchProb(evt);
+            }
+        });
 
         btnAddEdge.setText("Add");
         btnAddEdge.addActionListener(new java.awt.event.ActionListener()
@@ -352,13 +361,6 @@ public class GraphUI extends javax.swing.JFrame
                             .addComponent(lblProbFeedback, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblEndIDFeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(lblUpdateEdge, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAddEdge, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(lblEdgeIDSelect)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                            .addComponent(cbxEdgeIDSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(btnUpdateEdge, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                             .addComponent(lblEdgeNewValue)
@@ -367,7 +369,15 @@ public class GraphUI extends javax.swing.JFrame
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblFieldSelect1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cbxEdgeFieldSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(cbxEdgeFieldSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(lblActionFeedback, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblUpdateEdge, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnAddEdge, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(lblEdgeIDSelect)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                            .addComponent(cbxEdgeIDSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(54, 54, 54))
         );
         layout.setVerticalGroup(
@@ -437,7 +447,9 @@ public class GraphUI extends javax.swing.JFrame
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                 .addComponent(lblProb)
                                                 .addComponent(txfProb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(lblProbFeedback, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                            .addComponent(lblProbFeedback, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(lblActionFeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addComponent(lblFormFeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(lblAddAction))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -532,9 +544,8 @@ public class GraphUI extends javax.swing.JFrame
             lblTitleFeedback.setText("Taken!");
             lblTypeFeedback.setText("Taken!");
             submit = false;
-        } 
-        
-        
+        }
+
         if (submit)
         {
             if ((cbxType.getSelectedItem() + "").equals("POST"))
@@ -613,14 +624,14 @@ public class GraphUI extends javax.swing.JFrame
         {
             lblProbFeedback.setText("");
         }
-        
+
         if (submit && m.edgeTaken(t, s, e))
         {
             lblTitleActionFeedback.setText("Taken!");
             lblStartIDFeedback.setText("Taken!");
             lblEndIDFeedback.setText("Taken!");
             submit = false;
-        } 
+        }
 
         if (submit)
         {
@@ -630,6 +641,22 @@ public class GraphUI extends javax.swing.JFrame
             double prob = Double.parseDouble(txfProb.getText());
             int id = m.addEdge(title, startID, endID, prob);
             updateDisplays();
+            String text = txfStart.getText();
+            System.out.println(text);
+            int q = Integer.parseInt(text);
+            double z = m.fetchRemainingProb(q);
+            if (z != 0)
+            {
+                txfProb.setEnabled(true);
+
+            } else
+            {
+                txfProb.setText("");
+                txfProb.setEnabled(false);
+            }
+            lblProbFeedback.setText("<=" + z + "");
+            lblActionFeedback.setText("");
+
         } else
         {
 
@@ -668,6 +695,31 @@ public class GraphUI extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_btnUpdateEdgeActionPerformed
 
+    private void fetchProb(java.awt.event.KeyEvent evt)//GEN-FIRST:event_fetchProb
+    {//GEN-HEADEREND:event_fetchProb
+        try
+        {
+            String text = txfStart.getText();
+            System.out.println(text);
+            int id = Integer.parseInt(text);
+            double prob = m.fetchRemainingProb(id);
+            if (prob != 0.0)
+            {
+                txfProb.setEnabled(true);
+
+            } else
+            {
+                txfProb.setText("");
+                txfProb.setEnabled(false);
+            }
+            lblProbFeedback.setText("<=" + prob + "");
+            lblActionFeedback.setText("");
+        } catch (IndexOutOfBoundsException e)
+        {
+            lblActionFeedback.setText("Invalid start ID!");
+        }
+    }//GEN-LAST:event_fetchProb
+
     private void updateDisplays()
     {
         updateNodesDisplay();
@@ -677,28 +729,28 @@ public class GraphUI extends javax.swing.JFrame
     private void updateNodesDisplay()
     {
         txaNodes.setText(m.printNodes());
-        
+
         cbxNodeIDSelect.removeAllItems();
         int[] ids = m.getNodeIDs();
-        for(int i = 0; i < ids.length; i++)
+        for (int i = 0; i < ids.length; i++)
         {
             cbxNodeIDSelect.addItem((Integer) ids[i]);
         }
-        cbxNodeIDSelect.setSelectedIndex(ids.length-1);
+        cbxNodeIDSelect.setSelectedIndex(ids.length - 1);
     }
 
     private void updateEdgesDisplay()
     {
         txaEdges.setText(m.printEdges());
-        
+
         cbxEdgeIDSelect.removeAllItems();
         int[] ids = m.getEdgeIDs();
-        for(int i = 0; i < ids.length; i++)
+        for (int i = 0; i < ids.length; i++)
         {
             cbxEdgeIDSelect.addItem((Integer) ids[i]);
         }
-        cbxEdgeIDSelect.setSelectedIndex(ids.length-1);
-        
+        cbxEdgeIDSelect.setSelectedIndex(ids.length - 1);
+
     }
 
     /**
@@ -760,6 +812,7 @@ public class GraphUI extends javax.swing.JFrame
     private javax.swing.JComboBox<String> cbxType;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblActionFeedback;
     private javax.swing.JLabel lblAddAction;
     private javax.swing.JLabel lblAddNode;
     private javax.swing.JLabel lblCookie;

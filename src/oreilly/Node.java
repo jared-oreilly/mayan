@@ -215,6 +215,19 @@ public class Node
         return b;
     }
     
-    
+    public double fetchRemainingProb()
+    {
+        double count = 0;
+        for(int i = 0; i < numEdges; i++)
+        {
+            count += edges.get(i).getProb();
+        }
+        count = 1 - count;
+        count = count * 1000;
+        count = Math.round(count);
+        count = count / 1000.0;
+        //System.out.println(count);
+        return count;
+    }
 
 }

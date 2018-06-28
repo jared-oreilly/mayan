@@ -329,5 +329,10 @@ public class Graph
         }
         return arr;
     }
+    
+    public double fetchRemainingProb(int id) throws IndexOutOfBoundsException
+    {
+       return nodes.get(id).fetchRemainingProb();
+    }
 
 }

@@ -153,15 +153,6 @@
                       </Group>
                   </Group>
                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="lblUpdateEdge" alignment="0" max="32767" attributes="0"/>
-                      <Component id="btnAddEdge" alignment="0" pref="166" max="32767" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="lblEdgeIDSelect" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="32" max="32767" attributes="0"/>
-                          <Component id="cbxEdgeIDSelect" min="-2" pref="123" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                       <Component id="btnUpdateEdge" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="lblEdgeNewValue" min="-2" max="-2" attributes="0"/>
@@ -173,6 +164,16 @@
                       <Component id="lblFieldSelect1" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="cbxEdgeFieldSelect" min="-2" pref="123" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="lblActionFeedback" alignment="0" max="32767" attributes="0"/>
+                      <Component id="lblUpdateEdge" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btnAddEdge" alignment="0" pref="166" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="lblEdgeIDSelect" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="32" max="32767" attributes="0"/>
+                          <Component id="cbxEdgeIDSelect" min="-2" pref="123" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
@@ -266,6 +267,8 @@
                                           </Group>
                                           <Component id="lblProbFeedback" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
                                       </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="lblActionFeedback" min="-2" pref="20" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -403,6 +406,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txfStart">
+      <Events>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="fetchProb"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txfProb">
     </Component>
@@ -655,6 +661,8 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateEdgeActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblActionFeedback">
     </Component>
   </SubComponents>
 </Form>
