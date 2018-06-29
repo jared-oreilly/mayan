@@ -8,6 +8,18 @@ config:
     - duration: 2
       arrivalRate: 1
 scenarios:
+  - name: 'Test0'
+    weight: 1
+    flow:
+      - log: 'Test0'
+      - get:
+          url: '/Login'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
   - name: 'Test1'
     weight: 1
     flow:
@@ -16,6 +28,30 @@ scenarios:
           url: '/Login'
           headers:
             Cookie: ''
+      - post:
+          url: '/Login'
+          form:
+user: 'jared'   pass: 'dogs'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Login'
+          headers:
+            Cookie: ''
+      - post:
+          url: '/Login'
+          form:
+user: 'jared'   pass: 'dogs'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Home'
+          headers:
+            Cookie: '123abc'
+      - get:
+          url: '/Table'
+          headers:
+            Cookie: '123abc'
       - get:
           url: '/'
           headers:
@@ -39,17 +75,87 @@ user: 'jared'   pass: 'dogs'
           headers:
             Cookie: '123abc'
       - get:
+          url: '/Logout'
+          headers:
+            Cookie: '123abc'
+      - get:
+          url: '/Login'
+          headers:
+            Cookie: ''
+      - post:
+          url: '/Login'
+          form:
+user: 'jared'   pass: 'dogs'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Login'
+          headers:
+            Cookie: ''
+      - post:
+          url: '/Login'
+          form:
+user: 'jared'   pass: 'dogs'
+          headers:
+            Cookie: ''
+      - get:
           url: '/Home'
           headers:
             Cookie: '123abc'
       - get:
-          url: '/Profile'
+          url: '/Table'
           headers:
             Cookie: '123abc'
       - get:
-          url: '/Logout'
+          url: '/'
+          headers:
+            Cookie: ''
+  - name: 'Test3'
+    weight: 1
+    flow:
+      - log: 'Test3'
+      - get:
+          url: '/Login'
+          headers:
+            Cookie: ''
+      - post:
+          url: '/Login'
+          form:
+user: 'jared'   pass: 'dogs'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Home'
           headers:
             Cookie: '123abc'
+      - get:
+          url: '/Home'
+          headers:
+            Cookie: '123abc'
+      - get:
+          url: '/Table'
+          headers:
+            Cookie: '123abc'
+      - get:
+          url: '/Home'
+          headers:
+            Cookie: '123abc'
+      - get:
+          url: '/Table'
+          headers:
+            Cookie: '123abc'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+  - name: 'Test4'
+    weight: 1
+    flow:
+      - log: 'Test4'
+      - get:
+          url: '/Login'
+          headers:
+            Cookie: ''
       - get:
           url: '/'
           headers:

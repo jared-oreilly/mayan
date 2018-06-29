@@ -1,0 +1,238 @@
+config:
+  target: 'http://tagsuatappservice.azurewebsites.net'
+  phases:
+    - duration: 5
+      arrivalRate: 5
+    - duration: 1
+      arrivalRate: 1
+    - duration: 3
+      arrivalRate: 3
+scenarios:
+  - name: 'Test0'
+    weight: 1
+    flow:
+      - log: 'Test0'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/q'
+          headers:
+            Cookie: ''
+  - name: 'Test1'
+    weight: 1
+    flow:
+      - log: 'Test1'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/q'
+          headers:
+            Cookie: ''
+  - name: 'Test2'
+    weight: 1
+    flow:
+      - log: 'Test2'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/q'
+          headers:
+            Cookie: ''
+  - name: 'Test3'
+    weight: 1
+    flow:
+      - log: 'Test3'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/q'
+          headers:
+            Cookie: ''
+  - name: 'Test4'
+    weight: 1
+    flow:
+      - log: 'Test4'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/q'
+          headers:
+            Cookie: ''
+  - name: 'Test5'
+    weight: 1
+    flow:
+      - log: 'Test5'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/q'
+          headers:
+            Cookie: ''

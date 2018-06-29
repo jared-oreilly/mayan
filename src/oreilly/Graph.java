@@ -17,6 +17,9 @@ public class Graph
     private int numNodes;
     private ArrayList<Edge> edges;
     private int numEdges;
+    private ArrayList<Integer> durArr;
+    private ArrayList<Integer> arrArr;
+    private int numScenarios;
 
     public Graph(String baseUrl)
     {
@@ -25,6 +28,66 @@ public class Graph
         numNodes = 0;
         edges = new ArrayList<Edge>();
         numEdges = 0;
+        durArr = new ArrayList<Integer>();
+        arrArr = new ArrayList<Integer>();
+        //default
+        numScenarios = 5;
+    }
+
+    public int getNumScenarios()
+    {
+        return numScenarios;
+    }
+
+    public void setNumScenarios(int numScenarios)
+    {
+        this.numScenarios = numScenarios;
+    }
+    
+    private void addDur(int i)
+    {
+        durArr.add((Integer) i);
+    }
+    
+    private void addArr(int i)
+    {
+        arrArr.add((Integer) i);
+    }
+    
+    public void addPhase(int d, int a)
+    {
+        addDur(d);
+        addArr(a);
+    }
+    
+    public int getLastDur()
+    {
+        return durArr.get(durArr.size()-1);
+    }
+    
+    public int getLastArr()
+    {
+        return arrArr.get(arrArr.size()-1);
+    }
+    
+    public String getPhases()
+    {
+        String b = "";
+        for(int i = 0; i < durArr.size(); i++)
+        {
+            b += "Phase " + i + ": duration = " + durArr.get(i) + ", arrivalRate = " + arrArr.get(i) + "/s\n";
+        }
+        return b;
+    }
+
+    public String getBaseUrl()
+    {
+        return baseUrl;
+    }
+
+    public void setBaseUrl(String baseUrl)
+    {
+        this.baseUrl = baseUrl;
     }
 
     private Node startNode()
@@ -120,11 +183,10 @@ public class Graph
     //piece config and scenarios together - needs work
     public String mayanArtillery(String filename)
     {
-        int s = 5;
-        String[] names = new String[s];
-        int[] weights = new int[s];
+        String[] names = new String[numScenarios];
+        int[] weights = new int[numScenarios];
 
-        for (int i = 0; i < s; i++)
+        for (int i = 0; i < numScenarios; i++)
         {
             names[i] = "Test" + i;
             weights[i] = 1;
@@ -147,7 +209,7 @@ public class Graph
         {
             System.out.println("Problem with writing to file: " + e);
         }
-
+        
         return ma;
     }
 
@@ -157,7 +219,10 @@ public class Graph
         String c = "config:\n";
         c += "  target: '" + baseUrl + "'\n";
         c += "  phases:\n";
-        c += "    - duration: 1\n      arrivalRate: 1\n    - duration: 1\n      arrivalRate: 1\n    - duration: 2\n      arrivalRate: 1\n";
+        for(int i = 0; i < durArr.size(); i++)
+        {
+            c += "    - duration: " + durArr.get(i) + "\n      arrivalRate: " + arrArr.get(i) + "\n";
+        }
         return c;
     }
 
@@ -200,6 +265,17 @@ public class Graph
     {
         String b = "{";
         b += "\"baseUrl\": \"" + baseUrl + "\", ";
+        b += "\"phases\": [";
+        if(durArr.isEmpty())
+        {
+            b += "{\"duration\": " + 1 + ", \"arrivalRate\": " + 1 + "}, ";
+        }
+        for (int i = 0; i < durArr.size(); i++)
+        {
+            b += "{\"duration\": " + durArr.get(i) + ", \"arrivalRate\": " + arrArr.get(i) + "}, ";
+        }
+        b = b.substring(0, b.length() - 2) + "], ";
+        b += "\"numScenarios\": \"" + numScenarios + "\", ";
         b += "\"numNodes\": \"" + numNodes + "\", ";
         b += "\"nodes\": [";
         for (int i = 0; i < numNodes; i++)
@@ -246,7 +322,21 @@ public class Graph
             //numEdges = Integer.parseInt((String) jsonObject.get("numEdges"));
             numNodes = 0;
             numEdges = 0;
+            
+            JSONArray phases = (JSONArray) jsonObject.get("phases");
+            for (int i = 0; i < phases.size(); i++)
+            {
+                JSONObject cur = (JSONObject) phases.get(i);
+                //System.out.println(cur);
+                int d = Integer.parseInt(cur.get("duration") + "");
+                int a = Integer.parseInt(cur.get("arrivalRate") + "");
+                //System.out.println(d + " " + a);
+                addPhase(d, a);
+                //System.out.println(getNode(d));
+            }
 
+            numScenarios = Integer.parseInt(jsonObject.get("numScenarios") + "");
+                    
             JSONArray nodes = (JSONArray) jsonObject.get("nodes");
             for (int i = 0; i < nodes.size(); i++)
             {
