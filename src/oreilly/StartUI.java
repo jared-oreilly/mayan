@@ -111,19 +111,17 @@ public class StartUI extends javax.swing.JFrame
 
     private void btnImportActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnImportActionPerformed
     {//GEN-HEADEREND:event_btnImportActionPerformed
-        if(!txfFilename.getText().equals(""))
+        if (!txfFilename.getText().equals(""))
         {
             lblFeedback.setText("");
             try
             {
-            new GraphUI(txfFilename.getText() + ".json").setVisible(true);
-            }
-            catch(IOException e)
+                new GraphUI(txfFilename.getText() + ".json").setVisible(true);
+            } catch (IOException e)
             {
                 lblFeedback.setText("No file with that name!");
             }
-        }
-        else
+        } else
         {
             lblFeedback.setText("Enter a filename!");
         }

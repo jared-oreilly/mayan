@@ -1,0 +1,90 @@
+config:
+  target: 'http://tagsuatappservice.azurewebsites.net'
+  phases:
+    - duration: 10
+      arrivalRate: 1
+    - duration: 20
+      arrivalRate: 1
+    - duration: 30
+      arrivalRate: 1
+scenarios:
+  - name: 'Test0'
+    weight: 1
+    flow:
+      - log: 'Test0'
+      - get:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/c'
+          headers:
+            Cookie: ''
+  - name: 'Test1'
+    weight: 1
+    flow:
+      - log: 'Test1'
+      - get:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/c'
+          headers:
+            Cookie: ''
+  - name: 'Test2'
+    weight: 1
+    flow:
+      - log: 'Test2'
+      - get:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/c'
+          headers:
+            Cookie: ''
+  - name: 'Test3'
+    weight: 1
+    flow:
+      - log: 'Test3'
+      - get:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/c'
+          headers:
+            Cookie: ''
+  - name: 'Test4'
+    weight: 1
+    flow:
+      - log: 'Test4'
+      - get:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/c'
+          headers:
+            Cookie: ''

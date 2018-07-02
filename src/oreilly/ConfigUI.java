@@ -13,7 +13,9 @@ import javax.swing.JOptionPane;
  */
 public class ConfigUI extends javax.swing.JFrame
 {
+
     Graph m;
+
     /**
      * Creates new form ConfigUI
      */
@@ -23,6 +25,25 @@ public class ConfigUI extends javax.swing.JFrame
         this.m = m;
         txfBaseURL.setText(m.getBaseUrl());
         txfScenarios.setText(m.getNumScenarios() + "");
+        fillInPhaseBox();
+    }
+
+    private void fillInPhaseBox()
+    {
+        int s = m.getNumPhases();
+        cbxDeletePhase.removeAllItems();
+        for (int i = 0; i < s; i++)
+        {
+            cbxDeletePhase.addItem((Integer) i);
+        }
+        try
+        {
+            cbxDeletePhase.setSelectedIndex(0);
+        }
+        catch(IllegalArgumentException e)
+        {
+            
+        }
         txaPhases.setText(m.getPhases());
     }
 
@@ -51,6 +72,9 @@ public class ConfigUI extends javax.swing.JFrame
         jLabel6 = new javax.swing.JLabel();
         txfScenarios = new javax.swing.JTextField();
         btnScenarios = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        btnDeletePhase = new javax.swing.JButton();
+        cbxDeletePhase = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -98,6 +122,17 @@ public class ConfigUI extends javax.swing.JFrame
             }
         });
 
+        jLabel7.setText("Delete Phase");
+
+        btnDeletePhase.setText("Delete Phase");
+        btnDeletePhase.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btnDeletePhaseActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -107,21 +142,6 @@ public class ConfigUI extends javax.swing.JFrame
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txfArrival))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txfDuration)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnAddPhase))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(layout.createSequentialGroup()
@@ -135,7 +155,28 @@ public class ConfigUI extends javax.swing.JFrame
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnChange, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnScenarios, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE))))
+                            .addComponent(btnScenarios, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txfArrival))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addGap(18, 18, 18)
+                                .addComponent(cbxDeletePhase, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addGap(40, 40, 40)
+                                .addComponent(txfDuration)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnAddPhase, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnDeletePhase, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -153,7 +194,7 @@ public class ConfigUI extends javax.swing.JFrame
                     .addComponent(jLabel6)
                     .addComponent(txfScenarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnScenarios))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -167,7 +208,16 @@ public class ConfigUI extends javax.swing.JFrame
                             .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txfArrival, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(cbxDeletePhase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnDeletePhase)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -178,12 +228,11 @@ public class ConfigUI extends javax.swing.JFrame
     private void btnChangeActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnChangeActionPerformed
     {//GEN-HEADEREND:event_btnChangeActionPerformed
         String t = txfBaseURL.getText().trim();
-        if(!t.equals(""))
+        if (!t.equals(""))
         {
             m.setBaseUrl(txfBaseURL.getText());
             //g.updateGraphConfig(m);
-        }
-        else
+        } else
         {
             JOptionPane.showMessageDialog(null, "URL required!");
         }
@@ -193,13 +242,13 @@ public class ConfigUI extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btnAddPhaseActionPerformed
         String d = txfDuration.getText().trim();
         String a = txfArrival.getText().trim();
-        if(!d.equals("") && !a.equals(""))
+        if (!d.equals("") && !a.equals(""))
         {
             m.addPhase(Integer.parseInt(d), Integer.parseInt(a));
             txaPhases.setText(m.getPhases());
+            fillInPhaseBox();
             //g.updateGraphConfig(m);
-        }
-        else
+        } else
         {
             JOptionPane.showMessageDialog(null, "Duration or arrival rate missing!");
         }
@@ -208,26 +257,41 @@ public class ConfigUI extends javax.swing.JFrame
     private void btnScenariosActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnScenariosActionPerformed
     {//GEN-HEADEREND:event_btnScenariosActionPerformed
         String s = txfScenarios.getText().trim();
-        if(!s.equals(""))
+        if (!s.equals(""))
         {
             m.setNumScenarios(Integer.parseInt(s));
-        }
-        else
+        } else
         {
             JOptionPane.showMessageDialog(null, "Number of scenarios missing!");
         }
     }//GEN-LAST:event_btnScenariosActionPerformed
 
+    private void btnDeletePhaseActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnDeletePhaseActionPerformed
+    {//GEN-HEADEREND:event_btnDeletePhaseActionPerformed
+        if (cbxDeletePhase.getSelectedItem() != null)
+        {
+            int id = (Integer) cbxDeletePhase.getSelectedItem();
+            m.deletePhase(id);
+            fillInPhaseBox();
+        } else
+        {
+            JOptionPane.showMessageDialog(null, "No phase selected!");
+        }
+    }//GEN-LAST:event_btnDeletePhaseActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddPhase;
     private javax.swing.JButton btnChange;
+    private javax.swing.JButton btnDeletePhase;
     private javax.swing.JButton btnScenarios;
+    private javax.swing.JComboBox<Integer> cbxDeletePhase;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea txaPhases;
     private javax.swing.JTextField txfArrival;

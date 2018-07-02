@@ -1,0 +1,56 @@
+Started phase 0, duration: 2s @ 10:57:26(+0200) 2018-07-02
+Test5
+Test9
+Test7
+Started phase 1, duration: 2s @ 10:57:28(+0200) 2018-07-02
+Test8
+Test6
+Test3
+Test8
+Started phase 2, duration: 2s @ 10:57:30(+0200) 2018-07-02
+Test6
+Test1
+Test3
+Test2
+Test4
+Report @ 10:57:34(+0200) 2018-07-02
+  Scenarios launched:  12
+  Scenarios completed: 12
+  Requests completed:  36
+  RPS sent: 4.79
+  Request latency:
+    min: 230.8
+    max: 1005.3
+    median: 559.1
+    p95: 938.9
+    p99: 1005.3
+  Codes:
+    200: 12
+    302: 24
+
+All virtual users finished
+Summary report @ 10:57:34(+0200) 2018-07-02
+  Scenarios launched:  12
+  Scenarios completed: 12
+  Requests completed:  36
+  RPS sent: 4.77
+  Request latency:
+    min: 230.8
+    max: 1005.3
+    median: 559.1
+    p95: 938.9
+    p99: 1005.3
+  Scenario counts:
+    Test5: 1 (8.333%)
+    Test9: 1 (8.333%)
+    Test7: 1 (8.333%)
+    Test8: 2 (16.667%)
+    Test6: 2 (16.667%)
+    Test3: 2 (16.667%)
+    Test1: 1 (8.333%)
+    Test2: 1 (8.333%)
+    Test4: 1 (8.333%)
+  Codes:
+    200: 12
+    302: 24
+

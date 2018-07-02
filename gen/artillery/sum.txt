@@ -1,12 +1,12 @@
 config:
   target: 'http://tagsuatappservice.azurewebsites.net'
   phases:
-    - duration: 1
-      arrivalRate: 1
     - duration: 5
       arrivalRate: 1
     - duration: 10
       arrivalRate: 2
+    - duration: 20
+      arrivalRate: 20
 scenarios:
   - name: 'Test0'
     weight: 1
@@ -17,7 +17,11 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/d'
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/c'
           headers:
             Cookie: ''
       - get:
@@ -57,15 +61,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -76,6 +72,14 @@ scenarios:
     weight: 1
     flow:
       - log: 'Test3'
+      - get:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/d'
+          headers:
+            Cookie: ''
       - get:
           url: '/a'
           headers:
@@ -113,14 +117,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
           url: '/d'
           headers:
             Cookie: ''
@@ -137,7 +133,15 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/d'
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/e'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/f'
           headers:
             Cookie: ''
       - get:
@@ -153,15 +157,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -225,7 +221,23 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/d'
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/b'
           headers:
             Cookie: ''
       - get:
@@ -238,14 +250,6 @@ scenarios:
             Cookie: ''
       - get:
           url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/d'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/a'
           headers:
             Cookie: ''
       - get:
@@ -265,35 +269,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/c'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -325,15 +301,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -349,7 +317,15 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/d'
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/e'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/f'
           headers:
             Cookie: ''
       - get:
@@ -376,14 +352,6 @@ scenarios:
     weight: 1
     flow:
       - log: 'Test17'
-      - get:
-          url: '/a'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
       - get:
           url: '/a'
           headers:
@@ -429,7 +397,43 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/d'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/e'
+          headers:
+            Cookie: ''
+      - get:
           url: '/f'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/c'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/e'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/e'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -445,15 +449,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -485,7 +481,11 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/d'
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/c'
           headers:
             Cookie: ''
       - get:
@@ -498,14 +498,6 @@ scenarios:
       - log: 'Test23'
       - get:
           url: '/a'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
           headers:
             Cookie: ''
       - get:
@@ -525,7 +517,15 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/d'
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/e'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/f'
           headers:
             Cookie: ''
       - get:
@@ -549,11 +549,15 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/f'
+          url: '/b'
           headers:
             Cookie: ''
       - get:
-          url: '/c'
+          url: '/e'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/f'
           headers:
             Cookie: ''
       - get:
@@ -582,14 +586,6 @@ scenarios:
       - log: 'Test27'
       - get:
           url: '/a'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
           headers:
             Cookie: ''
       - get:
@@ -625,14 +621,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
           url: '/d'
           headers:
             Cookie: ''
@@ -649,7 +637,15 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/d'
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/e'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/f'
           headers:
             Cookie: ''
       - get:
@@ -681,19 +677,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/c'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -709,7 +693,15 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/d'
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/e'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/f'
           headers:
             Cookie: ''
       - get:
@@ -745,22 +737,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/a'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/a'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/d'
-          headers:
-            Cookie: ''
-      - get:
           url: '/QUIT'
           headers:
             Cookie: ''
@@ -773,15 +749,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -792,14 +760,6 @@ scenarios:
     weight: 1
     flow:
       - log: 'Test37'
-      - get:
-          url: '/a'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
       - get:
           url: '/a'
           headers:
@@ -821,35 +781,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/c'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/c'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/c'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -862,6 +794,14 @@ scenarios:
       - log: 'Test39'
       - get:
           url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/e'
           headers:
             Cookie: ''
       - get:
@@ -897,47 +837,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
           url: '/d'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/a'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/c'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/a'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/c'
           headers:
             Cookie: ''
       - get:
@@ -954,6 +854,10 @@ scenarios:
             Cookie: ''
       - get:
           url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/c'
           headers:
             Cookie: ''
       - get:
@@ -977,27 +881,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/c'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -1029,15 +913,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -1057,6 +933,14 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/d'
+          headers:
+            Cookie: ''
+      - get:
           url: '/QUIT'
           headers:
             Cookie: ''
@@ -1064,22 +948,6 @@ scenarios:
     weight: 1
     flow:
       - log: 'Test47'
-      - get:
-          url: '/a'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
       - get:
           url: '/a'
           headers:
@@ -1125,15 +993,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -1173,15 +1033,19 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
+          url: '/f'
           headers:
             Cookie: ''
       - get:
-          url: '/a'
+          url: '/c'
           headers:
             Cookie: ''
       - get:
-          url: '/d'
+          url: '/e'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/f'
           headers:
             Cookie: ''
       - get:
@@ -1221,14 +1085,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
           url: '/d'
           headers:
             Cookie: ''
@@ -1245,11 +1101,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/c'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -1260,14 +1112,6 @@ scenarios:
     weight: 1
     flow:
       - log: 'Test55'
-      - get:
-          url: '/a'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/d'
-          headers:
-            Cookie: ''
       - get:
           url: '/a'
           headers:
@@ -1321,15 +1165,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -1357,6 +1193,10 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/c'
+          headers:
+            Cookie: ''
+      - get:
           url: '/QUIT'
           headers:
             Cookie: ''
@@ -1369,19 +1209,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/c'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -1397,15 +1225,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -1437,27 +1257,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/c'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -1473,27 +1273,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/c'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -1506,22 +1286,6 @@ scenarios:
       - log: 'Test65'
       - get:
           url: '/a'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
           headers:
             Cookie: ''
       - get:
@@ -1541,6 +1305,14 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
           url: '/d'
           headers:
             Cookie: ''
@@ -1549,15 +1321,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -1570,14 +1334,6 @@ scenarios:
       - log: 'Test67'
       - get:
           url: '/a'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
           headers:
             Cookie: ''
       - get:
@@ -1597,27 +1353,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/c'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -1633,23 +1369,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/a'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -1665,15 +1385,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -1705,15 +1417,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -1745,23 +1449,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -1777,31 +1465,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/a'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -1833,7 +1497,23 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/d'
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/e'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/f'
           headers:
             Cookie: ''
       - get:
@@ -1849,7 +1529,15 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/d'
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/e'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/f'
           headers:
             Cookie: ''
       - get:
@@ -1893,7 +1581,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/d'
+          url: '/f'
           headers:
             Cookie: ''
       - get:
@@ -1909,15 +1597,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -1953,18 +1633,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/c'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
           url: '/a'
           headers:
             Cookie: ''
@@ -1985,15 +1653,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -2009,11 +1669,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/c'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -2029,15 +1685,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -2069,7 +1717,23 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/d'
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/e'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/e'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/f'
           headers:
             Cookie: ''
       - get:
@@ -2101,14 +1765,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
           url: '/d'
           headers:
             Cookie: ''
@@ -2125,15 +1781,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -2165,15 +1813,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -2186,6 +1826,14 @@ scenarios:
       - log: 'Test94'
       - get:
           url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/e'
           headers:
             Cookie: ''
       - get:
@@ -2205,15 +1853,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -2229,15 +1869,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -2257,15 +1889,11 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/c'
+          url: '/a'
           headers:
             Cookie: ''
       - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:
@@ -2281,15 +1909,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/b'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/e'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/f'
+          url: '/d'
           headers:
             Cookie: ''
       - get:

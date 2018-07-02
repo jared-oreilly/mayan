@@ -1,0 +1,1 @@
+artillery run test.txt > ../runs/test.txt

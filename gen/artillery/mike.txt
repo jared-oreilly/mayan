@@ -1,0 +1,130 @@
+config:
+  target: 'http://www.test.com'
+  phases:
+    - duration: 2
+      arrivalRate: 2
+    - duration: 2
+      arrivalRate: 2
+    - duration: 2
+      arrivalRate: 2
+scenarios:
+  - name: 'Test0'
+    weight: 1
+    flow:
+      - log: 'Test0'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/c'
+          headers:
+            Cookie: ''
+  - name: 'Test1'
+    weight: 1
+    flow:
+      - log: 'Test1'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/c'
+          headers:
+            Cookie: ''
+  - name: 'Test2'
+    weight: 1
+    flow:
+      - log: 'Test2'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/c'
+          headers:
+            Cookie: ''
+  - name: 'Test3'
+    weight: 1
+    flow:
+      - log: 'Test3'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/c'
+          headers:
+            Cookie: ''
+  - name: 'Test4'
+    weight: 1
+    flow:
+      - log: 'Test4'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/c'
+          headers:
+            Cookie: ''
+  - name: 'Test5'
+    weight: 1
+    flow:
+      - log: 'Test5'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'cool'
+  - name: 'Test6'
+    weight: 1
+    flow:
+      - log: 'Test6'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'cool'
+  - name: 'Test7'
+    weight: 1
+    flow:
+      - log: 'Test7'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/c'
+          headers:
+            Cookie: ''
+  - name: 'Test8'
+    weight: 1
+    flow:
+      - log: 'Test8'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/c'
+          headers:
+            Cookie: ''
+  - name: 'Test9'
+    weight: 1
+    flow:
+      - log: 'Test9'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/c'
+          headers:
+            Cookie: ''

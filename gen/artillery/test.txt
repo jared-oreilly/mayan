@@ -24,32 +24,16 @@ scenarios:
           url: '/c'
           headers:
             Cookie: 'abc'
-      - get:
-          url: '/b'
-          headers:
-            Cookie: 'abc'
-      - get:
-          url: '/c'
-          headers:
-            Cookie: 'abc'
-      - get:
-          url: '/b'
-          headers:
-            Cookie: 'abc'
-      - get:
-          url: '/c'
-          headers:
-            Cookie: 'abc'
-      - get:
-          url: '/b'
-          headers:
-            Cookie: 'abc'
-      - get:
-          url: '/c'
-          headers:
-            Cookie: 'abc'
       - post:
           url: '/a'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
           headers:
             Cookie: 'abc'
       - get:
@@ -70,22 +54,6 @@ scenarios:
       - log: 'Test1'
       - post:
           url: '/a'
-          headers:
-            Cookie: 'abc'
-      - get:
-          url: '/b'
-          headers:
-            Cookie: 'abc'
-      - get:
-          url: '/c'
-          headers:
-            Cookie: 'abc'
-      - get:
-          url: '/b'
-          headers:
-            Cookie: 'abc'
-      - get:
-          url: '/c'
           headers:
             Cookie: 'abc'
       - get:
@@ -125,6 +93,14 @@ scenarios:
           headers:
             Cookie: 'abc'
       - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - get:
           url: '/q'
           headers:
             Cookie: ''
@@ -132,6 +108,18 @@ scenarios:
     weight: 1
     flow:
       - log: 'Test3'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
       - post:
           url: '/a'
           headers:
@@ -164,6 +152,14 @@ scenarios:
           url: '/c'
           headers:
             Cookie: 'abc'
+      - get:
+          url: '/q'
+          headers:
+            Cookie: ''
+  - name: 'Test5'
+    weight: 1
+    flow:
+      - log: 'Test5'
       - post:
           url: '/a'
           headers:
@@ -176,6 +172,14 @@ scenarios:
           url: '/c'
           headers:
             Cookie: 'abc'
+      - get:
+          url: '/q'
+          headers:
+            Cookie: ''
+  - name: 'Test6'
+    weight: 1
+    flow:
+      - log: 'Test6'
       - post:
           url: '/a'
           headers:
@@ -204,10 +208,10 @@ scenarios:
           url: '/q'
           headers:
             Cookie: ''
-  - name: 'Test5'
+  - name: 'Test7'
     weight: 1
     flow:
-      - log: 'Test5'
+      - log: 'Test7'
       - post:
           url: '/a'
           headers:
@@ -220,6 +224,46 @@ scenarios:
           url: '/c'
           headers:
             Cookie: 'abc'
+      - get:
+          url: '/q'
+          headers:
+            Cookie: ''
+  - name: 'Test8'
+    weight: 1
+    flow:
+      - log: 'Test8'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - post:
+          url: '/a'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/b'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/c'
+          headers:
+            Cookie: 'abc'
+      - get:
+          url: '/q'
+          headers:
+            Cookie: ''
+  - name: 'Test9'
+    weight: 1
+    flow:
+      - log: 'Test9'
       - post:
           url: '/a'
           headers:

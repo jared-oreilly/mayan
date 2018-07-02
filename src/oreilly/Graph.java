@@ -60,6 +60,17 @@ public class Graph
         addArr(a);
     }
     
+    public void deletePhase(int id)
+    {
+        durArr.remove(id);
+        arrArr.remove(id);
+    }
+    
+    public int getNumPhases()
+    {
+        return durArr.size();
+    }
+    
     public int getLastDur()
     {
         return durArr.get(durArr.size()-1);
@@ -202,7 +213,7 @@ public class Graph
             String nl = System.getProperty("line.separator");
             filema = filema.replace("\n", nl);
 
-            PrintWriter writer = new PrintWriter("artillery/" + filename, "UTF-8");
+            PrintWriter writer = new PrintWriter("gen/artillery/" + filename, "UTF-8");
             writer.print(filema);
             writer.close();
         } catch (IOException e)
@@ -297,7 +308,7 @@ public class Graph
             String nl = System.getProperty("line.separator");
             fileb = fileb.replace("\n", nl);
 
-            PrintWriter writer = new PrintWriter("graphs/" + filename, "UTF-8");
+            PrintWriter writer = new PrintWriter("gen/graphs/" + filename, "UTF-8");
             writer.print(fileb);
             writer.close();
         } catch (IOException e)
@@ -314,7 +325,7 @@ public class Graph
         {
 
             JSONParser parser = new JSONParser();
-            Object obj = parser.parse(new FileReader("graphs/" + filename));
+            Object obj = parser.parse(new FileReader("gen/graphs/" + filename));
             JSONObject jsonObject = (JSONObject) obj;
 
             baseUrl = (String) jsonObject.get("baseUrl");
