@@ -5,7 +5,6 @@
  */
 package oreilly;
 
-import java.awt.Color;
 import java.io.IOException;
 import javax.swing.JOptionPane;
 
@@ -847,8 +846,26 @@ public class GraphUI extends javax.swing.JFrame
 
     private void btnMAActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnMAActionPerformed
     {//GEN-HEADEREND:event_btnMAActionPerformed
-        m.mayanArtillery(txfMayan.getText() + ".txt");
+        String ma = m.mayanArtillery(txfMayan.getText() + ".txt");
         JOptionPane.showMessageDialog(null, txfMayan.getText() + ".txt generated!");
+        int choice = JOptionPane.showConfirmDialog(null, "Would you like to run " + txfMayan.getText() + ".txt on Artillery (" + m.requestTotalTime() + " seconds)?");
+        switch (choice)
+        {
+            case JOptionPane.YES_OPTION:
+                m.runArtillery(ma, txfMayan.getText() + ".txt");
+                JOptionPane.showMessageDialog(null, txfMayan.getText() + ".txt has been run on Artillery successfully!");
+                int choice2 = JOptionPane.showConfirmDialog(null, "Would you like to exit Mayan?");
+                switch (choice2)
+                {
+                    case JOptionPane.YES_OPTION:
+                        System.exit(0);
+                        break;
+                    default:
+                }
+                break;
+            default:
+
+        }
     }//GEN-LAST:event_btnMAActionPerformed
 
     private void updateDisplays()

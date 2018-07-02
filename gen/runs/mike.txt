@@ -1,56 +1,118 @@
-Started phase 0, duration: 2s @ 10:57:26(+0200) 2018-07-02
+Started phase 0, duration: 2s @ 15:08:57(+0200) 2018-07-02
+Test4
+Started phase 1, duration: 5s @ 15:08:59(+0200) 2018-07-02
+Test1
+Test0
+Test1
 Test5
-Test9
-Test7
-Started phase 1, duration: 2s @ 10:57:28(+0200) 2018-07-02
-Test8
-Test6
+Test0
+Test2
+Test0
+Test4
+Test5
 Test3
-Test8
-Started phase 2, duration: 2s @ 10:57:30(+0200) 2018-07-02
-Test6
+Started phase 2, duration: 10s @ 15:09:04(+0200) 2018-07-02
+Test3
+Test2
+Test3
+Test3
+Test2
+Test3
+Test3
+Test2
+Test2
+Test4
+Test0
+Test5
+Test0
+Test3
+Test1
+Report @ 15:09:07(+0200) 2018-07-02
+  Scenarios launched:  26
+  Scenarios completed: 19
+  Requests completed:  66
+  RPS sent: 8.14
+  Request latency:
+    min: 179
+    max: 860
+    median: 376.4
+    p95: 832.3
+    p99: 857.1
+  Codes:
+    200: 19
+    302: 47
+
+Test0
+Test5
+Test3
+Test5
+Test4
+Test3
+Test3
+Test2
+Test0
+Test1
+Test3
+Test1
 Test1
 Test3
 Test2
-Test4
-Report @ 10:57:34(+0200) 2018-07-02
-  Scenarios launched:  12
-  Scenarios completed: 12
-  Requests completed:  36
-  RPS sent: 4.79
+Test1
+Test1
+Test3
+Test5
+Test1
+Test1
+Test3
+Test0
+Test2
+Test2
+Test0
+Test0
+Test5
+Test0
+Test2
+Test5
+Test5
+Test0
+Test1
+Test5
+Test3
+Report @ 15:09:16(+0200) 2018-07-02
+  Scenarios launched:  36
+  Scenarios completed: 43
+  Requests completed:  120
+  RPS sent: 13.28
   Request latency:
-    min: 230.8
-    max: 1005.3
-    median: 559.1
-    p95: 938.9
-    p99: 1005.3
+    min: 179.2
+    max: 833.4
+    median: 377.7
+    p95: 827.7
+    p99: 833
   Codes:
-    200: 12
-    302: 24
+    200: 43
+    302: 77
 
 All virtual users finished
-Summary report @ 10:57:34(+0200) 2018-07-02
-  Scenarios launched:  12
-  Scenarios completed: 12
-  Requests completed:  36
-  RPS sent: 4.77
+Summary report @ 15:09:16(+0200) 2018-07-02
+  Scenarios launched:  62
+  Scenarios completed: 62
+  Requests completed:  186
+  RPS sent: 10.61
   Request latency:
-    min: 230.8
-    max: 1005.3
-    median: 559.1
-    p95: 938.9
-    p99: 1005.3
+    min: 179
+    max: 860
+    median: 377.3
+    p95: 829.5
+    p99: 839.5
   Scenario counts:
-    Test5: 1 (8.333%)
-    Test9: 1 (8.333%)
-    Test7: 1 (8.333%)
-    Test8: 2 (16.667%)
-    Test6: 2 (16.667%)
-    Test3: 2 (16.667%)
-    Test1: 1 (8.333%)
-    Test2: 1 (8.333%)
-    Test4: 1 (8.333%)
+    Test4: 4 (6.452%)
+    Test1: 11 (17.742%)
+    Test0: 12 (19.355%)
+    Test5: 10 (16.129%)
+    Test2: 10 (16.129%)
+    Test3: 15 (24.194%)
   Codes:
-    200: 12
-    302: 24
+    200: 62
+    302: 124
 

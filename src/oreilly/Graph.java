@@ -43,48 +43,48 @@ public class Graph
     {
         this.numScenarios = numScenarios;
     }
-    
+
     private void addDur(int i)
     {
         durArr.add((Integer) i);
     }
-    
+
     private void addArr(int i)
     {
         arrArr.add((Integer) i);
     }
-    
+
     public void addPhase(int d, int a)
     {
         addDur(d);
         addArr(a);
     }
-    
+
     public void deletePhase(int id)
     {
         durArr.remove(id);
         arrArr.remove(id);
     }
-    
+
     public int getNumPhases()
     {
         return durArr.size();
     }
-    
+
     public int getLastDur()
     {
-        return durArr.get(durArr.size()-1);
+        return durArr.get(durArr.size() - 1);
     }
-    
+
     public int getLastArr()
     {
-        return arrArr.get(arrArr.size()-1);
+        return arrArr.get(arrArr.size() - 1);
     }
-    
+
     public String getPhases()
     {
         String b = "";
-        for(int i = 0; i < durArr.size(); i++)
+        for (int i = 0; i < durArr.size(); i++)
         {
             b += "Phase " + i + ": duration = " + durArr.get(i) + ", arrivalRate = " + arrArr.get(i) + "/s\n";
         }
@@ -220,8 +220,67 @@ public class Graph
         {
             System.out.println("Problem with writing to file: " + e);
         }
+
         
+        //runScript(ma, filename);
+
         return ma;
+    }
+
+    public void runArtillery(String ma, String filename)
+    {
+        try
+        {
+            //System.out.println(filename);
+            Runtime rt = Runtime.getRuntime();
+            //Process pr = rt.exec("cmd /c dir");
+            //System.out.println("cmd /c artillery run " + filename + " > gen/runs/" + filename);
+            Process pr = rt.exec("cmd /c artillery run " + filename + " > gen/runs/" + filename);
+            //Process pr = rt.exec("cmd /c dir");
+
+            //read any input
+            BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
+            String line = null;
+            while ((line = input.readLine()) != null)
+            {
+                System.out.println(line);
+            }
+
+            int exitVal = pr.waitFor();
+            //System.out.println("Exited with error code " + exitVal);
+
+        } catch (Exception e)
+        {
+            System.out.println(e.toString());
+        }
+    }
+    
+    public void runOlmec()
+    {
+        try
+        {
+            //System.out.println(filename);
+            Runtime rt = Runtime.getRuntime();
+            //Process pr = rt.exec("cmd /c dir");
+            //System.out.println("cmd /c artillery run " + filename + " > gen/runs/" + filename);
+            Process pr = rt.exec("cmd /c java ../../olmec/Olmec/dist/Olmec.jar");
+            //Process pr = rt.exec("cmd /c dir");
+
+            //read any input
+            BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
+            String line = null;
+            while ((line = input.readLine()) != null)
+            {
+                System.out.println(line);
+            }
+
+            int exitVal = pr.waitFor();
+            //System.out.println("Exited with error code " + exitVal);
+
+        } catch (Exception e)
+        {
+            System.out.println(e.toString());
+        }
     }
 
     //generate the config part
@@ -230,7 +289,7 @@ public class Graph
         String c = "config:\n";
         c += "  target: '" + baseUrl + "'\n";
         c += "  phases:\n";
-        for(int i = 0; i < durArr.size(); i++)
+        for (int i = 0; i < durArr.size(); i++)
         {
             c += "    - duration: " + durArr.get(i) + "\n      arrivalRate: " + arrArr.get(i) + "\n";
         }
@@ -277,7 +336,7 @@ public class Graph
         String b = "{";
         b += "\"baseUrl\": \"" + baseUrl + "\", ";
         b += "\"phases\": [";
-        if(durArr.isEmpty())
+        if (durArr.isEmpty())
         {
             b += "{\"duration\": " + 1 + ", \"arrivalRate\": " + 1 + "}, ";
         }
@@ -333,7 +392,7 @@ public class Graph
             //numEdges = Integer.parseInt((String) jsonObject.get("numEdges"));
             numNodes = 0;
             numEdges = 0;
-            
+
             JSONArray phases = (JSONArray) jsonObject.get("phases");
             for (int i = 0; i < phases.size(); i++)
             {
@@ -347,7 +406,7 @@ public class Graph
             }
 
             numScenarios = Integer.parseInt(jsonObject.get("numScenarios") + "");
-                    
+
             JSONArray nodes = (JSONArray) jsonObject.get("nodes");
             for (int i = 0; i < nodes.size(); i++)
             {
@@ -430,10 +489,19 @@ public class Graph
         }
         return arr;
     }
-    
+
     public double fetchRemainingProb(int id) throws IndexOutOfBoundsException
     {
-       return nodes.get(id).fetchRemainingProb();
+        return nodes.get(id).fetchRemainingProb();
     }
 
+    public int requestTotalTime()
+    {
+        int count = 0;
+        for(int i = 0; i < durArr.size(); i++)
+        {
+            count += durArr.get(i);
+        }
+        return count;
+    }
 }

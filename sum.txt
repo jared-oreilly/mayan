@@ -19,6 +19,14 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/e'
+          headers:
+            Cookie: ''
+      - get:
           url: '/d'
           headers:
             Cookie: ''
@@ -30,6 +38,14 @@ scenarios:
     weight: 1
     flow:
       - log: 'Test1'
+      - get:
+          url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/b'
+          headers:
+            Cookie: ''
       - get:
           url: '/a'
           headers:
@@ -80,6 +96,14 @@ scenarios:
       - log: 'Test4'
       - get:
           url: '/a'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/b'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/e'
           headers:
             Cookie: ''
       - get:
