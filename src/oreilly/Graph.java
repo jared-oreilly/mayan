@@ -234,8 +234,8 @@ public class Graph
             //System.out.println(filename);
             Runtime rt = Runtime.getRuntime();
             //Process pr = rt.exec("cmd /c dir");
-            //System.out.println("cmd /c artillery run " + filename + " > gen/runs/" + filename);
-            Process pr = rt.exec("cmd /c artillery run " + filename + " > gen/runs/" + filename);
+            //System.out.println("cmd /c artillery run gen/artillery/" + filename + " > gen/runs/" + filename);
+            Process pr = rt.exec("cmd /c artillery run gen/artillery/" + filename + " > gen/runs/" + filename);
             //Process pr = rt.exec("cmd /c dir");
 
             //read any input
