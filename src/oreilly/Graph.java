@@ -206,7 +206,8 @@ public class Graph
             String nl = System.getProperty("line.separator");
             filema = filema.replace("\n", nl);
 
-            PrintWriter writer = new PrintWriter("gen/artillery/" + filename, "UTF-8");
+            new File("gen/artillery/" + filename.substring(0, filename.indexOf("."))).mkdirs();
+            PrintWriter writer = new PrintWriter("gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + filename, "UTF-8");
             writer.print(filema);
             writer.close();
         } catch (IOException e)
@@ -223,8 +224,9 @@ public class Graph
         {
             Runtime rt = Runtime.getRuntime();
 
+            new File("gen/runs/" + filename.substring(0, filename.indexOf("."))).mkdirs();
             //System.out.println("cmd /c artillery run gen/artillery/" + filename + " > gen/runs/" + filename);
-            Process pr = rt.exec("cmd /c artillery run gen/artillery/" + filename + " > gen/runs/" + filename);
+            Process pr = rt.exec("cmd /c artillery run gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + filename + " > gen/runs/" + filename.substring(0, filename.indexOf(".")) + "/" + filename);
 
             BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
             String line = null;
