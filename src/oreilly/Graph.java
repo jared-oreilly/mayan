@@ -5,10 +5,6 @@ import java.util.*;
 import org.json.simple.parser.*;
 import org.json.simple.*;
 
-/**
- *
- * @author jared.oreilly
- */
 public class Graph
 {
 
@@ -19,7 +15,7 @@ public class Graph
     private int numEdges;
     private ArrayList<Integer> durArr;
     private ArrayList<Integer> arrArr;
-    private int numScenarios;
+    private int numScenarios = 5;
 
     public Graph(String baseUrl)
     {
@@ -30,8 +26,6 @@ public class Graph
         numEdges = 0;
         durArr = new ArrayList<Integer>();
         arrArr = new ArrayList<Integer>();
-        //default
-        numScenarios = 5;
     }
 
     public int getNumScenarios()
@@ -191,7 +185,6 @@ public class Graph
         return edges.get(id);
     }
 
-    //piece config and scenarios together - needs work
     public String mayanArtillery(String filename)
     {
         String[] names = new String[numScenarios];
@@ -221,9 +214,6 @@ public class Graph
             System.out.println("Problem with writing to file: " + e);
         }
 
-        
-        //runScript(ma, filename);
-
         return ma;
     }
 
@@ -231,14 +221,11 @@ public class Graph
     {
         try
         {
-            //System.out.println(filename);
             Runtime rt = Runtime.getRuntime();
-            //Process pr = rt.exec("cmd /c dir");
-            System.out.println("cmd /c artillery run gen/artillery/" + filename + " > gen/runs/" + filename);
+
+            //System.out.println("cmd /c artillery run gen/artillery/" + filename + " > gen/runs/" + filename);
             Process pr = rt.exec("cmd /c artillery run gen/artillery/" + filename + " > gen/runs/" + filename);
-            //Process pr = rt.exec("cmd /c dir");
 
-            //read any input
             BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
             String line = null;
             while ((line = input.readLine()) != null)
@@ -247,35 +234,6 @@ public class Graph
             }
 
             int exitVal = pr.waitFor();
-            //System.out.println("Exited with error code " + exitVal);
-
-        } catch (Exception e)
-        {
-            System.out.println(e.toString());
-        }
-    }
-    
-    public void runOlmec()
-    {
-        try
-        {
-            //System.out.println(filename);
-            Runtime rt = Runtime.getRuntime();
-            //Process pr = rt.exec("cmd /c dir");
-            //System.out.println("cmd /c artillery run " + filename + " > gen/runs/" + filename);
-            Process pr = rt.exec("cmd /c java ../../olmec/Olmec/dist/Olmec.jar");
-            //Process pr = rt.exec("cmd /c dir");
-
-            //read any input
-            BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
-            String line = null;
-            while ((line = input.readLine()) != null)
-            {
-                System.out.println(line);
-            }
-
-            int exitVal = pr.waitFor();
-            //System.out.println("Exited with error code " + exitVal);
 
         } catch (Exception e)
         {
@@ -283,7 +241,6 @@ public class Graph
         }
     }
 
-    //generate the config part
     public String generateConfig()
     {
         String c = "config:\n";
@@ -296,7 +253,6 @@ public class Graph
         return c;
     }
 
-    //generate all scenarios - needs work
     public String generateScenarios(String[] names, int[] weights)
     {
         String s = "scenarios:\n";
@@ -307,7 +263,6 @@ public class Graph
         return s;
     }
 
-    //generate a specific scenario - pretty good
     public String generateScenario(String name, int weight)
     {
         String s = "  - name: '" + name + "'\n";
@@ -318,7 +273,6 @@ public class Graph
         return s;
     }
 
-    //generate the flow steps in a scenario - needs work
     public String generateFlowSteps()
     {
         String fs = "";
@@ -382,14 +336,11 @@ public class Graph
     {
         try
         {
-
             JSONParser parser = new JSONParser();
             Object obj = parser.parse(new FileReader("gen/graphs/" + filename));
             JSONObject jsonObject = (JSONObject) obj;
 
             baseUrl = (String) jsonObject.get("baseUrl");
-            //numNodes = Integer.parseInt((String) jsonObject.get("numNodes"));
-            //numEdges = Integer.parseInt((String) jsonObject.get("numEdges"));
             numNodes = 0;
             numEdges = 0;
 
@@ -397,12 +348,9 @@ public class Graph
             for (int i = 0; i < phases.size(); i++)
             {
                 JSONObject cur = (JSONObject) phases.get(i);
-                //System.out.println(cur);
                 int d = Integer.parseInt(cur.get("duration") + "");
                 int a = Integer.parseInt(cur.get("arrivalRate") + "");
-                //System.out.println(d + " " + a);
                 addPhase(d, a);
-                //System.out.println(getNode(d));
             }
 
             numScenarios = Integer.parseInt(jsonObject.get("numScenarios") + "");
@@ -411,7 +359,6 @@ public class Graph
             for (int i = 0; i < nodes.size(); i++)
             {
                 JSONObject cur = (JSONObject) nodes.get(i);
-                //System.out.println(cur);
                 String j = (String) cur.get("json");
                 if (j.equals("null"))
                 {
@@ -422,22 +369,18 @@ public class Graph
                 {
                     f = null;
                 }
-                int d = addNode((String) cur.get("title"), (String) cur.get("url"), (String) cur.get("type"), (String) cur.get("cookie"), j, f);
-                //System.out.println(getNode(d));
+                addNode((String) cur.get("title"), (String) cur.get("url"), (String) cur.get("type"), (String) cur.get("cookie"), j, f);
             }
 
-            //System.out.println("");
             JSONArray edges = (JSONArray) jsonObject.get("edges");
             for (int i = 0; i < edges.size(); i++)
             {
                 JSONObject cur = (JSONObject) edges.get(i);
-                //System.out.println(cur);
                 String t = (String) cur.get("title");
                 int s = Integer.parseInt(cur.get("startID") + "");
                 int e = Integer.parseInt(cur.get("endID") + "");
                 double p = Double.parseDouble(cur.get("prob") + "");
-                int d = addEdge(t, s, e, p);
-                //System.out.println(getEdge(d));
+                addEdge(t, s, e, p);
             }
 
         } catch (ParseException e)
@@ -498,7 +441,7 @@ public class Graph
     public int requestTotalTime()
     {
         int count = 0;
-        for(int i = 0; i < durArr.size(); i++)
+        for (int i = 0; i < durArr.size(); i++)
         {
             count += durArr.get(i);
         }

@@ -1,16 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package oreilly;
 
-/**
- *
- * @author jared.oreilly
- */
 public class Edge
 {
+
     private int id;
     private String title;
     private Node start;
@@ -25,7 +17,7 @@ public class Edge
         this.end = end;
         this.prob = prob;
     }
-    
+
     public int getId()
     {
         return id;
@@ -81,19 +73,19 @@ public class Edge
     {
         String b = "";
         b += id + ": '" + title + "' " + prob + " = ";
-        b += start.getId() + ":" + start.getTitle() + " -> " + end.getId() + ":" + end.getTitle();    
+        b += start.getId() + ":" + start.getTitle() + " -> " + end.getId() + ":" + end.getTitle();
         return b;
     }
-    
+
     public String exportEdge()
     {
         String b = "{";
-        b += "\"id\": \"" + id + "\", "; 
-        b += "\"title\": \"" + title + "\", "; 
-        b += "\"startID\": " + start.getId() + ", "; 
-        b += "\"endID\": " + end.getId() + ", "; 
-        b += "\"prob\": " + prob + "}"; 
+        b += "\"id\": \"" + id + "\", ";
+        b += "\"title\": \"" + title + "\", ";
+        b += "\"startID\": " + start.getId() + ", ";
+        b += "\"endID\": " + end.getId() + ", ";
+        b += "\"prob\": " + prob + "}";
         return b;
     }
-    
+
 }

@@ -1,45 +1,30 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package oreilly;
 
 import java.io.IOException;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author jared.oreilly
- */
 public class GraphUI extends javax.swing.JFrame
 {
 
     Graph m;
 
-    /**
-     * Creates new form GraphUI
-     */
     public GraphUI()
     {
         m = new Graph("http://tagsuatappservice.azurewebsites.net");
         initComponents();
         updateDisplays();
-        //System.out.println(m);
-
-        //new DiagramUI(m).setVisible(true);
     }
 
     public GraphUI(String filename) throws IOException
     {
         m = new Graph("");
-
         m.importGraph(filename);
+
         initComponents();
+
         updateDisplays();
         txfFilename.setText(filename.substring(0, filename.length() - 5));
         txfMayan.setText(filename.substring(0, filename.length() - 5));
-        //System.out.println(m);
 
     }
 
@@ -221,13 +206,6 @@ public class GraphUI extends javax.swing.JFrame
         lblNodeFieldSelect.setText("Field");
 
         cbNodeFieldSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Title", "URL", "Type", "Cookie", "JSON", "Form" }));
-        cbNodeFieldSelect.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                cbNodeFieldSelectActionPerformed(evt);
-            }
-        });
 
         lblNodeNewValue.setText("New");
 
@@ -249,13 +227,6 @@ public class GraphUI extends javax.swing.JFrame
 
         cbxEdgeFieldSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Title", "StartID", "EndID", "Prob" }));
         cbxEdgeFieldSelect.setToolTipText("");
-        cbxEdgeFieldSelect.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                cbxEdgeFieldSelectActionPerformed(evt);
-            }
-        });
 
         lblEdgeNewValue.setText("New");
 
@@ -537,9 +508,8 @@ public class GraphUI extends javax.swing.JFrame
 
     private void btnAddNodeActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnAddNodeActionPerformed
     {//GEN-HEADEREND:event_btnAddNodeActionPerformed
-        //do validation on node fields
         boolean submit = true;
-        //txfTitleNode
+        //Title
         String t = txfTitleNode.getText().trim();
         String ty = (cbxType.getSelectedItem() + "");
         if (t.equals(""))
@@ -551,7 +521,7 @@ public class GraphUI extends javax.swing.JFrame
             lblTitleFeedback.setText("");
             lblTypeFeedback.setText("");
         }
-        //txfURL
+        //URL
         if (txfURL.getText().trim().equals(""))
         {
             lblURLFeedback.setText("Required!");
@@ -560,9 +530,6 @@ public class GraphUI extends javax.swing.JFrame
         {
             lblURLFeedback.setText("");
         }
-        //txfCookie
-        //txfJSON
-        //txfForm
 
         if (submit && m.nodeTaken(t, ty))
         {
@@ -589,14 +556,14 @@ public class GraphUI extends javax.swing.JFrame
                 {
                     form = null;
                 }
-                int id = m.addNode(title, URL, type, cookie, JSON, form);
+                m.addNode(title, URL, type, cookie, JSON, form);
             } else if ((cbxType.getSelectedItem() + "").equals("GET"))
             {
                 String title = txfTitleNode.getText();
                 String URL = txfURL.getText();
                 String type = (cbxType.getSelectedItem() + "");
                 String cookie = txfCookie.getText();
-                int id = m.addNode(title, URL, type, cookie);
+                m.addNode(title, URL, type, cookie);
             }
             updateDisplays();
         } else
@@ -664,10 +631,11 @@ public class GraphUI extends javax.swing.JFrame
             int startID = Integer.parseInt(txfStart.getText());
             int endID = Integer.parseInt(txfEnd.getText());
             double prob = Double.parseDouble(txfProb.getText());
-            int id = m.addEdge(title, startID, endID, prob);
+            m.addEdge(title, startID, endID, prob);
+
             updateDisplays();
+
             String text = txfStart.getText();
-            System.out.println(text);
             int q = Integer.parseInt(text);
             double z = m.fetchRemainingProb(q);
             if (z != 0)
@@ -680,6 +648,7 @@ public class GraphUI extends javax.swing.JFrame
                 txfProb.setEnabled(false);
             }
             lblProbFeedback.setText("<=" + z + "");
+
             lblActionFeedback.setText("");
 
         } else
@@ -701,7 +670,6 @@ public class GraphUI extends javax.swing.JFrame
 
     private void btnUpdateNodeActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnUpdateNodeActionPerformed
     {//GEN-HEADEREND:event_btnUpdateNodeActionPerformed
-
         if (cbxNodeIDSelect.getSelectedItem() != null)
         {
             int id = Integer.parseInt(cbxNodeIDSelect.getSelectedItem() + "");
@@ -752,16 +720,6 @@ public class GraphUI extends javax.swing.JFrame
 
 
     }//GEN-LAST:event_btnUpdateNodeActionPerformed
-
-    private void cbNodeFieldSelectActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cbNodeFieldSelectActionPerformed
-    {//GEN-HEADEREND:event_cbNodeFieldSelectActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbNodeFieldSelectActionPerformed
-
-    private void cbxEdgeFieldSelectActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cbxEdgeFieldSelectActionPerformed
-    {//GEN-HEADEREND:event_cbxEdgeFieldSelectActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbxEdgeFieldSelectActionPerformed
 
     private void btnUpdateEdgeActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnUpdateEdgeActionPerformed
     {//GEN-HEADEREND:event_btnUpdateEdgeActionPerformed
@@ -820,7 +778,6 @@ public class GraphUI extends javax.swing.JFrame
         try
         {
             String text = txfStart.getText();
-            System.out.println(text);
             int id = Integer.parseInt(text);
             double prob = m.fetchRemainingProb(id);
             if (prob != 0.0)
@@ -899,51 +856,6 @@ public class GraphUI extends javax.swing.JFrame
         }
         cbxEdgeIDSelect.setSelectedIndex(old);
 
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[])
-    {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try
-        {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
-            {
-                if ("Nimbus".equals(info.getName()))
-                {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex)
-        {
-            java.util.logging.Logger.getLogger(GraphUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex)
-        {
-            java.util.logging.Logger.getLogger(GraphUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex)
-        {
-            java.util.logging.Logger.getLogger(GraphUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex)
-        {
-            java.util.logging.Logger.getLogger(GraphUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable()
-        {
-            public void run()
-            {
-                new GraphUI().setVisible(true);
-            }
-        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

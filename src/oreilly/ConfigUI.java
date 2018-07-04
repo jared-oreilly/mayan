@@ -1,24 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package oreilly;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author jared.oreilly
- */
 public class ConfigUI extends javax.swing.JFrame
 {
 
     Graph m;
 
-    /**
-     * Creates new form ConfigUI
-     */
     public ConfigUI(Graph m)
     {
         initComponents();
@@ -39,10 +27,9 @@ public class ConfigUI extends javax.swing.JFrame
         try
         {
             cbxDeletePhase.setSelectedIndex(0);
-        }
-        catch(IllegalArgumentException e)
+        } catch (IllegalArgumentException e)
         {
-            
+
         }
         txaPhases.setText(m.getPhases());
     }
@@ -231,7 +218,6 @@ public class ConfigUI extends javax.swing.JFrame
         if (!t.equals(""))
         {
             m.setBaseUrl(txfBaseURL.getText());
-            //g.updateGraphConfig(m);
         } else
         {
             JOptionPane.showMessageDialog(null, "URL required!");
@@ -247,7 +233,6 @@ public class ConfigUI extends javax.swing.JFrame
             m.addPhase(Integer.parseInt(d), Integer.parseInt(a));
             txaPhases.setText(m.getPhases());
             fillInPhaseBox();
-            //g.updateGraphConfig(m);
         } else
         {
             JOptionPane.showMessageDialog(null, "Duration or arrival rate missing!");

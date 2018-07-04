@@ -2,10 +2,6 @@ package oreilly;
 
 import java.util.*;
 
-/**
- *
- * @author jared.oreilly
- */
 public class Node
 {
 
@@ -148,14 +144,12 @@ public class Node
         } else
         {
             double rand = Math.random();
-            //System.out.println(rand);
             int i = -1;
             double count = 0;
             while (rand > count)
             {
                 i++;
                 count += edges.get(i).getProb();
-                //System.out.println(count);
             }
             return edges.get(i).getEnd();
         }
@@ -170,7 +164,6 @@ public class Node
         return b;
     }
 
-    //the one step in the flow
     public String generateFlowStep()
     {
         String afs = "";
@@ -191,34 +184,24 @@ public class Node
         afs += "            Cookie: '" + cookie + "'\n";
         return afs;
     }
-    
+
     public String exportNode()
     {
         String b = "{";
-        b += "\"id\": \"" + id + "\", "; 
-        b += "\"title\": \"" + title + "\", "; 
-        b += "\"url\": \"" + url + "\", "; 
-        /*
-        b += "\"edges\": [";
-        for(int i = 0; i < numEdges; i++)
-        {
-            b += edges.get(0).getId() + ", ";
-        }
-        b = b.substring(0, b.length()-2);
-        b += "], ";
-        b += "\"numEdges\": " + numEdges + ", "; 
-        */
-        b += "\"type\": \"" + type + "\", "; 
-        b += "\"cookie\": \"" + cookie + "\", "; 
-        b += "\"json\": \"" + json + "\", "; 
-        b += "\"form\": \"" + form + "\"}"; 
+        b += "\"id\": \"" + id + "\", ";
+        b += "\"title\": \"" + title + "\", ";
+        b += "\"url\": \"" + url + "\", ";
+        b += "\"type\": \"" + type + "\", ";
+        b += "\"cookie\": \"" + cookie + "\", ";
+        b += "\"json\": \"" + json + "\", ";
+        b += "\"form\": \"" + form + "\"}";
         return b;
     }
-    
+
     public double fetchRemainingProb()
     {
         double count = 0;
-        for(int i = 0; i < numEdges; i++)
+        for (int i = 0; i < numEdges; i++)
         {
             count += edges.get(i).getProb();
         }
@@ -226,7 +209,6 @@ public class Node
         count = count * 1000;
         count = Math.round(count);
         count = count / 1000.0;
-        //System.out.println(count);
         return count;
     }
 
