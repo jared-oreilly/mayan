@@ -13,9 +13,12 @@ public class Graph
     private int numNodes;
     private ArrayList<Edge> edges;
     private int numEdges;
+    //possibly use a HashSet and WeightedScenario to make searching quicker
+    private ArrayList<Scenario> scens;
+    private int numScens;
     private ArrayList<Integer> durArr;
     private ArrayList<Integer> arrArr;
-    private int numScenarios = 5;
+    private int numScensToGenerate = 5;
 
     public Graph(String baseUrl)
     {
@@ -24,18 +27,20 @@ public class Graph
         numNodes = 0;
         edges = new ArrayList<Edge>();
         numEdges = 0;
+        scens = new ArrayList<Scenario>();
+        numScens = 0;
         durArr = new ArrayList<Integer>();
         arrArr = new ArrayList<Integer>();
     }
 
-    public int getNumScenarios()
+    public int getNumScenariosToGenerate()
     {
-        return numScenarios;
+        return numScensToGenerate;
     }
 
-    public void setNumScenarios(int numScenarios)
+    public void setNumScenariosToGenerate(int numScenarios)
     {
-        this.numScenarios = numScenarios;
+        this.numScensToGenerate = numScenarios;
     }
 
     private void addDur(int i)
@@ -185,6 +190,7 @@ public class Graph
         return edges.get(id);
     }
 
+    /*
     public String mayanArtillery(String filename)
     {
         String[] names = new String[numScenarios];
@@ -215,6 +221,76 @@ public class Graph
             System.out.println("Problem with writing to file: " + e);
         }
 
+        return ma;
+    }*/
+    public String mayanArtillery(String filename)
+    {
+        //make sure the artillery file is there/create itt
+        new File("gen/artillery/" + filename.substring(0, filename.indexOf("."))).mkdirs();
+        //clear artillery file if it is there
+        for (File file : new File("gen/artillery/" + filename.substring(0, filename.indexOf("."))).listFiles())
+        {
+            if (!file.isDirectory())
+            {
+                file.delete();
+            }
+        }
+
+        //generate the big file, after, do the small ones from the scenarios made in the big
+        String[] names = new String[numScensToGenerate];
+        int[] weights = new int[numScensToGenerate];
+
+        for (int i = 0; i < numScensToGenerate; i++)
+        {
+            names[i] = "Test" + i;
+            weights[i] = 1;
+        }
+
+        String ma = "";
+        ma += generateConfig();
+        ma += generateScenarios(names, weights);
+
+        try
+        {
+            String filema = ma.substring(0, ma.length() - 1);
+            String nl = System.getProperty("line.separator");
+            filema = filema.replace("\n", nl);
+
+            PrintWriter writer = new PrintWriter("gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + filename, "UTF-8");
+            writer.print(filema);
+            writer.close();
+        } catch (IOException e)
+        {
+            System.out.println("Problem with writing to file: " + e);
+        }
+
+        //do the small ones now
+        try
+        {
+            String temp, config = generateConfig();
+            String ls = System.getProperty("line.separator");
+            PrintWriter writer;
+            Scenario s;
+            for (int i = 0; i < numScens; i++)
+            {
+                s = scens.get(i);
+                temp = config;
+                temp += "scenarios:\n";
+                temp += s.getArtilleryRepresentation();
+                //System.out.println(scens.get(i));
+                temp = temp.substring(0, temp.length() - 1);
+                temp = temp.replace("\n", ls);
+
+                //new File("gen/artillery/" + filename.substring(0, filename.indexOf("."))).mkdirs();
+                writer = new PrintWriter("gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + s.getName() + ".txt", "UTF-8");
+                writer.print(temp);
+                writer.close();
+            }
+            System.out.println("NUMBER OF UNIQUE SCENARIOS GENERATED: " + numScens);
+        } catch (IOException e)
+        {
+            System.out.println("Problem with writing to file: " + e);
+        }
         return ma;
     }
 
@@ -258,33 +334,56 @@ public class Graph
     public String generateScenarios(String[] names, int[] weights)
     {
         String s = "scenarios:\n";
+        scens.clear();
+        numScens = 0;
         for (int i = 0; i < names.length; i++)
         {
+            //the function below should add this scenario, but also check if the same scenario has been created already, for grouping
             s += generateScenario(names[i], weights[i]);
         }
+        //
         return s;
     }
 
     public String generateScenario(String name, int weight)
     {
+        /*
+        Scenario scen = new Scenario(name, "", "");
         String s = "  - name: '" + name + "'\n";
         s += "    weight: " + weight + "\n";
         s += "    flow:\n";
         s += "      - log: '" + name + "'\n";
-        s += generateFlowSteps();
+        s += generateFlowSteps(scen);
         return s;
+         */
+
+        Scenario scen = new Scenario(name);
+        generateFlowSteps(scen);
+
+        //this part would use the HashSet rather, faster. This does the grouping of scenarios
+        int index = scens.indexOf(scen);
+        if (index == -1 || numScens == 0)
+        {
+            scens.add(scen);
+            numScens++;
+        } else
+        {
+            scens.get(index).incrementWeight();
+        }
+
+        //System.out.println(scen.getQuick());
+        return scen.getArtilleryRepresentation();
     }
 
-    public String generateFlowSteps()
+    public void generateFlowSteps(Scenario scen)
     {
-        String fs = "";
         Node node = startNode();
         while (node != null)
         {
-            fs += node.generateFlowStep();
+            scen.appendFlow(node.generateFlowStep());
+            scen.appendQuick(node.getQuickRepresentation() + " ");
             node = node.takeRandomPath();
         }
-        return fs;
     }
 
     public String exportGraph(String filename)
@@ -301,7 +400,7 @@ public class Graph
             b += "{\"duration\": " + durArr.get(i) + ", \"arrivalRate\": " + arrArr.get(i) + "}, ";
         }
         b = b.substring(0, b.length() - 2) + "], ";
-        b += "\"numScenarios\": \"" + numScenarios + "\", ";
+        b += "\"numScenarios\": \"" + numScensToGenerate + "\", ";
         b += "\"numNodes\": \"" + numNodes + "\", ";
         b += "\"nodes\": [";
         for (int i = 0; i < numNodes; i++)
@@ -355,7 +454,7 @@ public class Graph
                 addPhase(d, a);
             }
 
-            numScenarios = Integer.parseInt(jsonObject.get("numScenarios") + "");
+            numScensToGenerate = Integer.parseInt(jsonObject.get("numScenarios") + "");
 
             JSONArray nodes = (JSONArray) jsonObject.get("nodes");
             for (int i = 0; i < nodes.size(); i++)

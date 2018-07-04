@@ -211,5 +211,18 @@ public class Node
         count = count / 1000.0;
         return count;
     }
+    
+    public String getQuickRepresentation()
+    {
+        if(type.equals("GET"))
+        {
+            return url + "~0";
+        }
+        else
+        {
+            return url + "~1";
+        }
+        
+    }
 
 }

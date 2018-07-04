@@ -1,320 +1,117 @@
-Started phase 0, duration: 2s @ 14:02:59(+0200) 2018-07-04
-Test25
-Started phase 1, duration: 5s @ 14:03:01(+0200) 2018-07-04
-Test68
-Test41
-Test91
-Test45
-Test65
-Test54
-Test45
-Test97
-Test14
-Test69
-Started phase 2, duration: 10s @ 14:03:06(+0200) 2018-07-04
-Test79
-Test93
+Started phase 0, duration: 2s @ 22:08:26(+0200) 2018-07-04
 Test3
-Test58
-Test77
-Test95
-Test89
-Test35
-Test44
-Test26
-Test45
-Test97
-Test89
-Test26
-Test55
-Report @ 14:03:09(+0200) 2018-07-04
-  Scenarios launched:  26
-  Scenarios completed: 23
-  Requests completed:  47
-  RPS sent: 5.58
-  Request latency:
-    min: 174.2
-    max: 601.7
-    median: 386.8
-    p95: 533.9
-    p99: 601.7
-  Codes:
-    301: 24
-    404: 23
-
-Test72
-Test72
-Test23
-Test71
-Test0
-Test28
-Test21
-Test86
-Test77
-Test62
-Test72
-Test98
-Test13
-Test67
-Test36
-Test20
-Test47
-Test95
-Test36
-Test67
-Test22
-Test14
-Test56
-Test46
-Test36
-Test15
-Test83
-Test81
-Test86
-Test5
-Test38
-Test95
-Test91
-Test55
-Test16
-Started phase 3, duration: 20s @ 14:03:16(+0200) 2018-07-04
-Test30
-Test29
-Test93
-Test7
-Test76
-Test74
-Test48
-Test32
-Test80
-Test95
-Test32
-Test15
-Test3
-Test28
-Test75
-Test86
-Report @ 14:03:19(+0200) 2018-07-04
-  Scenarios launched:  51
-  Scenarios completed: 50
-  Requests completed:  100
-  RPS sent: 10.1
-  Request latency:
-    min: 175
-    max: 454.7
-    median: 333.4
-    p95: 429.3
-    p99: 453.1
-  Codes:
-    301: 50
-    404: 50
-
-Test92
-Test3
-Test19
-Test46
-Test18
-Test76
-Test47
-Test86
-Test58
-Test22
-Test47
-Test5
-Test36
-Test45
-Test42
-Test79
-Test31
-Test47
-Test29
-Test77
-Test86
-Test41
-Test33
-Test86
-Test52
-Test84
-Test65
-Test70
+Started phase 1, duration: 5s @ 22:08:28(+0200) 2018-07-04
+Test4
+Test4
+Test4
 Test2
-Test13
-Test19
-Test15
-Test95
-Test85
-Test28
-Test6
-Test95
-Test67
-Test77
-Test40
-Test92
-Test14
-Test42
-Test56
-Test67
-Test73
-Test6
-Test40
-Test89
-Test55
-Report @ 14:03:29(+0200) 2018-07-04
-  Scenarios launched:  50
-  Scenarios completed: 51
-  Requests completed:  101
-  RPS sent: 10.01
+Test4
+Test3
+Test3
+Test3
+Test4
+Test1
+Started phase 2, duration: 10s @ 22:08:33(+0200) 2018-07-04
+Test4
+Test2
+Test1
+Test3
+Test2
+Test2
+Test1
+Test1
+Test2
+Test4
+Test2
+Test4
+Test4
+Test4
+Test1
+Report @ 22:08:36(+0200) 2018-07-04
+  Scenarios launched:  26
+  Scenarios completed: 19
+  Requests completed:  66
+  RPS sent: 8.14
   Request latency:
-    min: 171.6
-    max: 452.3
-    median: 255.4
-    p95: 426.8
-    p99: 449.5
+    min: 191.3
+    max: 1561.9
+    median: 389.5
+    p95: 813.8
+    p99: 1531.1
   Codes:
-    301: 50
-    404: 51
+    200: 19
+    302: 47
 
-Test29
-Test27
-Test35
-Test50
-Test46
-Test18
-Test35
-Test93
-Test92
-Test94
-Test51
-Test90
-Test37
-Test53
-Test31
-Test26
-Test91
-Test36
-Test63
-Test13
-Test6
-Test82
-Test76
-Test26
-Test77
-Test80
-Test51
-Test66
-Test97
-Test74
-Test52
-Test84
-Test32
-Test82
-Test66
-Report @ 14:03:37(+0200) 2018-07-04
-  Scenarios launched:  35
-  Scenarios completed: 38
-  Requests completed:  76
-  RPS sent: 9.15
+Test3
+Test2
+Test3
+Test4
+Test0
+Test1
+Test2
+Test4
+Test2
+Test0
+Test3
+Test2
+Test2
+Test4
+Test3
+Test2
+Test1
+Test3
+Test1
+Test0
+Test4
+Test3
+Test4
+Test4
+Test2
+Test4
+Test4
+Test4
+Test4
+Test2
+Test4
+Test0
+Test0
+Test0
+Test4
+Test2
+Report @ 22:08:44(+0200) 2018-07-04
+  Scenarios launched:  36
+  Scenarios completed: 43
+  Requests completed:  120
+  RPS sent: 13.34
   Request latency:
-    min: 175.4
-    max: 583.7
-    median: 375
-    p95: 493.1
-    p99: 581.8
+    min: 191
+    max: 836.3
+    median: 395.5
+    p95: 804.1
+    p99: 835.9
   Codes:
-    301: 38
-    404: 38
+    200: 43
+    302: 77
 
 All virtual users finished
-Summary report @ 14:03:37(+0200) 2018-07-04
-  Scenarios launched:  162
-  Scenarios completed: 162
-  Requests completed:  324
-  RPS sent: 8.76
+Summary report @ 22:08:44(+0200) 2018-07-04
+  Scenarios launched:  62
+  Scenarios completed: 62
+  Requests completed:  186
+  RPS sent: 10.63
   Request latency:
-    min: 171.6
-    max: 601.7
-    median: 372.7
-    p95: 447
-    p99: 573.7
+    min: 191
+    max: 1561.9
+    median: 394.2
+    p95: 808.2
+    p99: 1177.6
   Scenario counts:
-    Test25: 1 (0.617%)
-    Test68: 1 (0.617%)
-    Test41: 2 (1.235%)
-    Test91: 3 (1.852%)
-    Test45: 4 (2.469%)
-    Test65: 2 (1.235%)
-    Test54: 1 (0.617%)
-    Test97: 3 (1.852%)
-    Test14: 3 (1.852%)
-    Test69: 1 (0.617%)
-    Test79: 2 (1.235%)
-    Test93: 3 (1.852%)
-    Test3: 3 (1.852%)
-    Test58: 2 (1.235%)
-    Test77: 5 (3.086%)
-    Test95: 6 (3.704%)
-    Test89: 3 (1.852%)
-    Test35: 3 (1.852%)
-    Test44: 1 (0.617%)
-    Test26: 4 (2.469%)
-    Test55: 3 (1.852%)
-    Test72: 3 (1.852%)
-    Test23: 1 (0.617%)
-    Test71: 1 (0.617%)
-    Test0: 1 (0.617%)
-    Test28: 3 (1.852%)
-    Test21: 1 (0.617%)
-    Test86: 6 (3.704%)
-    Test62: 1 (0.617%)
-    Test98: 1 (0.617%)
-    Test13: 3 (1.852%)
-    Test67: 4 (2.469%)
-    Test36: 5 (3.086%)
-    Test20: 1 (0.617%)
-    Test47: 4 (2.469%)
-    Test22: 2 (1.235%)
-    Test56: 2 (1.235%)
-    Test46: 3 (1.852%)
-    Test15: 3 (1.852%)
-    Test83: 1 (0.617%)
-    Test81: 1 (0.617%)
-    Test5: 2 (1.235%)
-    Test38: 1 (0.617%)
-    Test16: 1 (0.617%)
-    Test30: 1 (0.617%)
-    Test29: 3 (1.852%)
-    Test7: 1 (0.617%)
-    Test76: 3 (1.852%)
-    Test74: 2 (1.235%)
-    Test48: 1 (0.617%)
-    Test32: 3 (1.852%)
-    Test80: 2 (1.235%)
-    Test75: 1 (0.617%)
-    Test92: 3 (1.852%)
-    Test19: 2 (1.235%)
-    Test18: 2 (1.235%)
-    Test42: 2 (1.235%)
-    Test31: 2 (1.235%)
-    Test33: 1 (0.617%)
-    Test52: 2 (1.235%)
-    Test84: 2 (1.235%)
-    Test70: 1 (0.617%)
-    Test2: 1 (0.617%)
-    Test85: 1 (0.617%)
-    Test6: 3 (1.852%)
-    Test40: 2 (1.235%)
-    Test73: 1 (0.617%)
-    Test27: 1 (0.617%)
-    Test50: 1 (0.617%)
-    Test94: 1 (0.617%)
-    Test51: 2 (1.235%)
-    Test90: 1 (0.617%)
-    Test37: 1 (0.617%)
-    Test53: 1 (0.617%)
-    Test63: 1 (0.617%)
-    Test82: 2 (1.235%)
-    Test66: 2 (1.235%)
+    Test3: 11 (17.742%)
+    Test4: 22 (35.484%)
+    Test2: 15 (24.194%)
+    Test1: 8 (12.903%)
+    Test0: 6 (9.677%)
   Codes:
-    301: 162
-    404: 162
+    200: 62
+    302: 124
 

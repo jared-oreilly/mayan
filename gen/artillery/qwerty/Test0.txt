@@ -1,0 +1,18 @@
+config:
+  target: 'http://www.test.com'
+  phases:
+    - duration: 10
+      arrivalRate: 1
+scenarios:
+  - name: 'Test0'
+    weight: 5
+    flow:
+      - log: 'Test0'
+      - get:
+          url: 'a'
+          headers:
+            Cookie: ''
+      - get:
+          url: 'b'
+          headers:
+            Cookie: ''

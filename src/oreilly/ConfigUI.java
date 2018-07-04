@@ -12,7 +12,7 @@ public class ConfigUI extends javax.swing.JFrame
         initComponents();
         this.m = m;
         txfBaseURL.setText(m.getBaseUrl());
-        txfScenarios.setText(m.getNumScenarios() + "");
+        txfScenarios.setText(m.getNumScenariosToGenerate() + "");
         fillInPhaseBox();
     }
 
@@ -244,7 +244,7 @@ public class ConfigUI extends javax.swing.JFrame
         String s = txfScenarios.getText().trim();
         if (!s.equals(""))
         {
-            m.setNumScenarios(Integer.parseInt(s));
+            m.setNumScenariosToGenerate(Integer.parseInt(s));
         } else
         {
             JOptionPane.showMessageDialog(null, "Number of scenarios missing!");

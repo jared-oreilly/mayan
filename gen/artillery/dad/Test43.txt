@@ -1,0 +1,46 @@
+config:
+  target: 'http://www.supersport.co.za'
+  phases:
+    - duration: 10
+      arrivalRate: 1
+    - duration: 20
+      arrivalRate: 2
+    - duration: 30
+      arrivalRate: 5
+    - duration: 20
+      arrivalRate: 2
+    - duration: 10
+      arrivalRate: 1
+scenarios:
+  - name: 'Test43'
+    weight: 3
+    flow:
+      - log: 'Test43'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/quit'
+          headers:
+            Cookie: ''
