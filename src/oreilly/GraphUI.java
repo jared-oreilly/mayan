@@ -239,8 +239,9 @@ public class GraphUI extends javax.swing.JFrame
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("GRAPH");
+        jLabel1.setText("MAYAN GRAPH");
 
         btnMA.setText("Mayan Artillery");
         btnMA.addActionListener(new java.awt.event.ActionListener()
