@@ -216,11 +216,11 @@ public class Node
     {
         if(type.equals("GET"))
         {
-            return url + "~0";
+            return url.replace("/", "-") + "~0";
         }
         else
         {
-            return url + "~1";
+            return url.replace("/", "-") + "~1";
         }
         
     }

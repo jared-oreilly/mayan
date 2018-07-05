@@ -12,10 +12,10 @@ config:
     - duration: 10
       arrivalRate: 5
 scenarios:
-  - name: 'Test15'
-    weight: 11
+  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
+    weight: 1
     flow:
-      - log: 'Test15'
+      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
       - get:
           url: '/'
           headers:

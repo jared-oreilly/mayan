@@ -52,7 +52,7 @@ public class Scenario
 
     public String getQuick()
     {
-        return quick;
+        return quick.substring(0, quick.length()-1);
     }
 
     public void setQuick(String quick)
@@ -72,10 +72,11 @@ public class Scenario
     
     public String getArtilleryRepresentation()
     {
-        String s = "  - name: '" + name + "'\n";
+        String use = quick.substring(0, quick.length()-1);
+        String s = "  - name: '" + use + "'\n";
         s += "    weight: " + weight + "\n";
         s += "    flow:\n";
-        s += "      - log: '" + name + "'\n";
+        s += "      - log: '" + use + "'\n";
         s += flow + "\n";
         return s;
     }

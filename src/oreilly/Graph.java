@@ -330,7 +330,7 @@ public class Graph
                 temp = temp.replace("\n", ls);
 
                 //new File("gen/artillery/" + filename.substring(0, filename.indexOf("."))).mkdirs();
-                writer = new PrintWriter("gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + s.getName() + ".txt", "UTF-8");
+                writer = new PrintWriter("gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + s.getQuick() + ".txt", "UTF-8");
                 writer.print(temp);
                 writer.close();
             }
@@ -410,7 +410,7 @@ public class Graph
 
                     if (!fn.equals(filename))
                     {
-                        System.out.println(count + ": Running " + fn);
+                        System.out.print(count + ": Running " + fn + "... ");
                         Process pr = rt.exec("cmd /c artillery run gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + fn + " > gen/runs/" + filename.substring(0, filename.indexOf(".")) + "/" + fn);
 
                         BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
@@ -421,7 +421,7 @@ public class Graph
                         }
 
                         int exitVal = pr.waitFor();
-                        System.out.println("Done with " + fn);
+                        System.out.println("done");
                         count++;
                     } else
                     {
@@ -433,7 +433,7 @@ public class Graph
 
             if (runMain)
             {
-                System.out.println("Running main file!");
+                System.out.println(">: Running main file... ");
 
                 //run main file
                 Process pr = rt.exec("cmd /c artillery run gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + filename + " > gen/runs/" + filename.substring(0, filename.indexOf(".")) + "/" + filename);
@@ -446,6 +446,7 @@ public class Graph
                 }
 
                 int exitVal = pr.waitFor();
+                System.out.println("done");
             }
 
         } catch (Exception e)
@@ -528,7 +529,7 @@ public class Graph
         while (node != null)
         {
             scen.appendFlow(node.generateFlowStep());
-            scen.appendQuick(node.getQuickRepresentation() + " ");
+            scen.appendQuick(node.getQuickRepresentation() + "_");
             node = node.takeRandomPath();
         }
     }
