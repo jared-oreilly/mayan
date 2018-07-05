@@ -1,5 +1,5 @@
 config:
-  target: 'http://www.supersport.co.za'
+  target: 'http://www.test.com'
   phases:
     - duration: 10
       arrivalRate: 1
@@ -12,19 +12,15 @@ config:
     - duration: 10
       arrivalRate: 5
 scenarios:
-  - name: 'Test0'
-    weight: 56
+  - name: 'Test1'
+    weight: 76
     flow:
-      - log: 'Test0'
-      - get:
-          url: '/'
+      - log: 'Test1'
+      - post:
+          url: '/a'
           headers:
             Cookie: ''
       - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/quit'
+          url: '/c'
           headers:
             Cookie: ''

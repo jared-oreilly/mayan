@@ -3,14 +3,14 @@ config:
   phases:
     - duration: 10
       arrivalRate: 1
-    - duration: 20
-      arrivalRate: 2
-    - duration: 30
-      arrivalRate: 5
-    - duration: 20
+    - duration: 10
       arrivalRate: 2
     - duration: 10
-      arrivalRate: 1
+      arrivalRate: 3
+    - duration: 10
+      arrivalRate: 4
+    - duration: 10
+      arrivalRate: 5
 scenarios:
   - name: 'Test7'
     weight: 2
@@ -22,6 +22,10 @@ scenarios:
             Cookie: ''
       - get:
           url: '/rugby'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
           headers:
             Cookie: ''
       - get:

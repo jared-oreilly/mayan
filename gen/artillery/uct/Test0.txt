@@ -1,5 +1,5 @@
 config:
-  target: 'http://www.supersport.co.za'
+  target: 'http://www.uct.ac.za'
   phases:
     - duration: 10
       arrivalRate: 1
@@ -13,7 +13,7 @@ config:
       arrivalRate: 5
 scenarios:
   - name: 'Test0'
-    weight: 56
+    weight: 34
     flow:
       - log: 'Test0'
       - get:
@@ -21,10 +21,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/quit'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''

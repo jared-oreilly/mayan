@@ -1,0 +1,256 @@
+Started phase 0, duration: 10s @ 09:14:57(+0200) 2018-07-05
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Report @ 09:15:07(+0200) 2018-07-05
+  Scenarios launched:  9
+  Scenarios completed: 9
+  Requests completed:  18
+  RPS sent: 2.01
+  Request latency:
+    min: 32.8
+    max: 177.3
+    median: 58.1
+    p95: 147.2
+    p99: 177.3
+  Codes:
+    200: 18
+
+Started phase 1, duration: 10s @ 09:15:07(+0200) 2018-07-05
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Report @ 09:15:17(+0200) 2018-07-05
+  Scenarios launched:  20
+  Scenarios completed: 20
+  Requests completed:  40
+  RPS sent: 4
+  Request latency:
+    min: 32.7
+    max: 1083.6
+    median: 65.5
+    p95: 92.5
+    p99: 1083.6
+  Codes:
+    200: 40
+
+Started phase 2, duration: 10s @ 09:15:17(+0200) 2018-07-05
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Report @ 09:15:27(+0200) 2018-07-05
+  Scenarios launched:  30
+  Scenarios completed: 30
+  Requests completed:  60
+  RPS sent: 6.01
+  Request latency:
+    min: 32.4
+    max: 103.2
+    median: 52.4
+    p95: 89.2
+    p99: 102.3
+  Codes:
+    200: 60
+
+Started phase 3, duration: 10s @ 09:15:27(+0200) 2018-07-05
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Report @ 09:15:37(+0200) 2018-07-05
+  Scenarios launched:  40
+  Scenarios completed: 40
+  Requests completed:  80
+  RPS sent: 8
+  Request latency:
+    min: 32.3
+    max: 197.3
+    median: 53.5
+    p95: 97.6
+    p99: 176.5
+  Codes:
+    200: 80
+
+Started phase 4, duration: 10s @ 09:15:37(+0200) 2018-07-05
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Test1
+Report @ 09:15:47(+0200) 2018-07-05
+  Scenarios launched:  50
+  Scenarios completed: 49
+  Requests completed:  99
+  RPS sent: 10.01
+  Request latency:
+    min: 32.2
+    max: 152.6
+    median: 61.5
+    p95: 122.7
+    p99: 146.2
+  Codes:
+    200: 99
+
+Test1
+Report @ 09:15:47(+0200) 2018-07-05
+  Scenarios launched:  1
+  Scenarios completed: 2
+  Requests completed:  3
+  RPS sent: 4
+  Request latency:
+    min: 32.8
+    max: 90
+    median: 34.4
+    p95: 90
+    p99: 90
+  Codes:
+    200: 3
+
+All virtual users finished
+Summary report @ 09:15:47(+0200) 2018-07-05
+  Scenarios launched:  150
+  Scenarios completed: 150
+  Requests completed:  300
+  RPS sent: 6.06
+  Request latency:
+    min: 32.2
+    max: 1083.6
+    median: 55.2
+    p95: 104.1
+    p99: 164.9
+  Scenario counts:
+    Test1: 150 (100%)
+  Codes:
+    200: 300
+

@@ -12,16 +12,24 @@ config:
     - duration: 10
       arrivalRate: 5
 scenarios:
-  - name: 'Test0'
-    weight: 56
+  - name: 'Test6'
+    weight: 3
     flow:
-      - log: 'Test0'
+      - log: 'Test6'
       - get:
           url: '/'
           headers:
             Cookie: ''
       - get:
           url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/rugby'
           headers:
             Cookie: ''
       - get:

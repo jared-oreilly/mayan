@@ -19,7 +19,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -58,7 +58,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/contacts'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -97,7 +97,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -136,7 +136,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/contacts'
           headers:
             Cookie: ''
 
@@ -175,7 +175,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -201,7 +201,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/contacts'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -214,7 +214,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/contacts'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -240,7 +240,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/contacts'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -279,7 +279,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/faculties-departments/faculty-factsheets'
+          url: '/main/contacts'
           headers:
             Cookie: ''
 
@@ -292,7 +292,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/contacts'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -305,7 +305,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/faculties-departments/faculty-factsheets'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -318,7 +318,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/faculties-departments/faculty-factsheets'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -331,7 +331,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/contacts'
           headers:
             Cookie: ''
 
@@ -344,7 +344,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/contacts'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -357,7 +357,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/contacts'
           headers:
             Cookie: ''
 
@@ -383,7 +383,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -409,7 +409,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/contacts'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -422,7 +422,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/faculties-departments/faculty-factsheets'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -448,7 +448,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/faculties-departments/faculty-factsheets'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -461,7 +461,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/faculties-departments/faculty-factsheets'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -474,7 +474,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -487,7 +487,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/faculties-departments/faculty-factsheets'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -500,7 +500,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/faculties-departments/faculty-factsheets'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -513,7 +513,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -526,7 +526,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/contacts'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -539,7 +539,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -552,7 +552,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/faculties-departments/faculty-factsheets'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -565,7 +565,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/contacts'
           headers:
             Cookie: ''
 
@@ -578,7 +578,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -591,7 +591,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/contacts'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -630,7 +630,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/contacts'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -643,7 +643,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/contacts'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -656,7 +656,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/contacts'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -734,7 +734,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -747,7 +747,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/contacts'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -760,7 +760,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/contacts'
           headers:
             Cookie: ''
 
@@ -773,7 +773,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -799,7 +799,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/contacts'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -812,7 +812,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -838,7 +838,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/contacts'
           headers:
             Cookie: ''
 
@@ -851,7 +851,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -864,7 +864,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/faculties-departments/faculty-factsheets'
+          url: '/main/contacts'
           headers:
             Cookie: ''
 
@@ -903,7 +903,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/contacts'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -916,7 +916,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -929,7 +929,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/faculties-departments/faculty-factsheets'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -942,7 +942,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/contacts'
           headers:
             Cookie: ''
 
@@ -955,7 +955,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -981,7 +981,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -994,7 +994,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/contacts'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -1020,7 +1020,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/faculties-departments/faculty-factsheets'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -1033,7 +1033,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -1059,7 +1059,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/contacts'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -1072,7 +1072,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/contacts'
           headers:
             Cookie: ''
 
@@ -1085,7 +1085,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/contacts'
           headers:
             Cookie: ''
 
@@ -1098,7 +1098,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -1111,7 +1111,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/contacts'
           headers:
             Cookie: ''
 
@@ -1137,7 +1137,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -1150,7 +1150,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -1163,7 +1163,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/contacts'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -1176,7 +1176,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -1228,7 +1228,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/contacts'
           headers:
             Cookie: ''
 
@@ -1254,7 +1254,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -1267,7 +1267,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -1293,7 +1293,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/faculties-departments/faculty-factsheets'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -1306,6 +1306,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/faculties-departments/faculty-factsheets'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''

@@ -55,14 +55,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -97,14 +89,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -115,6 +99,14 @@ scenarios:
       - log: 'Test5'
       - get:
           url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/rugby'
           headers:
             Cookie: ''
       - get:
@@ -139,6 +131,14 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/rugby'
+          headers:
+            Cookie: ''
+      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -153,6 +153,10 @@ scenarios:
             Cookie: ''
       - get:
           url: '/rugby'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
           headers:
             Cookie: ''
       - get:
@@ -220,14 +224,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/rugby'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
           url: '/football'
           headers:
             Cookie: ''
@@ -242,6 +238,18 @@ scenarios:
       - log: 'Test12'
       - get:
           url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/rugby'
           headers:
             Cookie: ''
       - get:
@@ -266,6 +274,14 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/rugby'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -276,6 +292,22 @@ scenarios:
       - log: 'Test14'
       - get:
           url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/rugby'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
           headers:
             Cookie: ''
       - get:
@@ -326,10 +358,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -373,6 +401,10 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -386,7 +418,15 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/rugby'
+          headers:
+            Cookie: ''
+      - get:
           url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/rugby'
           headers:
             Cookie: ''
       - get:
@@ -441,6 +481,14 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -454,18 +502,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/rugby'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -474,6 +510,14 @@ scenarios:
     weight: 1
     flow:
       - log: 'Test26'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
       - get:
           url: '/'
           headers:
@@ -500,18 +544,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/rugby'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -522,10 +554,6 @@ scenarios:
       - log: 'Test28'
       - get:
           url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
           headers:
             Cookie: ''
       - get:
@@ -563,6 +591,22 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -573,6 +617,18 @@ scenarios:
       - log: 'Test31'
       - get:
           url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
           headers:
             Cookie: ''
       - get:
@@ -590,10 +646,6 @@ scenarios:
             Cookie: ''
       - get:
           url: '/football'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/rugby'
           headers:
             Cookie: ''
       - get:
@@ -627,6 +679,14 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/rugby'
+          headers:
+            Cookie: ''
+      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -640,7 +700,11 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/rugby'
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/'
           headers:
             Cookie: ''
       - get:
@@ -665,10 +729,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/rugby'
-          headers:
-            Cookie: ''
-      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -677,6 +737,14 @@ scenarios:
     weight: 1
     flow:
       - log: 'Test37'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
       - get:
           url: '/'
           headers:
@@ -699,6 +767,18 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/rugby'
+          headers:
+            Cookie: ''
+      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -709,6 +789,10 @@ scenarios:
       - log: 'Test39'
       - get:
           url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
           headers:
             Cookie: ''
       - get:
@@ -746,14 +830,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/rugby'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -779,22 +855,6 @@ scenarios:
     weight: 1
     flow:
       - log: 'Test43'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
-          headers:
-            Cookie: ''
       - get:
           url: '/'
           headers:
@@ -838,6 +898,10 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/rugby'
+          headers:
+            Cookie: ''
+      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -846,6 +910,14 @@ scenarios:
     weight: 1
     flow:
       - log: 'Test46'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
       - get:
           url: '/'
           headers:
@@ -893,32 +965,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/quit'
-          headers:
-            Cookie: ''
-
-  - name: 'Test49'
-    weight: 1
-    flow:
-      - log: 'Test49'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/quit'
-          headers:
-            Cookie: ''
-
-  - name: 'Test50'
-    weight: 1
-    flow:
-      - log: 'Test50'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
           url: '/football'
           headers:
             Cookie: ''
@@ -935,7 +981,33 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/quit'
+          headers:
+            Cookie: ''
+
+  - name: 'Test49'
+    weight: 1
+    flow:
+      - log: 'Test49'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
           url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/quit'
+          headers:
+            Cookie: ''
+
+  - name: 'Test50'
+    weight: 1
+    flow:
+      - log: 'Test50'
+      - get:
+          url: '/'
           headers:
             Cookie: ''
       - get:
@@ -947,6 +1019,22 @@ scenarios:
     weight: 1
     flow:
       - log: 'Test51'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/rugby'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/rugby'
+          headers:
+            Cookie: ''
       - get:
           url: '/'
           headers:
@@ -973,26 +1061,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/rugby'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/rugby'
-          headers:
-            Cookie: ''
-      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -1003,14 +1071,6 @@ scenarios:
       - log: 'Test53'
       - get:
           url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/rugby'
           headers:
             Cookie: ''
       - get:
@@ -1082,26 +1142,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -1119,14 +1159,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/rugby'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -1135,6 +1167,14 @@ scenarios:
     weight: 1
     flow:
       - log: 'Test59'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
       - get:
           url: '/'
           headers:
@@ -1161,6 +1201,10 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -1171,10 +1215,6 @@ scenarios:
       - log: 'Test61'
       - get:
           url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
           headers:
             Cookie: ''
       - get:
@@ -1225,10 +1265,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -1239,14 +1275,6 @@ scenarios:
       - log: 'Test65'
       - get:
           url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/rugby'
           headers:
             Cookie: ''
       - get:
@@ -1301,7 +1329,23 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
           url: '/rugby'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
           headers:
             Cookie: ''
       - get:
@@ -1339,10 +1383,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -1353,6 +1393,14 @@ scenarios:
       - log: 'Test71'
       - get:
           url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/rugby'
           headers:
             Cookie: ''
       - get:
@@ -1386,6 +1434,14 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/rugby'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
           url: '/football'
           headers:
             Cookie: ''
@@ -1398,14 +1454,6 @@ scenarios:
     weight: 1
     flow:
       - log: 'Test74'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
-          headers:
-            Cookie: ''
       - get:
           url: '/'
           headers:
@@ -1436,6 +1484,14 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -1461,14 +1517,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -1483,6 +1531,10 @@ scenarios:
             Cookie: ''
       - get:
           url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/'
           headers:
             Cookie: ''
       - get:
@@ -1528,14 +1580,6 @@ scenarios:
     weight: 1
     flow:
       - log: 'Test80'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
-          headers:
-            Cookie: ''
       - get:
           url: '/'
           headers:
@@ -1596,10 +1640,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -1617,6 +1657,10 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -1630,11 +1674,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/'
+          url: '/rugby'
           headers:
             Cookie: ''
       - get:
@@ -1655,14 +1695,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -1677,6 +1709,10 @@ scenarios:
             Cookie: ''
       - get:
           url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/rugby'
           headers:
             Cookie: ''
       - get:
@@ -1820,6 +1856,10 @@ scenarios:
           headers:
             Cookie: ''
       - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
           url: '/quit'
           headers:
             Cookie: ''
@@ -1828,14 +1868,6 @@ scenarios:
     weight: 1
     flow:
       - log: 'Test96'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
-          headers:
-            Cookie: ''
       - get:
           url: '/'
           headers:
@@ -1855,6 +1887,14 @@ scenarios:
       - log: 'Test97'
       - get:
           url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/rugby'
           headers:
             Cookie: ''
       - get:
@@ -1883,22 +1923,6 @@ scenarios:
     weight: 1
     flow:
       - log: 'Test99'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
-          headers:
-            Cookie: ''
       - get:
           url: '/'
           headers:

@@ -31,7 +31,7 @@ public class GraphUI extends javax.swing.JFrame
     public void updateGraphConfig(Graph other)
     {
         m.setBaseUrl(other.getBaseUrl());
-        m.addPhase(other.getLastDur(), other.getLastArr());
+        m.addPhaseMain(other.getLastDurMain(), other.getLastArrMain());
     }
 
     /**
@@ -810,7 +810,8 @@ public class GraphUI extends javax.swing.JFrame
         switch (choice)
         {
             case JOptionPane.YES_OPTION:
-                m.runArtillery(ma, txfMayan.getText() + ".txt");
+                //m.runArtillery(ma, txfMayan.getText() + ".txt", false);
+                m.runArtillery(ma, txfMayan.getText() + ".txt", true);
                 JOptionPane.showMessageDialog(null, txfMayan.getText() + ".txt has been run on Artillery successfully!");
                 int choice2 = JOptionPane.showConfirmDialog(null, "Would you like to exit Mayan?");
                 switch (choice2)

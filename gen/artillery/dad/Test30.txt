@@ -3,19 +3,19 @@ config:
   phases:
     - duration: 10
       arrivalRate: 1
-    - duration: 20
-      arrivalRate: 2
-    - duration: 30
-      arrivalRate: 5
-    - duration: 20
+    - duration: 10
       arrivalRate: 2
     - duration: 10
-      arrivalRate: 1
+      arrivalRate: 3
+    - duration: 10
+      arrivalRate: 4
+    - duration: 10
+      arrivalRate: 5
 scenarios:
-  - name: 'Test52'
-    weight: 1
+  - name: 'Test30'
+    weight: 2
     flow:
-      - log: 'Test52'
+      - log: 'Test30'
       - get:
           url: '/'
           headers:
@@ -25,7 +25,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/rugby'
+          url: '/'
           headers:
             Cookie: ''
       - get:
@@ -38,10 +38,6 @@ scenarios:
             Cookie: ''
       - get:
           url: '/football'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/rugby'
           headers:
             Cookie: ''
       - get:

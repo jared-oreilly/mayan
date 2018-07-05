@@ -16,8 +16,10 @@ public class Graph
     //possibly use a HashSet and WeightedScenario to make searching quicker
     private ArrayList<Scenario> scens;
     private int numScens;
-    private ArrayList<Integer> durArr;
-    private ArrayList<Integer> arrArr;
+    private ArrayList<Integer> durArrMain;
+    private ArrayList<Integer> arrArrMain;
+    private ArrayList<Integer> durArrSingle;
+    private ArrayList<Integer> arrArrSingle;
     private int numScensToGenerate = 5;
 
     public Graph(String baseUrl)
@@ -29,8 +31,10 @@ public class Graph
         numEdges = 0;
         scens = new ArrayList<Scenario>();
         numScens = 0;
-        durArr = new ArrayList<Integer>();
-        arrArr = new ArrayList<Integer>();
+        durArrMain = new ArrayList<Integer>();
+        arrArrMain = new ArrayList<Integer>();
+        durArrSingle = new ArrayList<Integer>();
+        arrArrSingle = new ArrayList<Integer>();
     }
 
     public int getNumScenariosToGenerate()
@@ -43,49 +47,96 @@ public class Graph
         this.numScensToGenerate = numScenarios;
     }
 
-    private void addDur(int i)
+    private void addDurMain(int i)
     {
-        durArr.add((Integer) i);
+        durArrMain.add((Integer) i);
     }
 
-    private void addArr(int i)
+    private void addArrMain(int i)
     {
-        arrArr.add((Integer) i);
+        arrArrMain.add((Integer) i);
     }
 
-    public void addPhase(int d, int a)
+    public void addPhaseMain(int d, int a)
     {
-        addDur(d);
-        addArr(a);
+        addDurMain(d);
+        addArrMain(a);
     }
 
-    public void deletePhase(int id)
+    public void deletePhaseMain(int id)
     {
-        durArr.remove(id);
-        arrArr.remove(id);
+        durArrMain.remove(id);
+        arrArrMain.remove(id);
     }
 
-    public int getNumPhases()
+    public int getNumPhasesMain()
     {
-        return durArr.size();
+        return durArrMain.size();
     }
 
-    public int getLastDur()
+    public int getLastDurMain()
     {
-        return durArr.get(durArr.size() - 1);
+        return durArrMain.get(durArrMain.size() - 1);
     }
 
-    public int getLastArr()
+    public int getLastArrMain()
     {
-        return arrArr.get(arrArr.size() - 1);
+        return arrArrMain.get(arrArrMain.size() - 1);
     }
 
-    public String getPhases()
+    public String getPhasesMain()
     {
         String b = "";
-        for (int i = 0; i < durArr.size(); i++)
+        for (int i = 0; i < durArrMain.size(); i++)
         {
-            b += "Phase " + i + ": duration = " + durArr.get(i) + ", arrivalRate = " + arrArr.get(i) + "/s\n";
+            b += "Phase " + i + ": duration = " + durArrMain.get(i) + ", arrivalRate = " + arrArrMain.get(i) + "/s\n";
+        }
+        return b;
+    }
+
+    private void addDurSingle(int i)
+    {
+        durArrSingle.add((Integer) i);
+    }
+
+    private void addArrSingle(int i)
+    {
+        arrArrSingle.add((Integer) i);
+    }
+
+    public void addPhaseSingle(int d, int a)
+    {
+        addDurSingle(d);
+        addArrSingle(a);
+    }
+
+    public void deletePhaseSingle(int id)
+    {
+        durArrSingle.remove(id);
+        arrArrSingle.remove(id);
+    }
+
+    public int getNumPhasesSingle()
+    {
+        return durArrSingle.size();
+    }
+
+    public int getLastDurSingle()
+    {
+        return durArrSingle.get(durArrSingle.size() - 1);
+    }
+
+    public int getLastArrSingle()
+    {
+        return arrArrSingle.get(arrArrSingle.size() - 1);
+    }
+
+    public String getPhasesSingle()
+    {
+        String b = "";
+        for (int i = 0; i < durArrSingle.size(); i++)
+        {
+            b += "Phase " + i + ": duration = " + durArrSingle.get(i) + ", arrivalRate = " + arrArrSingle.get(i) + "/s\n";
         }
         return b;
     }
@@ -230,10 +281,7 @@ public class Graph
         //clear artillery file if it is there
         for (File file : new File("gen/artillery/" + filename.substring(0, filename.indexOf("."))).listFiles())
         {
-            if (!file.isDirectory())
-            {
-                file.delete();
-            }
+            file.delete();
         }
 
         //generate the big file, after, do the small ones from the scenarios made in the big
@@ -247,7 +295,7 @@ public class Graph
         }
 
         String ma = "";
-        ma += generateConfig();
+        ma += generateConfigMain();
         ma += generateScenarios(names, weights);
 
         try
@@ -267,7 +315,7 @@ public class Graph
         //do the small ones now
         try
         {
-            String temp, config = generateConfig();
+            String temp, config = generateConfigSingle();
             String ls = System.getProperty("line.separator");
             PrintWriter writer;
             Scenario s;
@@ -294,6 +342,7 @@ public class Graph
         return ma;
     }
 
+    /*
     public void runArtillery(String ma, String filename)
     {
         try
@@ -318,15 +367,94 @@ public class Graph
             System.out.println(e.toString());
         }
     }
+     */
+    public void runArtillery(String ma, String filename, boolean runTests)
+    {
+        try
+        {
+            //make sure folder in runs is there (create if not)
+            new File("gen/runs/" + filename.substring(0, filename.indexOf("."))).mkdirs();
+            
+            //delete all in that folder
+            for (File file : new File("gen/runs/" + filename.substring(0, filename.indexOf("."))).listFiles())
+            {
+                file.delete();
+            }
+             
 
-    public String generateConfig()
+            Runtime rt = Runtime.getRuntime();
+
+            //run tests for all single files
+            if (runTests)
+            {
+                System.out.println("going through mini tests!");
+                //go through all single files
+                for (File file : new File("gen/artillery/" + filename.substring(0, filename.indexOf("."))).listFiles())
+                {
+                    String fn = file.getName();
+                    
+                    if (!fn.equals(filename))
+                    {
+                        System.out.println("Running " + fn);
+                        Process pr = rt.exec("cmd /c artillery run gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + fn + " > gen/runs/" + filename.substring(0, filename.indexOf(".")) + "/" + fn);
+
+                        BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
+                        String line = null;
+                        while ((line = input.readLine()) != null)
+                        {
+                            System.out.println(line);
+                        }
+
+                        int exitVal = pr.waitFor();
+                    }
+                    else
+                    {
+                        System.out.println("Main file, do not run");
+                    }
+
+                }
+            }
+
+            System.out.println("Running main file!");
+            
+            //run main file
+            Process pr = rt.exec("cmd /c artillery run gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + filename + " > gen/runs/" + filename.substring(0, filename.indexOf(".")) + "/" + filename);
+
+            BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
+            String line = null;
+            while ((line = input.readLine()) != null)
+            {
+                System.out.println(line);
+            }
+
+            int exitVal = pr.waitFor();
+
+        } catch (Exception e)
+        {
+            System.out.println(e.toString());
+        }
+    }
+
+    public String generateConfigMain()
     {
         String c = "config:\n";
         c += "  target: '" + baseUrl + "'\n";
         c += "  phases:\n";
-        for (int i = 0; i < durArr.size(); i++)
+        for (int i = 0; i < durArrMain.size(); i++)
         {
-            c += "    - duration: " + durArr.get(i) + "\n      arrivalRate: " + arrArr.get(i) + "\n";
+            c += "    - duration: " + durArrMain.get(i) + "\n      arrivalRate: " + arrArrMain.get(i) + "\n";
+        }
+        return c;
+    }
+
+    public String generateConfigSingle()
+    {
+        String c = "config:\n";
+        c += "  target: '" + baseUrl + "'\n";
+        c += "  phases:\n";
+        for (int i = 0; i < durArrSingle.size(); i++)
+        {
+            c += "    - duration: " + durArrSingle.get(i) + "\n      arrivalRate: " + arrArrSingle.get(i) + "\n";
         }
         return c;
     }
@@ -390,16 +518,33 @@ public class Graph
     {
         String b = "{";
         b += "\"baseUrl\": \"" + baseUrl + "\", ";
-        b += "\"phases\": [";
-        if (durArr.isEmpty())
+
+        b += "\"phasesMain\": [";
+        if (durArrMain.isEmpty())
         {
             b += "{\"duration\": " + 1 + ", \"arrivalRate\": " + 1 + "}, ";
         }
-        for (int i = 0; i < durArr.size(); i++)
+        for (int i = 0; i < durArrMain.size(); i++)
         {
-            b += "{\"duration\": " + durArr.get(i) + ", \"arrivalRate\": " + arrArr.get(i) + "}, ";
+            b += "{\"duration\": " + durArrMain.get(i) + ", \"arrivalRate\": " + arrArrMain.get(i) + "}, ";
         }
         b = b.substring(0, b.length() - 2) + "], ";
+
+        b += "\"phasesSingle\": [";
+        if (durArrSingle.isEmpty())
+        {
+            b += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 1 + "}, ";
+            b += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 2 + "}, ";
+            b += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 3 + "}, ";
+            b += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 4 + "}, ";
+            b += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 5 + "}, ";
+        }
+        for (int i = 0; i < durArrSingle.size(); i++)
+        {
+            b += "{\"duration\": " + durArrSingle.get(i) + ", \"arrivalRate\": " + arrArrSingle.get(i) + "}, ";
+        }
+        b = b.substring(0, b.length() - 2) + "], ";
+
         b += "\"numScenarios\": \"" + numScensToGenerate + "\", ";
         b += "\"numNodes\": \"" + numNodes + "\", ";
         b += "\"nodes\": [";
@@ -445,13 +590,22 @@ public class Graph
             numNodes = 0;
             numEdges = 0;
 
-            JSONArray phases = (JSONArray) jsonObject.get("phases");
-            for (int i = 0; i < phases.size(); i++)
+            JSONArray phasesMain = (JSONArray) jsonObject.get("phasesMain");
+            for (int i = 0; i < phasesMain.size(); i++)
             {
-                JSONObject cur = (JSONObject) phases.get(i);
+                JSONObject cur = (JSONObject) phasesMain.get(i);
                 int d = Integer.parseInt(cur.get("duration") + "");
                 int a = Integer.parseInt(cur.get("arrivalRate") + "");
-                addPhase(d, a);
+                addPhaseMain(d, a);
+            }
+
+            JSONArray phasesSingle = (JSONArray) jsonObject.get("phasesSingle");
+            for (int i = 0; i < phasesSingle.size(); i++)
+            {
+                JSONObject cur = (JSONObject) phasesSingle.get(i);
+                int d = Integer.parseInt(cur.get("duration") + "");
+                int a = Integer.parseInt(cur.get("arrivalRate") + "");
+                addPhaseSingle(d, a);
             }
 
             numScensToGenerate = Integer.parseInt(jsonObject.get("numScenarios") + "");
@@ -542,9 +696,9 @@ public class Graph
     public int requestTotalTime()
     {
         int count = 0;
-        for (int i = 0; i < durArr.size(); i++)
+        for (int i = 0; i < durArrMain.size(); i++)
         {
-            count += durArr.get(i);
+            count += durArrMain.get(i);
         }
         return count;
     }
