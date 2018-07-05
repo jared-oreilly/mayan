@@ -806,7 +806,9 @@ public class GraphUI extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btnMAActionPerformed
         String ma = m.mayanArtillery(txfMayan.getText() + ".txt");
         JOptionPane.showMessageDialog(null, txfMayan.getText() + ".txt generated!");
-        boolean runMain, runSingle;
+        
+        boolean runMain, runSingle, runAverages;
+        
         int choice = JOptionPane.showConfirmDialog(null, "Would you like to run the main " + txfMayan.getText() + " file on Artillery (" + m.requestTotalMainTime() + ")?");
         switch (choice)
         {
@@ -817,43 +819,53 @@ public class GraphUI extends javax.swing.JFrame
                 runMain = false;
 
         }
-        int choice1 = JOptionPane.showConfirmDialog(null, "Would you also like to run the single scenario tests (" + m.requestTotalSingleTime() + ")?");
+        
+        int choice1 = JOptionPane.showConfirmDialog(null, "Would you like to run the single scenario tests (" + m.requestTotalSingleTime() + ")?");
         switch (choice1)
         {
             case JOptionPane.YES_OPTION:
                 runSingle = true;
+                
+                int choice2 = JOptionPane.showConfirmDialog(null, "For the singles, averages of 3 (" + (m.requestTotalSingleTime(true)) + ")?");
+                switch (choice2)
+                {
+                    case JOptionPane.YES_OPTION:
+                        runAverages = true;
+                        break;
+                    default:
+                        runAverages = false;
+                }
+                
                 break;
             default:
                 runSingle = false;
+                runAverages = false;
         }
-        
-        m.runArtillery(ma, txfMayan.getText() + ".txt", runMain, runSingle);
-        
-        if(runMain)
+
+        m.runArtillery(ma, txfMayan.getText() + ".txt", runMain, runSingle, runAverages);
+
+        if (runMain)
         {
-            if(runSingle)
+            if (runSingle)
             {
                 JOptionPane.showMessageDialog(null, "The main " + txfMayan.getText() + " file and single tests have been run on Artillery successfully!");
-            }
-            else
+            } else
             {
                 JOptionPane.showMessageDialog(null, "The main " + txfMayan.getText() + " file has been run on Artillery successfully!");
             }
-        }
-        else
+        } else
         {
-            if(runSingle)
+            if (runSingle)
             {
                 JOptionPane.showMessageDialog(null, "The single tests have been run on Artillery successfully!");
-            }
-            else
+            } else
             {
                 JOptionPane.showMessageDialog(null, "Nothing has been run on Artillery!");
             }
         }
 
-        int choice2 = JOptionPane.showConfirmDialog(null, "Would you like to exit Mayan?");
-        switch (choice2)
+        int choice3 = JOptionPane.showConfirmDialog(null, "Would you like to exit Mayan?");
+        switch (choice3)
         {
             case JOptionPane.YES_OPTION:
                 System.exit(0);

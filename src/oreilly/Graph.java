@@ -21,6 +21,7 @@ public class Graph
     private ArrayList<Integer> durArrSingle;
     private ArrayList<Integer> arrArrSingle;
     private int numScensToGenerate = 5;
+    private final int averageNumber = 3;
 
     public Graph(String baseUrl)
     {
@@ -368,7 +369,7 @@ public class Graph
         }
     }
      */
-    public void runArtillery(String ma, String filename, boolean runMain, boolean runSingle)
+    public void runArtillery(String ma, String filename, boolean runMain, boolean runSingle, boolean runAverages)
     {
         try
         {
@@ -378,17 +379,16 @@ public class Graph
             //delete all in that folder
             for (File file : new File("gen/runs/" + filename.substring(0, filename.indexOf("."))).listFiles())
             {
-                if(file.getName().equals(filename))
+                if (file.getName().equals(filename))
                 {
-                    if(runMain)
+                    if (runMain)
                     {
                         //System.out.println("deleting main!");
                         file.delete();
                     }
-                }
-                else
+                } else
                 {
-                    if(runSingle)
+                    if (runSingle)
                     {
                         //System.out.println("deleting single!");
                         file.delete();
@@ -401,7 +401,6 @@ public class Graph
             //run tests for all single files
             if (runSingle)
             {
-                System.out.println("going through mini tests!");
                 //go through all single files
                 int count = 0;
                 for (File file : new File("gen/artillery/" + filename.substring(0, filename.indexOf("."))).listFiles())
@@ -410,30 +409,53 @@ public class Graph
 
                     if (!fn.equals(filename))
                     {
-                        System.out.print(count + ": Running " + fn + "... ");
-                        Process pr = rt.exec("cmd /c artillery run gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + fn + " > gen/runs/" + filename.substring(0, filename.indexOf(".")) + "/" + fn);
-
-                        BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
-                        String line = null;
-                        while ((line = input.readLine()) != null)
+                        if (runAverages)
                         {
-                            System.out.println(line);
+                            for (int k = 0; k < averageNumber; k++)
+                            {
+                                System.out.print(count + ": Running " + fn + "... ");
+                                Process pr = rt.exec("cmd /c artillery run gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + fn + " > gen/runs/" + filename.substring(0, filename.indexOf(".")) + "/" + fn + "___" + k);
+
+                                BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
+                                String line = null;
+                                while ((line = input.readLine()) != null)
+                                {
+                                    System.out.println(line);
+                                }
+
+                                int exitVal = pr.waitFor();
+                                System.out.println("done");
+                                count++;
+                            }
+
+                        } else
+                        {
+                            System.out.print(count + ": Running " + fn + "... ");
+                            Process pr = rt.exec("cmd /c artillery run gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + fn + " > gen/runs/" + filename.substring(0, filename.indexOf(".")) + "/" + fn);
+
+                            BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
+                            String line = null;
+                            while ((line = input.readLine()) != null)
+                            {
+                                System.out.println(line);
+                            }
+
+                            int exitVal = pr.waitFor();
+                            System.out.println("done");
+                            count++;
                         }
 
-                        int exitVal = pr.waitFor();
-                        System.out.println("done");
-                        count++;
                     } else
                     {
                         //System.out.println("Main file, do not run");
                     }
-                    
+
                 }
             }
 
             if (runMain)
             {
-                System.out.println(">: Running main file... ");
+                System.out.print(">: Running main file... ");
 
                 //run main file
                 Process pr = rt.exec("cmd /c artillery run gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + filename + " > gen/runs/" + filename.substring(0, filename.indexOf(".")) + "/" + filename);
@@ -553,6 +575,9 @@ public class Graph
         b += "\"phasesSingle\": [";
         if (durArrSingle.isEmpty())
         {
+            //warm up phase
+            b += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 1 + "}, ";
+            //steadily increasing phase
             b += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 1 + "}, ";
             b += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 2 + "}, ";
             b += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 3 + "}, ";
@@ -720,8 +745,8 @@ public class Graph
         {
             count += durArrMain.get(i);
         }
-        int h = count / (60*60);
-        count %= (60*60);
+        int h = count / (60 * 60);
+        count %= (60 * 60);
         int m = count / 60;
         count %= 60;
         return "" + h + "h:" + m + "m:" + count + "s";
@@ -735,8 +760,25 @@ public class Graph
             each += durArrSingle.get(i);
         }
         int count = each * numScens;
-        int h = count / (60*60);
-        count %= (60*60);
+        int h = count / (60 * 60);
+        count %= (60 * 60);
+        int m = count / 60;
+        count %= 60;
+        return "" + h + "h:" + m + "m:" + count + "s";
+    }
+
+    //for averagees
+    public String requestTotalSingleTime(boolean flag)
+    {
+        int each = 0;
+        for (int i = 0; i < durArrSingle.size(); i++)
+        {
+            each += durArrSingle.get(i);
+        }
+        int count = each * numScens;
+        count *= 3;
+        int h = count / (60 * 60);
+        count %= (60 * 60);
         int m = count / 60;
         count %= 60;
         return "" + h + "h:" + m + "m:" + count + "s";

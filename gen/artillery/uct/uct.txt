@@ -2,8 +2,6 @@ config:
   target: 'http://www.uct.ac.za'
   phases:
     - duration: 10
-      arrivalRate: 1
-    - duration: 10
       arrivalRate: 2
     - duration: 10
       arrivalRate: 3
@@ -23,42 +21,68 @@ scenarios:
           headers:
             Cookie: ''
 
-  - name: '-~0_-main-applicants-students~0'
+  - name: '-~0_-main-contacts~0'
     weight: 1
     flow:
-      - log: '-~0_-main-applicants-students~0'
+      - log: '-~0_-main-contacts~0'
       - get:
           url: '/'
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/contacts'
           headers:
             Cookie: ''
 
-  - name: '-~0_-main-applicants-students~0'
+  - name: '-~0_-main-contacts~0'
     weight: 1
     flow:
-      - log: '-~0_-main-applicants-students~0'
+      - log: '-~0_-main-contacts~0'
       - get:
           url: '/'
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/contacts'
           headers:
             Cookie: ''
 
-  - name: '-~0_-main-applicants-students~0'
+  - name: '-~0_-main-contacts~0'
     weight: 1
     flow:
-      - log: '-~0_-main-applicants-students~0'
+      - log: '-~0_-main-contacts~0'
       - get:
           url: '/'
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/contacts'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-contacts~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-contacts~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/contacts'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-contacts~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-contacts~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/contacts'
           headers:
             Cookie: ''
 
@@ -140,84 +164,6 @@ scenarios:
           headers:
             Cookie: ''
 
-  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/faculties-departments/faculty-factsheets'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/faculties-departments/faculty-factsheets'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-contacts~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-contacts~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/contacts'
-          headers:
-            Cookie: ''
-
   - name: '-~0_-main-applicants-students~0'
     weight: 1
     flow:
@@ -241,84 +187,6 @@ scenarios:
             Cookie: ''
       - get:
           url: '/main/contacts'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-contacts~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-contacts~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/contacts'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-contacts~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-contacts~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/contacts'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -452,19 +320,6 @@ scenarios:
           headers:
             Cookie: ''
 
-  - name: '-~0_-main-contacts~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-contacts~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/contacts'
-          headers:
-            Cookie: ''
-
   - name: '-~0_-main-applicants-students~0'
     weight: 1
     flow:
@@ -475,422 +330,6 @@ scenarios:
             Cookie: ''
       - get:
           url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-contacts~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-contacts~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/contacts'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-contacts~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-contacts~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/contacts'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/faculties-departments/faculty-factsheets'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/faculties-departments/faculty-factsheets'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/faculties-departments/faculty-factsheets'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-contacts~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-contacts~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/contacts'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/faculties-departments/faculty-factsheets'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/faculties-departments/faculty-factsheets'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/faculties-departments/faculty-factsheets'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/faculties-departments/faculty-factsheets'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/faculties-departments/faculty-factsheets'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/faculties-departments/faculty-factsheets'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-contacts~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-contacts~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/contacts'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-contacts~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-contacts~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/contacts'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-contacts~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-contacts~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/contacts'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/faculties-departments/faculty-factsheets'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-applicants-students~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-applicants-students~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/applicants-students'
-          headers:
-            Cookie: ''
-
-  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
-    weight: 1
-    flow:
-      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
-      - get:
-          url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -946,16 +385,16 @@ scenarios:
           headers:
             Cookie: ''
 
-  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
+  - name: '-~0_-main-applicants-students~0'
     weight: 1
     flow:
-      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
+      - log: '-~0_-main-applicants-students~0'
       - get:
           url: '/'
           headers:
             Cookie: ''
       - get:
-          url: '/main/faculties-departments/faculty-factsheets'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -982,6 +421,97 @@ scenarios:
             Cookie: ''
       - get:
           url: '/main/faculties-departments/faculty-factsheets'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/faculties-departments/faculty-factsheets'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/faculties-departments/faculty-factsheets'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/faculties-departments/faculty-factsheets'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
           headers:
             Cookie: ''
 
@@ -1047,6 +577,45 @@ scenarios:
             Cookie: ''
       - get:
           url: '/main/contacts'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-contacts~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-contacts~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/contacts'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
 
@@ -1154,6 +723,32 @@ scenarios:
           headers:
             Cookie: ''
 
+  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/faculties-departments/faculty-factsheets'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-contacts~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-contacts~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/contacts'
+          headers:
+            Cookie: ''
+
   - name: '-~0_-main-applicants-students~0'
     weight: 1
     flow:
@@ -1164,6 +759,123 @@ scenarios:
             Cookie: ''
       - get:
           url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-contacts~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-contacts~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/contacts'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/faculties-departments/faculty-factsheets'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-contacts~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-contacts~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/contacts'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-contacts~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-contacts~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/contacts'
           headers:
             Cookie: ''
 
@@ -1232,6 +944,45 @@ scenarios:
           headers:
             Cookie: ''
 
+  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/faculties-departments/faculty-factsheets'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-contacts~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-contacts~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/contacts'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/faculties-departments/faculty-factsheets'
+          headers:
+            Cookie: ''
+
   - name: '-~0_-main-applicants-students~0'
     weight: 1
     flow:
@@ -1242,6 +993,136 @@ scenarios:
             Cookie: ''
       - get:
           url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-contacts~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-contacts~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/contacts'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/faculties-departments/faculty-factsheets'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/faculties-departments/faculty-factsheets'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-contacts~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-contacts~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/contacts'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-contacts~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-contacts~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/contacts'
           headers:
             Cookie: ''
 
@@ -1307,5 +1188,122 @@ scenarios:
             Cookie: ''
       - get:
           url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/faculties-departments/faculty-factsheets'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-applicants-students~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-applicants-students~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/applicants-students'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-contacts~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-contacts~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/contacts'
+          headers:
+            Cookie: ''
+
+  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
+    weight: 1
+    flow:
+      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''

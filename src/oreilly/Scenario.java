@@ -72,11 +72,10 @@ public class Scenario
     
     public String getArtilleryRepresentation()
     {
-        String use = quick.substring(0, quick.length()-1);
-        String s = "  - name: '" + use + "'\n";
+        String s = "  - name: '" + getQuick() + "'\n";
         s += "    weight: " + weight + "\n";
         s += "    flow:\n";
-        s += "      - log: '" + use + "'\n";
+        s += "      - log: '" + getQuick() + "'\n";
         s += flow + "\n";
         return s;
     }
@@ -84,7 +83,7 @@ public class Scenario
     @Override
     public boolean equals(Object other)
     {
-        return quick.equals(((Scenario) other).getQuick());
+        return getQuick().equals(((Scenario) other).getQuick());
     }
     
     @Override
@@ -92,7 +91,7 @@ public class Scenario
     {
         String s = "name: '" + name + "'\n";
         s += "weight: " + weight + "\n";
-        s += "quick: " + quick + "\n";
+        s += "quick: " + getQuick() + "\n";
         //s += "flow: " + flow + "\n";
         return s;
     }
