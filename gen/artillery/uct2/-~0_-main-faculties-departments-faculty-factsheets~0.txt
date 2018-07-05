@@ -15,9 +15,13 @@ config:
       arrivalRate: 4
     - duration: 10
       arrivalRate: 5
+    - duration: 10
+      arrivalRate: 6
+    - duration: 10
+      arrivalRate: 7
 scenarios:
   - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
-    weight: 23
+    weight: 22
     flow:
       - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
       - get:

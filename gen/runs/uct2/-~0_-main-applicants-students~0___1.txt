@@ -1,34 +1,34 @@
-Started phase 0, duration: 5s @ 18:37:48(+0200) 2018-07-05
+Started phase 0, duration: 5s @ 21:04:59(+0200) 2018-07-05
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
-Started phase 1, duration: 5s @ 18:37:53(+0200) 2018-07-05
--~0_-main-applicants-students~0
--~0_-main-applicants-students~0
--~0_-main-applicants-students~0
--~0_-main-applicants-students~0
--~0_-main-applicants-students~0
+Started phase 1, duration: 5s @ 21:05:04(+0200) 2018-07-05
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
-Report @ 18:37:58(+0200) 2018-07-05
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+Report @ 21:05:09(+0200) 2018-07-05
   Scenarios launched:  14
   Scenarios completed: 14
   Requests completed:  28
   RPS sent: 3.12
   Request latency:
-    min: 29.3
-    max: 83.5
-    median: 49.8
-    p95: 82.5
-    p99: 83.5
+    min: 38.3
+    max: 88.1
+    median: 62.2
+    p95: 84.9
+    p99: 88.1
   Codes:
     200: 28
 
-Started phase 2, duration: 10s @ 18:37:58(+0200) 2018-07-05
+Started phase 2, duration: 10s @ 21:05:09(+0200) 2018-07-05
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
@@ -39,21 +39,21 @@ Started phase 2, duration: 10s @ 18:37:58(+0200) 2018-07-05
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
-Report @ 18:38:08(+0200) 2018-07-05
+Report @ 21:05:19(+0200) 2018-07-05
   Scenarios launched:  10
   Scenarios completed: 10
   Requests completed:  20
   RPS sent: 2
   Request latency:
-    min: 30.1
-    max: 84.1
-    median: 51.2
-    p95: 83.6
-    p99: 84.1
+    min: 37.8
+    max: 75.3
+    median: 58.3
+    p95: 75.2
+    p99: 75.3
   Codes:
     200: 20
 
-Started phase 3, duration: 10s @ 18:38:08(+0200) 2018-07-05
+Started phase 3, duration: 10s @ 21:05:19(+0200) 2018-07-05
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
@@ -74,21 +74,21 @@ Started phase 3, duration: 10s @ 18:38:08(+0200) 2018-07-05
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
-Report @ 18:38:18(+0200) 2018-07-05
+Report @ 21:05:29(+0200) 2018-07-05
   Scenarios launched:  20
   Scenarios completed: 20
   Requests completed:  40
-  RPS sent: 4
+  RPS sent: 4.01
   Request latency:
-    min: 27.3
-    max: 80.7
-    median: 48.3
-    p95: 74.5
-    p99: 80.7
+    min: 37.4
+    max: 86.5
+    median: 59.5
+    p95: 82.8
+    p99: 86.5
   Codes:
     200: 40
 
-Started phase 4, duration: 10s @ 18:38:18(+0200) 2018-07-05
+Started phase 4, duration: 10s @ 21:05:29(+0200) 2018-07-05
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
@@ -119,21 +119,21 @@ Started phase 4, duration: 10s @ 18:38:18(+0200) 2018-07-05
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
-Report @ 18:38:28(+0200) 2018-07-05
+Report @ 21:05:39(+0200) 2018-07-05
   Scenarios launched:  30
-  Scenarios completed: 29
-  Requests completed:  60
-  RPS sent: 6.01
+  Scenarios completed: 27
+  Requests completed:  59
+  RPS sent: 5.91
   Request latency:
-    min: 28.1
-    max: 92.2
-    median: 46.7
-    p95: 74.3
-    p99: 90.8
+    min: 36.5
+    max: 1214.5
+    median: 69
+    p95: 222.7
+    p99: 1214.3
   Codes:
-    200: 60
+    200: 59
 
-Started phase 5, duration: 10s @ 18:38:28(+0200) 2018-07-05
+Started phase 5, duration: 10s @ 21:05:39(+0200) 2018-07-05
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
@@ -174,21 +174,21 @@ Started phase 5, duration: 10s @ 18:38:28(+0200) 2018-07-05
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
-Report @ 18:38:38(+0200) 2018-07-05
+Report @ 21:05:49(+0200) 2018-07-05
   Scenarios launched:  40
-  Scenarios completed: 40
-  Requests completed:  79
-  RPS sent: 7.91
+  Scenarios completed: 42
+  Requests completed:  80
+  RPS sent: 8
   Request latency:
-    min: 28
-    max: 103.3
-    median: 54.8
-    p95: 82.9
-    p99: 98.2
+    min: 36.1
+    max: 88.9
+    median: 57.5
+    p95: 81.7
+    p99: 87.4
   Codes:
-    200: 79
+    200: 80
 
-Started phase 6, duration: 10s @ 18:38:38(+0200) 2018-07-05
+Started phase 6, duration: 10s @ 21:05:49(+0200) 2018-07-05
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
@@ -239,49 +239,223 @@ Started phase 6, duration: 10s @ 18:38:38(+0200) 2018-07-05
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
 -~0_-main-applicants-students~0
-Report @ 18:38:49(+0200) 2018-07-05
-  Scenarios launched:  51
-  Scenarios completed: 50
-  Requests completed:  100
-  RPS sent: 9.99
+Report @ 21:05:59(+0200) 2018-07-05
+  Scenarios launched:  50
+  Scenarios completed: 42
+  Requests completed:  96
+  RPS sent: 9.7
   Request latency:
-    min: 27.2
-    max: 99
-    median: 52.9
-    p95: 80
-    p99: 96.7
+    min: 36.1
+    max: 318.3
+    median: 68.6
+    p95: 91.6
+    p99: 300.6
   Codes:
-    200: 100
+    200: 96
+
+Started phase 7, duration: 10s @ 21:05:59(+0200) 2018-07-05
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+Report @ 21:06:09(+0200) 2018-07-05
+  Scenarios launched:  60
+  Scenarios completed: 42
+  Requests completed:  108
+  RPS sent: 10.8
+  Request latency:
+    min: 34.3
+    max: 1823.3
+    median: 86.9
+    p95: 1328.5
+    p99: 1628
+  Codes:
+    200: 108
+
+Started phase 8, duration: 10s @ 21:06:09(+0200) 2018-07-05
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+-~0_-main-applicants-students~0
+Report @ 21:06:19(+0200) 2018-07-05
+  Scenarios launched:  70
+  Scenarios completed: 45
+  Requests completed:  121
+  RPS sent: 12.39
+  Request latency:
+    min: 36.7
+    max: 3083.3
+    median: 87.2
+    p95: 1313.7
+    p99: 2503.6
+  Codes:
+    200: 121
 
 -~0_-main-applicants-students~0
-Report @ 18:38:49(+0200) 2018-07-05
+Report @ 21:06:29(+0200) 2018-07-05
+  Scenarios launched:  1
+  Scenarios completed: 52
+  Requests completed:  37
+  RPS sent: 3.3
+  Request latency:
+    min: 33.4
+    max: 5167.9
+    median: 45.1
+    p95: 3085.3
+    p99: 5167.9
+  Codes:
+    200: 37
+
+Report @ 21:06:31(+0200) 2018-07-05
   Scenarios launched:  0
-  Scenarios completed: 2
-  Requests completed:  3
-  RPS sent: 6.12
+  Scenarios completed: 1
+  Requests completed:  1
+  RPS sent: 3.33
   Request latency:
-    min: 27.8
-    max: 53
-    median: 34.8
-    p95: 53
-    p99: 53
+    min: 35.3
+    max: 35.3
+    median: 35.3
+    p95: 35.3
+    p99: 35.3
   Codes:
-    200: 3
+    200: 1
 
 All virtual users finished
-Summary report @ 18:38:49(+0200) 2018-07-05
-  Scenarios launched:  165
-  Scenarios completed: 165
-  Requests completed:  330
-  RPS sent: 5.54
+Summary report @ 21:06:31(+0200) 2018-07-05
+  Scenarios launched:  295
+  Scenarios completed: 295
+  Requests completed:  590
+  RPS sent: 6.48
   Request latency:
-    min: 27.2
-    max: 103.3
-    median: 52.9
-    p95: 80.5
-    p99: 92.6
+    min: 33.4
+    max: 5167.9
+    median: 69.4
+    p95: 606.2
+    p99: 1819.2
   Scenario counts:
-    -~0_-main-applicants-students~0: 165 (100%)
+    -~0_-main-applicants-students~0: 295 (100%)
   Codes:
-    200: 330
+    200: 590
 
