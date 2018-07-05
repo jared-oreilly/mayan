@@ -1,0 +1,287 @@
+Started phase 0, duration: 5s @ 18:42:04(+0200) 2018-07-05
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+Started phase 1, duration: 5s @ 18:42:09(+0200) 2018-07-05
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+Report @ 18:42:14(+0200) 2018-07-05
+  Scenarios launched:  14
+  Scenarios completed: 14
+  Requests completed:  28
+  RPS sent: 3.12
+  Request latency:
+    min: 27.4
+    max: 108.3
+    median: 48.7
+    p95: 83.7
+    p99: 108.3
+  Codes:
+    200: 28
+
+Started phase 2, duration: 10s @ 18:42:14(+0200) 2018-07-05
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+Report @ 18:42:24(+0200) 2018-07-05
+  Scenarios launched:  10
+  Scenarios completed: 10
+  Requests completed:  20
+  RPS sent: 2
+  Request latency:
+    min: 27.5
+    max: 74.5
+    median: 48
+    p95: 73
+    p99: 74.5
+  Codes:
+    200: 20
+
+Started phase 3, duration: 10s @ 18:42:24(+0200) 2018-07-05
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+Report @ 18:42:34(+0200) 2018-07-05
+  Scenarios launched:  20
+  Scenarios completed: 20
+  Requests completed:  40
+  RPS sent: 4
+  Request latency:
+    min: 26.8
+    max: 93.7
+    median: 55.6
+    p95: 77.5
+    p99: 93.7
+  Codes:
+    200: 40
+
+Started phase 4, duration: 10s @ 18:42:34(+0200) 2018-07-05
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+Report @ 18:42:44(+0200) 2018-07-05
+  Scenarios launched:  30
+  Scenarios completed: 29
+  Requests completed:  60
+  RPS sent: 6.01
+  Request latency:
+    min: 26.8
+    max: 74.2
+    median: 50.6
+    p95: 69.1
+    p99: 73.9
+  Codes:
+    200: 60
+
+Started phase 5, duration: 10s @ 18:42:44(+0200) 2018-07-05
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+Report @ 18:42:54(+0200) 2018-07-05
+  Scenarios launched:  40
+  Scenarios completed: 39
+  Requests completed:  79
+  RPS sent: 7.91
+  Request latency:
+    min: 27
+    max: 286.6
+    median: 49.8
+    p95: 72.9
+    p99: 231.3
+  Codes:
+    200: 79
+
+Started phase 6, duration: 10s @ 18:42:54(+0200) 2018-07-05
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+-~0_-main-contacts~0
+Report @ 18:43:04(+0200) 2018-07-05
+  Scenarios launched:  50
+  Scenarios completed: 50
+  Requests completed:  100
+  RPS sent: 10
+  Request latency:
+    min: 26.9
+    max: 98.2
+    median: 46.8
+    p95: 73.1
+    p99: 93.8
+  Codes:
+    200: 100
+
+-~0_-main-contacts~0
+Report @ 18:43:04(+0200) 2018-07-05
+  Scenarios launched:  1
+  Scenarios completed: 3
+  Requests completed:  3
+  RPS sent: 6
+  Request latency:
+    min: 27.9
+    max: 89.8
+    median: 32
+    p95: 89.8
+    p99: 89.8
+  Codes:
+    200: 3
+
+All virtual users finished
+Summary report @ 18:43:04(+0200) 2018-07-05
+  Scenarios launched:  165
+  Scenarios completed: 165
+  Requests completed:  330
+  RPS sent: 5.54
+  Request latency:
+    min: 26.8
+    max: 286.6
+    median: 49.8
+    p95: 73.2
+    p99: 96.3
+  Scenario counts:
+    -~0_-main-contacts~0: 165 (100%)
+  Codes:
+    200: 330
+

@@ -1,0 +1,287 @@
+Started phase 0, duration: 5s @ 18:43:07(+0200) 2018-07-05
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+Started phase 1, duration: 5s @ 18:43:12(+0200) 2018-07-05
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+Report @ 18:43:17(+0200) 2018-07-05
+  Scenarios launched:  14
+  Scenarios completed: 14
+  Requests completed:  28
+  RPS sent: 3.12
+  Request latency:
+    min: 26.8
+    max: 104.5
+    median: 47.2
+    p95: 82.2
+    p99: 104.5
+  Codes:
+    200: 28
+
+Started phase 2, duration: 10s @ 18:43:17(+0200) 2018-07-05
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+Report @ 18:43:27(+0200) 2018-07-05
+  Scenarios launched:  10
+  Scenarios completed: 10
+  Requests completed:  20
+  RPS sent: 2
+  Request latency:
+    min: 27.6
+    max: 69.2
+    median: 61.5
+    p95: 68.5
+    p99: 69.2
+  Codes:
+    200: 20
+
+Started phase 3, duration: 10s @ 18:43:27(+0200) 2018-07-05
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+Report @ 18:43:37(+0200) 2018-07-05
+  Scenarios launched:  20
+  Scenarios completed: 20
+  Requests completed:  40
+  RPS sent: 4
+  Request latency:
+    min: 27
+    max: 104.2
+    median: 49
+    p95: 78.6
+    p99: 104.2
+  Codes:
+    200: 40
+
+Started phase 4, duration: 10s @ 18:43:37(+0200) 2018-07-05
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+Report @ 18:43:47(+0200) 2018-07-05
+  Scenarios launched:  30
+  Scenarios completed: 29
+  Requests completed:  60
+  RPS sent: 6.01
+  Request latency:
+    min: 27.2
+    max: 90.3
+    median: 45.7
+    p95: 70.4
+    p99: 89.8
+  Codes:
+    200: 60
+
+Started phase 5, duration: 10s @ 18:43:47(+0200) 2018-07-05
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+Report @ 18:43:57(+0200) 2018-07-05
+  Scenarios launched:  40
+  Scenarios completed: 40
+  Requests completed:  79
+  RPS sent: 7.91
+  Request latency:
+    min: 27.3
+    max: 108.2
+    median: 53.2
+    p95: 77.1
+    p99: 104.1
+  Codes:
+    200: 79
+
+Started phase 6, duration: 10s @ 18:43:58(+0200) 2018-07-05
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+-~0_-main-faculties-departments-faculty-factsheets~0
+Report @ 18:44:07(+0200) 2018-07-05
+  Scenarios launched:  50
+  Scenarios completed: 49
+  Requests completed:  99
+  RPS sent: 10
+  Request latency:
+    min: 26.6
+    max: 137.6
+    median: 49.8
+    p95: 77.2
+    p99: 130.1
+  Codes:
+    200: 99
+
+-~0_-main-faculties-departments-faculty-factsheets~0
+Report @ 18:44:08(+0200) 2018-07-05
+  Scenarios launched:  1
+  Scenarios completed: 3
+  Requests completed:  4
+  RPS sent: 6
+  Request latency:
+    min: 28.5
+    max: 57
+    median: 52.5
+    p95: 57
+    p99: 57
+  Codes:
+    200: 4
+
+All virtual users finished
+Summary report @ 18:44:08(+0200) 2018-07-05
+  Scenarios launched:  165
+  Scenarios completed: 165
+  Requests completed:  330
+  RPS sent: 5.55
+  Request latency:
+    min: 26.6
+    max: 137.6
+    median: 53
+    p95: 75.5
+    p99: 105.2
+  Scenario counts:
+    -~0_-main-faculties-departments-faculty-factsheets~0: 165 (100%)
+  Codes:
+    200: 330
+

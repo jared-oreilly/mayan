@@ -413,8 +413,8 @@ public class Graph
                         {
                             for (int k = 0; k < averageNumber; k++)
                             {
-                                System.out.print(count + ": Running " + fn + "... ");
-                                Process pr = rt.exec("cmd /c artillery run gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + fn + " > gen/runs/" + filename.substring(0, filename.indexOf(".")) + "/" + fn + "___" + k);
+                                System.out.print(count + ": Running " + fn.substring(0, fn.indexOf(".")) + "___" + k + ".txt" + "... ");
+                                Process pr = rt.exec("cmd /c artillery run gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + fn + " > gen/runs/" + filename.substring(0, filename.indexOf(".")) + "/" + fn.substring(0, fn.indexOf(".")) + "___" + k + ".txt");
 
                                 BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
                                 String line = null;
