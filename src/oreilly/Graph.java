@@ -368,31 +368,45 @@ public class Graph
         }
     }
      */
-    public void runArtillery(String ma, String filename, boolean runTests)
+    public void runArtillery(String ma, String filename, boolean runMain, boolean runSingle)
     {
         try
         {
             //make sure folder in runs is there (create if not)
             new File("gen/runs/" + filename.substring(0, filename.indexOf("."))).mkdirs();
-            
+
             //delete all in that folder
             for (File file : new File("gen/runs/" + filename.substring(0, filename.indexOf("."))).listFiles())
             {
-                file.delete();
+                if(file.getName().equals(filename))
+                {
+                    if(runMain)
+                    {
+                        System.out.println("deleting main!");
+                        file.delete();
+                    }
+                }
+                else
+                {
+                    if(runSingle)
+                    {
+                        System.out.println("deleting single!");
+                        file.delete();
+                    }
+                }
             }
-             
 
             Runtime rt = Runtime.getRuntime();
 
             //run tests for all single files
-            if (runTests)
+            if (runSingle)
             {
                 System.out.println("going through mini tests!");
                 //go through all single files
                 for (File file : new File("gen/artillery/" + filename.substring(0, filename.indexOf("."))).listFiles())
                 {
                     String fn = file.getName();
-                    
+
                     if (!fn.equals(filename))
                     {
                         System.out.println("Running " + fn);
@@ -406,8 +420,7 @@ public class Graph
                         }
 
                         int exitVal = pr.waitFor();
-                    }
-                    else
+                    } else
                     {
                         System.out.println("Main file, do not run");
                     }
@@ -415,19 +428,22 @@ public class Graph
                 }
             }
 
-            System.out.println("Running main file!");
-            
-            //run main file
-            Process pr = rt.exec("cmd /c artillery run gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + filename + " > gen/runs/" + filename.substring(0, filename.indexOf(".")) + "/" + filename);
-
-            BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
-            String line = null;
-            while ((line = input.readLine()) != null)
+            if (runMain)
             {
-                System.out.println(line);
-            }
+                System.out.println("Running main file!");
 
-            int exitVal = pr.waitFor();
+                //run main file
+                Process pr = rt.exec("cmd /c artillery run gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + filename + " > gen/runs/" + filename.substring(0, filename.indexOf(".")) + "/" + filename);
+
+                BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
+                String line = null;
+                while ((line = input.readLine()) != null)
+                {
+                    System.out.println(line);
+                }
+
+                int exitVal = pr.waitFor();
+            }
 
         } catch (Exception e)
         {
@@ -693,7 +709,7 @@ public class Graph
         return nodes.get(id).fetchRemainingProb();
     }
 
-    public int requestTotalTime()
+    public int requestTotalMainTime()
     {
         int count = 0;
         for (int i = 0; i < durArrMain.size(); i++)
@@ -701,5 +717,16 @@ public class Graph
             count += durArrMain.get(i);
         }
         return count;
+    }
+
+    public int requestTotalSingleTime()
+    {
+        int each = 0;
+        for (int i = 0; i < durArrSingle.size(); i++)
+        {
+            each += durArrSingle.get(i);
+        }
+
+        return each * numScens;
     }
 }

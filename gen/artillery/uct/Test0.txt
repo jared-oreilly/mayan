@@ -13,7 +13,7 @@ config:
       arrivalRate: 5
 scenarios:
   - name: 'Test0'
-    weight: 34
+    weight: 22
     flow:
       - log: 'Test0'
       - get:
