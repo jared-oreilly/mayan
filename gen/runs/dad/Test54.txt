@@ -1,0 +1,151 @@
+Started phase 0, duration: 10s @ 12:29:32(+0200) 2018-07-05
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Report @ 12:29:42(+0200) 2018-07-05
+  Scenarios launched:  9
+  Scenarios completed: 9
+  Requests completed:  90
+  RPS sent: 10.03
+  Request latency:
+    min: 5.4
+    max: 308.5
+    median: 12.6
+    p95: 78
+    p99: 279.7
+  Codes:
+    200: 27
+    301: 27
+    302: 9
+    404: 27
+
+Started phase 1, duration: 10s @ 12:29:42(+0200) 2018-07-05
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Report @ 12:29:52(+0200) 2018-07-05
+  Scenarios launched:  20
+  Scenarios completed: 20
+  Requests completed:  200
+  RPS sent: 19.98
+  Request latency:
+    min: 5
+    max: 190.6
+    median: 10.1
+    p95: 67.6
+    p99: 150.4
+  Codes:
+    200: 60
+    301: 60
+    302: 20
+    404: 60
+
+Started phase 2, duration: 10s @ 12:29:52(+0200) 2018-07-05
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Test54
+Report @ 12:30:02(+0200) 2018-07-05
+  Scenarios launched:  30
+  Scenarios completed: 30
+  Requests completed:  300
+  RPS sent: 29.97
+  Request latency:
+    min: 5.1
+    max: 195.4
+    median: 10.3
+    p95: 55.1
+    p99: 109.5
+  Codes:
+    200: 90
+    301: 90
+    302: 30
+    404: 90
+
+Test54
+Report @ 12:30:02(+0200) 2018-07-05
+  Scenarios launched:  1
+  Scenarios completed: 1
+  Requests completed:  10
+  RPS sent: 20
+  Request latency:
+    min: 6
+    max: 53.4
+    median: 9.3
+    p95: 53.4
+    p99: 53.4
+  Codes:
+    200: 3
+    301: 3
+    302: 1
+    404: 3
+
+All virtual users finished
+Summary report @ 12:30:02(+0200) 2018-07-05
+  Scenarios launched:  60
+  Scenarios completed: 60
+  Requests completed:  600
+  RPS sent: 20.3
+  Request latency:
+    min: 5
+    max: 308.5
+    median: 10.7
+    p95: 58
+    p99: 140.3
+  Scenario counts:
+    Test54: 60 (100%)
+  Codes:
+    200: 180
+    301: 180
+    302: 60
+    404: 180
+

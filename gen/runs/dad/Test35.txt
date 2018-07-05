@@ -1,0 +1,151 @@
+Started phase 0, duration: 10s @ 12:26:43(+0200) 2018-07-05
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Report @ 12:26:53(+0200) 2018-07-05
+  Scenarios launched:  9
+  Scenarios completed: 9
+  Requests completed:  45
+  RPS sent: 5.02
+  Request latency:
+    min: 5.2
+    max: 218
+    median: 28.3
+    p95: 186.8
+    p99: 218
+  Codes:
+    200: 9
+    301: 9
+    302: 9
+    404: 18
+
+Started phase 1, duration: 10s @ 12:26:53(+0200) 2018-07-05
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Report @ 12:27:03(+0200) 2018-07-05
+  Scenarios launched:  20
+  Scenarios completed: 20
+  Requests completed:  100
+  RPS sent: 10
+  Request latency:
+    min: 5.1
+    max: 218.5
+    median: 26
+    p95: 94.4
+    p99: 206.6
+  Codes:
+    200: 20
+    301: 20
+    302: 20
+    404: 40
+
+Started phase 2, duration: 10s @ 12:27:03(+0200) 2018-07-05
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Test35
+Report @ 12:27:13(+0200) 2018-07-05
+  Scenarios launched:  30
+  Scenarios completed: 30
+  Requests completed:  150
+  RPS sent: 15.02
+  Request latency:
+    min: 5.4
+    max: 233.2
+    median: 24.6
+    p95: 46.7
+    p99: 66.4
+  Codes:
+    200: 30
+    301: 30
+    302: 30
+    404: 60
+
+Test35
+Report @ 12:27:13(+0200) 2018-07-05
+  Scenarios launched:  1
+  Scenarios completed: 1
+  Requests completed:  5
+  RPS sent: 10
+  Request latency:
+    min: 7.2
+    max: 100.9
+    median: 53.6
+    p95: 100.9
+    p99: 100.9
+  Codes:
+    200: 1
+    301: 1
+    302: 1
+    404: 2
+
+All virtual users finished
+Summary report @ 12:27:13(+0200) 2018-07-05
+  Scenarios launched:  60
+  Scenarios completed: 60
+  Requests completed:  300
+  RPS sent: 10.17
+  Request latency:
+    min: 5.1
+    max: 233.2
+    median: 25.3
+    p95: 83
+    p99: 212.6
+  Scenario counts:
+    Test35: 60 (100%)
+  Codes:
+    200: 60
+    301: 60
+    302: 60
+    404: 120
+

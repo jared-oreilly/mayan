@@ -382,7 +382,7 @@ public class Graph
                 {
                     if(runMain)
                     {
-                        System.out.println("deleting main!");
+                        //System.out.println("deleting main!");
                         file.delete();
                     }
                 }
@@ -390,7 +390,7 @@ public class Graph
                 {
                     if(runSingle)
                     {
-                        System.out.println("deleting single!");
+                        //System.out.println("deleting single!");
                         file.delete();
                     }
                 }
@@ -403,13 +403,14 @@ public class Graph
             {
                 System.out.println("going through mini tests!");
                 //go through all single files
+                int count = 0;
                 for (File file : new File("gen/artillery/" + filename.substring(0, filename.indexOf("."))).listFiles())
                 {
                     String fn = file.getName();
 
                     if (!fn.equals(filename))
                     {
-                        System.out.println("Running " + fn);
+                        System.out.println(count + ": Running " + fn);
                         Process pr = rt.exec("cmd /c artillery run gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + fn + " > gen/runs/" + filename.substring(0, filename.indexOf(".")) + "/" + fn);
 
                         BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
@@ -420,11 +421,13 @@ public class Graph
                         }
 
                         int exitVal = pr.waitFor();
+                        System.out.println("Done with " + fn);
+                        count++;
                     } else
                     {
-                        System.out.println("Main file, do not run");
+                        //System.out.println("Main file, do not run");
                     }
-
+                    
                 }
             }
 
@@ -709,24 +712,32 @@ public class Graph
         return nodes.get(id).fetchRemainingProb();
     }
 
-    public int requestTotalMainTime()
+    public String requestTotalMainTime()
     {
         int count = 0;
         for (int i = 0; i < durArrMain.size(); i++)
         {
             count += durArrMain.get(i);
         }
-        return count;
+        int h = count / (60*60);
+        count %= (60*60);
+        int m = count / 60;
+        count %= 60;
+        return "" + h + "h:" + m + "m:" + count + "s";
     }
 
-    public int requestTotalSingleTime()
+    public String requestTotalSingleTime()
     {
         int each = 0;
         for (int i = 0; i < durArrSingle.size(); i++)
         {
             each += durArrSingle.get(i);
         }
-
-        return each * numScens;
+        int count = each * numScens;
+        int h = count / (60*60);
+        count %= (60*60);
+        int m = count / 60;
+        count %= 60;
+        return "" + h + "h:" + m + "m:" + count + "s";
     }
 }

@@ -1,0 +1,151 @@
+Started phase 0, duration: 10s @ 12:31:12(+0200) 2018-07-05
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Report @ 12:31:23(+0200) 2018-07-05
+  Scenarios launched:  9
+  Scenarios completed: 8
+  Requests completed:  107
+  RPS sent: 11.93
+  Request latency:
+    min: 6.2
+    max: 469.1
+    median: 29.8
+    p95: 198.2
+    p99: 362.2
+  Codes:
+    200: 36
+    301: 36
+    302: 18
+    404: 17
+
+Started phase 1, duration: 10s @ 12:31:23(+0200) 2018-07-05
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Report @ 12:31:33(+0200) 2018-07-05
+  Scenarios launched:  20
+  Scenarios completed: 20
+  Requests completed:  240
+  RPS sent: 24.08
+  Request latency:
+    min: 4.6
+    max: 251.4
+    median: 28.3
+    p95: 167.4
+    p99: 226.7
+  Codes:
+    200: 80
+    301: 80
+    302: 40
+    404: 40
+
+Started phase 2, duration: 10s @ 12:31:33(+0200) 2018-07-05
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Test85
+Report @ 12:31:43(+0200) 2018-07-05
+  Scenarios launched:  30
+  Scenarios completed: 29
+  Requests completed:  350
+  RPS sent: 35.04
+  Request latency:
+    min: 5.1
+    max: 222.9
+    median: 28.4
+    p95: 123
+    p99: 194.5
+  Codes:
+    200: 116
+    301: 117
+    302: 59
+    404: 58
+
+Test85
+Report @ 12:31:44(+0200) 2018-07-05
+  Scenarios launched:  1
+  Scenarios completed: 3
+  Requests completed:  23
+  RPS sent: 14.67
+  Request latency:
+    min: 22.3
+    max: 339.1
+    median: 51.6
+    p95: 279.1
+    p99: 339.1
+  Codes:
+    200: 8
+    301: 7
+    302: 3
+    404: 5
+
+All virtual users finished
+Summary report @ 12:31:44(+0200) 2018-07-05
+  Scenarios launched:  60
+  Scenarios completed: 60
+  Requests completed:  720
+  RPS sent: 23.57
+  Request latency:
+    min: 4.6
+    max: 469.1
+    median: 29.7
+    p95: 151.9
+    p99: 227
+  Scenario counts:
+    Test85: 60 (100%)
+  Codes:
+    200: 240
+    301: 240
+    302: 120
+    404: 120
+

@@ -7,17 +7,17 @@ config:
       arrivalRate: 2
     - duration: 10
       arrivalRate: 3
-    - duration: 10
-      arrivalRate: 4
-    - duration: 10
-      arrivalRate: 5
 scenarios:
   - name: 'Test2'
-    weight: 12
+    weight: 50
     flow:
       - log: 'Test2'
       - get:
           url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
           headers:
             Cookie: ''
       - get:

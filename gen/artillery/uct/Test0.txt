@@ -13,7 +13,7 @@ config:
       arrivalRate: 5
 scenarios:
   - name: 'Test0'
-    weight: 22
+    weight: 68
     flow:
       - log: 'Test0'
       - get:
@@ -21,6 +21,6 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/main/faculties-departments/faculty-factsheets'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''

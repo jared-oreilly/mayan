@@ -1,0 +1,151 @@
+Started phase 0, duration: 10s @ 12:28:24(+0200) 2018-07-05
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Report @ 12:28:34(+0200) 2018-07-05
+  Scenarios launched:  9
+  Scenarios completed: 9
+  Requests completed:  63
+  RPS sent: 7.02
+  Request latency:
+    min: 5.8
+    max: 200
+    median: 18.1
+    p95: 85.3
+    p99: 193.3
+  Codes:
+    200: 18
+    301: 18
+    302: 9
+    404: 18
+
+Started phase 1, duration: 10s @ 12:28:34(+0200) 2018-07-05
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Report @ 12:28:44(+0200) 2018-07-05
+  Scenarios launched:  20
+  Scenarios completed: 19
+  Requests completed:  136
+  RPS sent: 13.6
+  Request latency:
+    min: 5.5
+    max: 389.2
+    median: 14.5
+    p95: 75.7
+    p99: 287
+  Codes:
+    200: 39
+    301: 39
+    302: 20
+    404: 38
+
+Started phase 2, duration: 10s @ 12:28:44(+0200) 2018-07-05
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Test5
+Report @ 12:28:54(+0200) 2018-07-05
+  Scenarios launched:  30
+  Scenarios completed: 31
+  Requests completed:  214
+  RPS sent: 21.38
+  Request latency:
+    min: 5.1
+    max: 169.8
+    median: 15.4
+    p95: 61.3
+    p99: 141
+  Codes:
+    200: 61
+    301: 61
+    302: 30
+    404: 62
+
+Test5
+Report @ 12:28:55(+0200) 2018-07-05
+  Scenarios launched:  1
+  Scenarios completed: 1
+  Requests completed:  7
+  RPS sent: 14
+  Request latency:
+    min: 6.8
+    max: 41.3
+    median: 9.6
+    p95: 41.3
+    p99: 41.3
+  Codes:
+    200: 2
+    301: 2
+    302: 1
+    404: 2
+
+All virtual users finished
+Summary report @ 12:28:55(+0200) 2018-07-05
+  Scenarios launched:  60
+  Scenarios completed: 60
+  Requests completed:  420
+  RPS sent: 14.22
+  Request latency:
+    min: 5.1
+    max: 389.2
+    median: 15.4
+    p95: 63.9
+    p99: 178.9
+  Scenario counts:
+    Test5: 60 (100%)
+  Codes:
+    200: 120
+    301: 120
+    302: 60
+    404: 120
+

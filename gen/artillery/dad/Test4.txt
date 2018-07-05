@@ -7,15 +7,11 @@ config:
       arrivalRate: 2
     - duration: 10
       arrivalRate: 3
-    - duration: 10
-      arrivalRate: 4
-    - duration: 10
-      arrivalRate: 5
 scenarios:
-  - name: 'Test30'
-    weight: 2
+  - name: 'Test4'
+    weight: 1
     flow:
-      - log: 'Test30'
+      - log: 'Test4'
       - get:
           url: '/'
           headers:
@@ -34,6 +30,18 @@ scenarios:
             Cookie: ''
       - get:
           url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/football'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/rugby'
           headers:
             Cookie: ''
       - get:

@@ -8,16 +8,12 @@ config:
     - duration: 10
       arrivalRate: 3
 scenarios:
-  - name: 'Test7'
+  - name: 'Test38'
     weight: 1
     flow:
-      - log: 'Test7'
+      - log: 'Test38'
       - get:
           url: '/'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/football'
           headers:
             Cookie: ''
       - get:
@@ -30,6 +26,10 @@ scenarios:
             Cookie: ''
       - get:
           url: '/'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/rugby'
           headers:
             Cookie: ''
       - get:

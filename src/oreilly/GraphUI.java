@@ -807,7 +807,7 @@ public class GraphUI extends javax.swing.JFrame
         String ma = m.mayanArtillery(txfMayan.getText() + ".txt");
         JOptionPane.showMessageDialog(null, txfMayan.getText() + ".txt generated!");
         boolean runMain, runSingle;
-        int choice = JOptionPane.showConfirmDialog(null, "Would you like to run the main " + txfMayan.getText() + " file on Artillery (" + m.requestTotalMainTime() + " seconds)?");
+        int choice = JOptionPane.showConfirmDialog(null, "Would you like to run the main " + txfMayan.getText() + " file on Artillery (" + m.requestTotalMainTime() + ")?");
         switch (choice)
         {
             case JOptionPane.YES_OPTION:
@@ -817,7 +817,7 @@ public class GraphUI extends javax.swing.JFrame
                 runMain = false;
 
         }
-        int choice1 = JOptionPane.showConfirmDialog(null, "Would you also like to run the single scenario tests (" + m.requestTotalSingleTime() + " seconds)?");
+        int choice1 = JOptionPane.showConfirmDialog(null, "Would you also like to run the single scenario tests (" + m.requestTotalSingleTime() + ")?");
         switch (choice1)
         {
             case JOptionPane.YES_OPTION:

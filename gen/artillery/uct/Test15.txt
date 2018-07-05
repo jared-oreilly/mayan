@@ -12,15 +12,15 @@ config:
     - duration: 10
       arrivalRate: 5
 scenarios:
-  - name: 'Test2'
-    weight: 61
+  - name: 'Test15'
+    weight: 11
     flow:
-      - log: 'Test2'
+      - log: 'Test15'
       - get:
           url: '/'
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''
