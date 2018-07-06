@@ -22,15 +22,15 @@ config:
     - duration: 10
       arrivalRate: 8
 scenarios:
-  - name: '-~0_-main-faculties-departments-faculty-factsheets~0'
-    weight: 18
+  - name: 'Home~0_Applicants and Students~0'
+    weight: 58
     flow:
-      - log: '-~0_-main-faculties-departments-faculty-factsheets~0'
+      - log: 'Home~0_Applicants and Students~0'
       - get:
           url: '/'
           headers:
             Cookie: ''
       - get:
-          url: '/main/faculties-departments/faculty-factsheets'
+          url: '/main/applicants-students'
           headers:
             Cookie: ''

@@ -2,6 +2,7 @@ package oreilly;
 
 public class Scenario
 {
+    //
     private String name;
     private int weight;
     private String flow;

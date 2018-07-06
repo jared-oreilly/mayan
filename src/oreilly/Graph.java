@@ -255,6 +255,7 @@ public class Graph
             file.delete();
         }
 
+        //
         //generate the big file, after, do the small ones from the scenarios made in the big
         String[] scenarioCountNames = new String[numScensToGenerate];
         int[] defaultWeights = new int[numScensToGenerate];
@@ -265,6 +266,7 @@ public class Graph
             defaultWeights[i] = 1;
         }
 
+        //
         String mayanArtillery = "";
         mayanArtillery += generateConfigMain();
         mayanArtillery += generateScenarios(scenarioCountNames, defaultWeights);
@@ -702,6 +704,7 @@ public class Graph
             each += durArrSingle.get(i);
         }
         int count = each * numScens;
+        //
         count *= 3;
         int hours = count / (60 * 60);
         count %= (60 * 60);

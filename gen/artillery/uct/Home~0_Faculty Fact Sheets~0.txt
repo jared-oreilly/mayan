@@ -22,15 +22,15 @@ config:
     - duration: 10
       arrivalRate: 8
 scenarios:
-  - name: '-~0_-main-contacts~0'
-    weight: 22
+  - name: 'Home~0_Faculty Fact Sheets~0'
+    weight: 20
     flow:
-      - log: '-~0_-main-contacts~0'
+      - log: 'Home~0_Faculty Fact Sheets~0'
       - get:
           url: '/'
           headers:
             Cookie: ''
       - get:
-          url: '/main/contacts'
+          url: '/main/faculties-departments/faculty-factsheets'
           headers:
             Cookie: ''

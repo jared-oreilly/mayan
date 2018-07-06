@@ -17,7 +17,7 @@ config:
       arrivalRate: 5
 scenarios:
   - name: 'Home~0_News~0_QUIT~0'
-    weight: 3
+    weight: 7
     flow:
       - log: 'Home~0_News~0_QUIT~0'
       - get:

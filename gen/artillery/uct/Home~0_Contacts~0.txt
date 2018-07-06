@@ -22,15 +22,15 @@ config:
     - duration: 10
       arrivalRate: 8
 scenarios:
-  - name: '-~0_-main-applicants-students~0'
-    weight: 60
+  - name: 'Home~0_Contacts~0'
+    weight: 22
     flow:
-      - log: '-~0_-main-applicants-students~0'
+      - log: 'Home~0_Contacts~0'
       - get:
           url: '/'
           headers:
             Cookie: ''
       - get:
-          url: '/main/applicants-students'
+          url: '/main/contacts'
           headers:
             Cookie: ''

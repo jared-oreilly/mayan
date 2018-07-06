@@ -14,23 +14,6 @@ config:
     - duration: 30
       arrivalRate: 6
 scenarios:
-  - name: 'Home~0_About_Us~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_About_Us~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
   - name: 'Home~0_News~0_QUIT~0'
     weight: 1
     flow:
@@ -48,112 +31,16 @@ scenarios:
           headers:
             Cookie: ''
 
-  - name: 'Home~0_About_Us~0_News~0_QUIT~0'
+  - name: 'Home~0_Careers~0_QUIT~0'
     weight: 1
     flow:
-      - log: 'Home~0_About_Us~0_News~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_News~0_Careers~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_News~0_Careers~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_Careers~0_Careers~0_Careers~0_Careers~0_About_Us~0_Careers~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_Careers~0_Careers~0_Careers~0_Careers~0_About_Us~0_Careers~0_QUIT~0'
+      - log: 'Home~0_Careers~0_QUIT~0'
       - get:
           url: '/Default.aspx'
           headers:
             Cookie: ''
       - get:
           url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_About_Us~0_News~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_About_Us~0_News~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
           headers:
             Cookie: ''
       - get:
@@ -195,12 +82,338 @@ scenarios:
           headers:
             Cookie: ''
 
+  - name: 'Home~0_About_Us~0_News~0_News~0_Careers~0_Careers~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_About_Us~0_News~0_News~0_Careers~0_Careers~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_News~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_News~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_About_Us~0_Careers~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_About_Us~0_Careers~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_Careers~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_Careers~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_About_Us~0_News~0_Careers~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_About_Us~0_News~0_Careers~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_Careers~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_Careers~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_News~0_Careers~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_News~0_Careers~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_Careers~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_Careers~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
   - name: 'Home~0_QUIT~0'
     weight: 1
     flow:
       - log: 'Home~0_QUIT~0'
       - get:
           url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_News~0_About_Us~0_News~0_Careers~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_News~0_About_Us~0_News~0_Careers~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_About_Us~0_News~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_About_Us~0_News~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_About_Us~0_Careers~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_About_Us~0_Careers~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_About_Us~0_News~0_Careers~0_About_Us~0_News~0_News~0_Careers~0_Careers~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_About_Us~0_News~0_Careers~0_About_Us~0_News~0_News~0_Careers~0_Careers~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_News~0_Careers~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_News~0_Careers~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_News~0_Careers~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_News~0_Careers~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
           headers:
             Cookie: ''
       - get:
@@ -225,12 +438,83 @@ scenarios:
           headers:
             Cookie: ''
 
-  - name: 'Home~0_News~0_QUIT~0'
+  - name: 'Home~0_Careers~0_QUIT~0'
     weight: 1
     flow:
-      - log: 'Home~0_News~0_QUIT~0'
+      - log: 'Home~0_Careers~0_QUIT~0'
       - get:
           url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_About_Us~0_News~0_News~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_About_Us~0_News~0_News~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_About_Us~0_News~0_Careers~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_About_Us~0_News~0_Careers~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_About_Us~0_News~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_About_Us~0_News~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
           headers:
             Cookie: ''
       - get:
@@ -288,24 +572,20 @@ scenarios:
           headers:
             Cookie: ''
 
-  - name: 'Home~0_News~0_Careers~0_Careers~0_QUIT~0'
+  - name: 'Home~0_About_Us~0_News~0_QUIT~0'
     weight: 1
     flow:
-      - log: 'Home~0_News~0_Careers~0_Careers~0_QUIT~0'
+      - log: 'Home~0_About_Us~0_News~0_QUIT~0'
       - get:
           url: '/Default.aspx'
           headers:
             Cookie: ''
       - get:
+          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
+          headers:
+            Cookie: ''
+      - get:
           url: '/News/NewsWithCategoriesSideBar.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
           headers:
             Cookie: ''
       - get:
@@ -313,20 +593,20 @@ scenarios:
           headers:
             Cookie: ''
 
-  - name: 'Home~0_News~0_Careers~0_QUIT~0'
+  - name: 'Home~0_About_Us~0_News~0_QUIT~0'
     weight: 1
     flow:
-      - log: 'Home~0_News~0_Careers~0_QUIT~0'
+      - log: 'Home~0_About_Us~0_News~0_QUIT~0'
       - get:
           url: '/Default.aspx'
           headers:
             Cookie: ''
       - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
+          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
           headers:
             Cookie: ''
       - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          url: '/News/NewsWithCategoriesSideBar.aspx'
           headers:
             Cookie: ''
       - get:
@@ -334,45 +614,20 @@ scenarios:
           headers:
             Cookie: ''
 
-  - name: 'Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0'
+  - name: 'Home~0_About_Us~0_Careers~0_Careers~0_QUIT~0'
     weight: 1
     flow:
-      - log: 'Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0'
+      - log: 'Home~0_About_Us~0_Careers~0_Careers~0_QUIT~0'
       - get:
           url: '/Default.aspx'
           headers:
             Cookie: ''
       - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
+          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
           headers:
             Cookie: ''
       - get:
           url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_News~0_Careers~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_News~0_Careers~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
           headers:
             Cookie: ''
       - get:
@@ -401,16 +656,58 @@ scenarios:
           headers:
             Cookie: ''
 
-  - name: 'Home~0_News~0_Careers~0_QUIT~0'
+  - name: 'Home~0_News~0_QUIT~0'
     weight: 1
     flow:
-      - log: 'Home~0_News~0_Careers~0_QUIT~0'
+      - log: 'Home~0_News~0_QUIT~0'
       - get:
           url: '/Default.aspx'
           headers:
             Cookie: ''
       - get:
           url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_News~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_News~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_News~0_News~0_Careers~0_Careers~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_News~0_News~0_Careers~0_Careers~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
           headers:
             Cookie: ''
       - get:
@@ -422,86 +719,16 @@ scenarios:
           headers:
             Cookie: ''
 
-  - name: 'Home~0_About_Us~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0'
+  - name: 'Home~0_News~0_QUIT~0'
     weight: 1
     flow:
-      - log: 'Home~0_About_Us~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0'
+      - log: 'Home~0_News~0_QUIT~0'
       - get:
           url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
           headers:
             Cookie: ''
       - get:
           url: '/News/NewsWithCategoriesSideBar.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_About_Us~0_News~0_About_Us~0_News~0_Careers~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_About_Us~0_News~0_About_Us~0_News~0_Careers~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_About_Us~0_Careers~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_About_Us~0_Careers~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
           headers:
             Cookie: ''
       - get:
@@ -551,12 +778,99 @@ scenarios:
           headers:
             Cookie: ''
 
+  - name: 'Home~0_News~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_News~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_About_Us~0_News~0_About_Us~0_Careers~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_About_Us~0_News~0_About_Us~0_Careers~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
   - name: 'Home~0_Careers~0_QUIT~0'
     weight: 1
     flow:
       - log: 'Home~0_Careers~0_QUIT~0'
       - get:
           url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_About_Us~0_News~0_News~0_Careers~0_Careers~0_Careers~0_Careers~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_About_Us~0_News~0_News~0_Careers~0_Careers~0_Careers~0_Careers~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
           headers:
             Cookie: ''
       - get:
@@ -585,187 +899,6 @@ scenarios:
           headers:
             Cookie: ''
 
-  - name: 'Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_About_Us~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_About_Us~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_News~0_Careers~0_Careers~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_News~0_Careers~0_Careers~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_About_Us~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_About_Us~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_About_Us~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_About_Us~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_About_Us~0_News~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_About_Us~0_News~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_About_Us~0_News~0_Careers~0_Careers~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_About_Us~0_News~0_Careers~0_Careers~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
   - name: 'Home~0_Careers~0_QUIT~0'
     weight: 1
     flow:
@@ -776,137 +909,6 @@ scenarios:
             Cookie: ''
       - get:
           url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_Careers~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_Careers~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_About_Us~0_News~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_About_Us~0_News~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_Careers~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_Careers~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_Careers~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_Careers~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_News~0_News~0_Careers~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_News~0_News~0_Careers~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_About_Us~0_News~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_About_Us~0_News~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
           headers:
             Cookie: ''
       - get:
@@ -935,6 +937,31 @@ scenarios:
           headers:
             Cookie: ''
 
+  - name: 'Home~0_About_Us~0_News~0_News~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_About_Us~0_News~0_News~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
   - name: 'Home~0_About_Us~0_QUIT~0'
     weight: 1
     flow:
@@ -952,53 +979,12 @@ scenarios:
           headers:
             Cookie: ''
 
-  - name: 'Home~0_About_Us~0_News~0_QUIT~0'
+  - name: 'Home~0_QUIT~0'
     weight: 1
     flow:
-      - log: 'Home~0_About_Us~0_News~0_QUIT~0'
+      - log: 'Home~0_QUIT~0'
       - get:
           url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-
-  - name: 'Home~0_News~0_News~0_News~0_Careers~0_Careers~0_QUIT~0'
-    weight: 1
-    flow:
-      - log: 'Home~0_News~0_News~0_News~0_Careers~0_Careers~0_QUIT~0'
-      - get:
-          url: '/Default.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DirectoryDisplay/CareersDirectory.aspx'
           headers:
             Cookie: ''
       - get:
@@ -1023,10 +1009,52 @@ scenarios:
           headers:
             Cookie: ''
 
-  - name: 'Home~0_About_Us~0_News~0_News~0_About_Us~0_QUIT~0'
+  - name: 'Home~0_News~0_News~0_About_Us~0_News~0_QUIT~0'
     weight: 1
     flow:
-      - log: 'Home~0_About_Us~0_News~0_News~0_About_Us~0_QUIT~0'
+      - log: 'Home~0_News~0_News~0_About_Us~0_News~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+
+  - name: 'Home~0_About_Us~0_News~0_Careers~0_QUIT~0'
+    weight: 1
+    flow:
+      - log: 'Home~0_About_Us~0_News~0_Careers~0_QUIT~0'
       - get:
           url: '/Default.aspx'
           headers:
@@ -1040,11 +1068,7 @@ scenarios:
           headers:
             Cookie: ''
       - get:
-          url: '/News/NewsWithCategoriesSideBar.aspx'
-          headers:
-            Cookie: ''
-      - get:
-          url: '/DisplayLink.aspx?group=About%20Us&name=N/A'
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
           headers:
             Cookie: ''
       - get:
