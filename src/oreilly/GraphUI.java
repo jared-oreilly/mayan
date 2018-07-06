@@ -6,19 +6,19 @@ import javax.swing.JOptionPane;
 public class GraphUI extends javax.swing.JFrame
 {
 
-    Graph m;
+    Graph graph;
 
     public GraphUI()
     {
-        m = new Graph("http://tagsuatappservice.azurewebsites.net");
+        graph = new Graph("http://tagsuatappservice.azurewebsites.net");
         initComponents();
         updateDisplays();
     }
 
     public GraphUI(String filename) throws IOException
     {
-        m = new Graph("");
-        m.importGraph(filename);
+        graph = new Graph("");
+        graph.importGraph(filename);
 
         initComponents();
 
@@ -30,8 +30,8 @@ public class GraphUI extends javax.swing.JFrame
 
     public void updateGraphConfig(Graph other)
     {
-        m.setBaseUrl(other.getBaseUrl());
-        m.addPhaseMain(other.getLastDurMain(), other.getLastArrMain());
+        graph.setBaseUrl(other.getBaseUrl());
+        graph.addPhaseMain(other.getLastDurMain(), other.getLastArrMain());
     }
 
     /**
@@ -511,9 +511,9 @@ public class GraphUI extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btnAddNodeActionPerformed
         boolean submit = true;
         //Title
-        String t = txfTitleNode.getText().trim();
-        String ty = (cbxType.getSelectedItem() + "");
-        if (t.equals(""))
+        String title = txfTitleNode.getText().trim();
+        String type = (cbxType.getSelectedItem() + "");
+        if (title.equals(""))
         {
             lblTitleFeedback.setText("Required!");
             submit = false;
@@ -532,7 +532,7 @@ public class GraphUI extends javax.swing.JFrame
             lblURLFeedback.setText("");
         }
 
-        if (submit && m.nodeTaken(t, ty))
+        if (submit && graph.nodeTaken(title, type))
         {
             lblTitleFeedback.setText("Taken!");
             lblTypeFeedback.setText("Taken!");
@@ -543,9 +543,9 @@ public class GraphUI extends javax.swing.JFrame
         {
             if ((cbxType.getSelectedItem() + "").equals("POST"))
             {
-                String title = txfTitleNode.getText();
+                title = txfTitleNode.getText();
                 String URL = txfURL.getText();
-                String type = (cbxType.getSelectedItem() + "");
+                type = (cbxType.getSelectedItem() + "");
                 String cookie = txfCookie.getText();
                 String JSON = txfJSON.getText();
                 if (JSON.equals(""))
@@ -557,14 +557,14 @@ public class GraphUI extends javax.swing.JFrame
                 {
                     form = null;
                 }
-                m.addNode(title, URL, type, cookie, JSON, form);
+                graph.addNode(title, URL, type, cookie, JSON, form);
             } else if ((cbxType.getSelectedItem() + "").equals("GET"))
             {
-                String title = txfTitleNode.getText();
+                title = txfTitleNode.getText();
                 String URL = txfURL.getText();
-                String type = (cbxType.getSelectedItem() + "");
+                type = (cbxType.getSelectedItem() + "");
                 String cookie = txfCookie.getText();
-                m.addNode(title, URL, type, cookie);
+                graph.addNode(title, URL, type, cookie);
             }
             updateDisplays();
         } else
@@ -577,12 +577,12 @@ public class GraphUI extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btnAddEdgeActionPerformed
         //do validation on edge fields
         boolean submit = true;
-        String t = txfTitleEdge.getText().trim();
-        String s = txfStart.getText().trim();
-        String e = txfEnd.getText().trim();
-        String p = txfProb.getText().trim();
+        String title = txfTitleEdge.getText().trim();
+        String startID = txfStart.getText().trim();
+        String endID = txfEnd.getText().trim();
+        String prob = txfProb.getText().trim();
         //Title
-        if (t.equals(""))
+        if (title.equals(""))
         {
             lblTitleActionFeedback.setText("Required!");
             submit = false;
@@ -591,7 +591,7 @@ public class GraphUI extends javax.swing.JFrame
             lblTitleActionFeedback.setText("");
         }
         //StartID
-        if (s.equals(""))
+        if (startID.equals(""))
         {
             lblStartIDFeedback.setText("Required!");
             submit = false;
@@ -600,7 +600,7 @@ public class GraphUI extends javax.swing.JFrame
             lblStartIDFeedback.setText("");
         }
         //EndID
-        if (e.equals(""))
+        if (endID.equals(""))
         {
             lblEndIDFeedback.setText("Required!");
             submit = false;
@@ -609,7 +609,7 @@ public class GraphUI extends javax.swing.JFrame
             lblEndIDFeedback.setText("");
         }
         //Prob
-        if (p.equals(""))
+        if (prob.equals(""))
         {
             lblProbFeedback.setText("Required!");
             submit = false;
@@ -618,7 +618,7 @@ public class GraphUI extends javax.swing.JFrame
             lblProbFeedback.setText("");
         }
 
-        if (submit && m.edgeTaken(t, s, e))
+        if (submit && graph.edgeTaken(title, startID, endID))
         {
             lblTitleActionFeedback.setText("Taken!");
             lblStartIDFeedback.setText("Taken!");
@@ -628,18 +628,18 @@ public class GraphUI extends javax.swing.JFrame
 
         if (submit)
         {
-            String title = txfTitleEdge.getText();
-            int startID = Integer.parseInt(txfStart.getText());
-            int endID = Integer.parseInt(txfEnd.getText());
-            double prob = Double.parseDouble(txfProb.getText());
-            m.addEdge(title, startID, endID, prob);
+            title = txfTitleEdge.getText();
+            int startIDInt = Integer.parseInt(txfStart.getText());
+            int endIDInt = Integer.parseInt(txfEnd.getText());
+            double probDouble = Double.parseDouble(txfProb.getText());
+            graph.addEdge(title, startIDInt, endIDInt, probDouble);
 
             updateDisplays();
 
-            String text = txfStart.getText();
-            int q = Integer.parseInt(text);
-            double z = m.fetchRemainingProb(q);
-            if (z != 0)
+            String startIDText = txfStart.getText();
+            int startIDTextInt = Integer.parseInt(startIDText);
+            double remainingProb = graph.fetchRemainingProb(startIDTextInt);
+            if (remainingProb != 0)
             {
                 txfProb.setEnabled(true);
 
@@ -648,7 +648,7 @@ public class GraphUI extends javax.swing.JFrame
                 txfProb.setText("");
                 txfProb.setEnabled(false);
             }
-            lblProbFeedback.setText("<=" + z + "");
+            lblProbFeedback.setText("<=" + remainingProb + "");
 
             lblActionFeedback.setText("");
 
@@ -660,12 +660,12 @@ public class GraphUI extends javax.swing.JFrame
 
     private void btnConfigActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnConfigActionPerformed
     {//GEN-HEADEREND:event_btnConfigActionPerformed
-        new ConfigUI(m).setVisible(true);
+        new ConfigUI(graph).setVisible(true);
     }//GEN-LAST:event_btnConfigActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnSaveActionPerformed
     {//GEN-HEADEREND:event_btnSaveActionPerformed
-        m.exportGraph(txfFilename.getText() + ".json");
+        graph.exportGraph(txfFilename.getText() + ".json");
         JOptionPane.showMessageDialog(null, txfFilename.getText() + ".json saved!");
     }//GEN-LAST:event_btnSaveActionPerformed
 
@@ -673,13 +673,13 @@ public class GraphUI extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btnUpdateNodeActionPerformed
         if (cbxNodeIDSelect.getSelectedItem() != null)
         {
-            int id = Integer.parseInt(cbxNodeIDSelect.getSelectedItem() + "");
+            int nodeID = Integer.parseInt(cbxNodeIDSelect.getSelectedItem() + "");
             switch (cbNodeFieldSelect.getSelectedItem() + "")
             {
                 case "Title":
                     if (!txfNodeNewValue.getText().trim().equals(""))
                     {
-                        m.getNode(id).setTitle(txfNodeNewValue.getText().trim());
+                        graph.getNode(nodeID).setTitle(txfNodeNewValue.getText().trim());
                     } else
                     {
                         JOptionPane.showMessageDialog(null, "A value must be present for this field!");
@@ -688,7 +688,7 @@ public class GraphUI extends javax.swing.JFrame
                 case "URL":
                     if (!txfNodeNewValue.getText().trim().equals(""))
                     {
-                        m.getNode(id).setUrl(txfNodeNewValue.getText().trim());
+                        graph.getNode(nodeID).setUrl(txfNodeNewValue.getText().trim());
                     } else
                     {
                         JOptionPane.showMessageDialog(null, "A value must be present for this field!");
@@ -697,20 +697,20 @@ public class GraphUI extends javax.swing.JFrame
                 case "Type":
                     if (!txfNodeNewValue.getText().trim().equals(""))
                     {
-                        m.getNode(id).setType(txfNodeNewValue.getText().trim());
+                        graph.getNode(nodeID).setType(txfNodeNewValue.getText().trim());
                     } else
                     {
                         JOptionPane.showMessageDialog(null, "A value must be present for this field!");
                     }
                     break;
                 case "Cookie":
-                    m.getNode(id).setCookie(txfNodeNewValue.getText().trim());
+                    graph.getNode(nodeID).setCookie(txfNodeNewValue.getText().trim());
                     break;
                 case "JSON":
-                    m.getNode(id).setJson(txfNodeNewValue.getText().trim());
+                    graph.getNode(nodeID).setJson(txfNodeNewValue.getText().trim());
                     break;
                 case "Form":
-                    m.getNode(id).setFormData(txfNodeNewValue.getText().trim());
+                    graph.getNode(nodeID).setFormData(txfNodeNewValue.getText().trim());
                     break;
             }
             updateDisplays();
@@ -726,13 +726,13 @@ public class GraphUI extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btnUpdateEdgeActionPerformed
         if (cbxEdgeIDSelect.getSelectedItem() != null)
         {
-            int id = Integer.parseInt(cbxEdgeIDSelect.getSelectedItem() + "");
+            int edgeID = Integer.parseInt(cbxEdgeIDSelect.getSelectedItem() + "");
             switch (cbxEdgeFieldSelect.getSelectedItem() + "")
             {
                 case "Title":
                     if (!txfEdgeNewValue.getText().trim().equals(""))
                     {
-                        m.getEdge(id).setTitle(txfEdgeNewValue.getText().trim());
+                        graph.getEdge(edgeID).setTitle(txfEdgeNewValue.getText().trim());
                     } else
                     {
                         JOptionPane.showMessageDialog(null, "A value must be present for this field!");
@@ -741,7 +741,7 @@ public class GraphUI extends javax.swing.JFrame
                 case "StartID":
                     if (!txfEdgeNewValue.getText().trim().equals(""))
                     {
-                        m.getEdge(id).setStart(m.getNode(Integer.parseInt(txfEdgeNewValue.getText().trim())));
+                        graph.getEdge(edgeID).setStart(graph.getNode(Integer.parseInt(txfEdgeNewValue.getText().trim())));
                     } else
                     {
                         JOptionPane.showMessageDialog(null, "A value must be present for this field!");
@@ -750,7 +750,7 @@ public class GraphUI extends javax.swing.JFrame
                 case "EndID":
                     if (!txfEdgeNewValue.getText().trim().equals(""))
                     {
-                        m.getEdge(id).setEnd(m.getNode(Integer.parseInt(txfEdgeNewValue.getText().trim())));
+                        graph.getEdge(edgeID).setEnd(graph.getNode(Integer.parseInt(txfEdgeNewValue.getText().trim())));
                     } else
                     {
                         JOptionPane.showMessageDialog(null, "A value must be present for this field!");
@@ -759,7 +759,7 @@ public class GraphUI extends javax.swing.JFrame
                 case "Prob":
                     if (!txfEdgeNewValue.getText().trim().equals(""))
                     {
-                        m.getEdge(id).setProb(Double.parseDouble(txfEdgeNewValue.getText().trim()));
+                        graph.getEdge(edgeID).setProb(Double.parseDouble(txfEdgeNewValue.getText().trim()));
                     } else
                     {
                         JOptionPane.showMessageDialog(null, "A value must be present for this field!");
@@ -778,10 +778,10 @@ public class GraphUI extends javax.swing.JFrame
     {//GEN-HEADEREND:event_fetchProb
         try
         {
-            String text = txfStart.getText();
-            int id = Integer.parseInt(text);
-            double prob = m.fetchRemainingProb(id);
-            if (prob != 0.0)
+            String startIDText = txfStart.getText();
+            int startIDTextInt = Integer.parseInt(startIDText);
+            double remainingProb = graph.fetchRemainingProb(startIDTextInt);
+            if (remainingProb != 0.0)
             {
                 txfProb.setEnabled(true);
 
@@ -790,7 +790,7 @@ public class GraphUI extends javax.swing.JFrame
                 txfProb.setText("");
                 txfProb.setEnabled(false);
             }
-            lblProbFeedback.setText("<=" + prob + "");
+            lblProbFeedback.setText("<=" + remainingProb + "");
             lblActionFeedback.setText("");
         } catch (IndexOutOfBoundsException e)
         {
@@ -804,13 +804,13 @@ public class GraphUI extends javax.swing.JFrame
 
     private void btnMAActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnMAActionPerformed
     {//GEN-HEADEREND:event_btnMAActionPerformed
-        String ma = m.mayanArtillery(txfMayan.getText() + ".txt");
+        String mayanArtillery = graph.mayanArtillery(txfMayan.getText() + ".txt");
         JOptionPane.showMessageDialog(null, txfMayan.getText() + ".txt generated!");
         
         boolean runMain, runSingle, runAverages;
         
-        int choice = JOptionPane.showConfirmDialog(null, "Would you like to run the main " + txfMayan.getText() + " file on Artillery (" + m.requestTotalMainTime() + ")?");
-        switch (choice)
+        int choice1 = JOptionPane.showConfirmDialog(null, "Would you like to run the main " + txfMayan.getText() + " file on Artillery (" + graph.requestTotalMainTime() + ")?");
+        switch (choice1)
         {
             case JOptionPane.YES_OPTION:
                 runMain = true;
@@ -820,14 +820,14 @@ public class GraphUI extends javax.swing.JFrame
 
         }
         
-        int choice1 = JOptionPane.showConfirmDialog(null, "Would you like to run the single scenario tests (" + m.requestTotalSingleTime() + ")?");
-        switch (choice1)
+        int choice2 = JOptionPane.showConfirmDialog(null, "Would you like to run the single scenario tests (" + graph.requestTotalSingleTime() + ")?");
+        switch (choice2)
         {
             case JOptionPane.YES_OPTION:
                 runSingle = true;
                 
-                int choice2 = JOptionPane.showConfirmDialog(null, "For the singles, averages of 3 (" + (m.requestTotalSingleTime(true)) + ")?");
-                switch (choice2)
+                int choice3 = JOptionPane.showConfirmDialog(null, "For the singles, averages of 3 (" + (graph.requestTotalSingleTime(true)) + ")?");
+                switch (choice3)
                 {
                     case JOptionPane.YES_OPTION:
                         runAverages = true;
@@ -842,7 +842,7 @@ public class GraphUI extends javax.swing.JFrame
                 runAverages = false;
         }
 
-        m.runArtillery(ma, txfMayan.getText() + ".txt", runMain, runSingle, runAverages);
+        graph.runArtillery(mayanArtillery, txfMayan.getText() + ".txt", runMain, runSingle, runAverages);
 
         if (runMain)
         {
@@ -864,8 +864,8 @@ public class GraphUI extends javax.swing.JFrame
             }
         }
 
-        int choice3 = JOptionPane.showConfirmDialog(null, "Would you like to exit Mayan?");
-        switch (choice3)
+        int choice4 = JOptionPane.showConfirmDialog(null, "Would you like to exit Mayan?");
+        switch (choice4)
         {
             case JOptionPane.YES_OPTION:
                 System.exit(0);
@@ -882,26 +882,26 @@ public class GraphUI extends javax.swing.JFrame
 
     private void updateNodesDisplay()
     {
-        txaNodes.setText(m.printNodes());
+        txaNodes.setText(graph.printNodes());
         int old = cbxNodeIDSelect.getSelectedIndex();
         cbxNodeIDSelect.removeAllItems();
-        int[] ids = m.getNodeIDs();
-        for (int i = 0; i < ids.length; i++)
+        int[] nodeIDs = graph.getNodeIDs();
+        for (int i = 0; i < nodeIDs.length; i++)
         {
-            cbxNodeIDSelect.addItem((Integer) ids[i]);
+            cbxNodeIDSelect.addItem((Integer) nodeIDs[i]);
         }
         cbxNodeIDSelect.setSelectedIndex(old);
     }
 
     private void updateEdgesDisplay()
     {
-        txaEdges.setText(m.printEdges());
+        txaEdges.setText(graph.printEdges());
         int old = cbxEdgeIDSelect.getSelectedIndex();
         cbxEdgeIDSelect.removeAllItems();
-        int[] ids = m.getEdgeIDs();
-        for (int i = 0; i < ids.length; i++)
+        int[] edgeIDs = graph.getEdgeIDs();
+        for (int i = 0; i < edgeIDs.length; i++)
         {
-            cbxEdgeIDSelect.addItem((Integer) ids[i]);
+            cbxEdgeIDSelect.addItem((Integer) edgeIDs[i]);
         }
         cbxEdgeIDSelect.setSelectedIndex(old);
 

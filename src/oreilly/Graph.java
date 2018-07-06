@@ -9,6 +9,7 @@ public class Graph
 {
 
     private String baseUrl;
+
     private ArrayList<Node> nodes;
     private int numNodes;
     private ArrayList<Edge> edges;
@@ -16,10 +17,12 @@ public class Graph
     //possibly use a HashSet and WeightedScenario to make searching quicker
     private ArrayList<Scenario> scens;
     private int numScens;
+
     private ArrayList<Integer> durArrMain;
     private ArrayList<Integer> arrArrMain;
     private ArrayList<Integer> durArrSingle;
     private ArrayList<Integer> arrArrSingle;
+
     private int numScensToGenerate = 5;
     private final int averageNumber = 3;
 
@@ -87,12 +90,12 @@ public class Graph
 
     public String getPhasesMain()
     {
-        String b = "";
+        String buildUp = "";
         for (int i = 0; i < durArrMain.size(); i++)
         {
-            b += "Phase " + i + ": duration = " + durArrMain.get(i) + ", arrivalRate = " + arrArrMain.get(i) + "/s\n";
+            buildUp += "Phase " + i + ": duration = " + durArrMain.get(i) + ", arrivalRate = " + arrArrMain.get(i) + "/s\n";
         }
-        return b;
+        return buildUp;
     }
 
     private void addDurSingle(int i)
@@ -134,12 +137,12 @@ public class Graph
 
     public String getPhasesSingle()
     {
-        String b = "";
+        String buildUp = "";
         for (int i = 0; i < durArrSingle.size(); i++)
         {
-            b += "Phase " + i + ": duration = " + durArrSingle.get(i) + ", arrivalRate = " + arrArrSingle.get(i) + "/s\n";
+            buildUp += "Phase " + i + ": duration = " + durArrSingle.get(i) + ", arrivalRate = " + arrArrSingle.get(i) + "/s\n";
         }
-        return b;
+        return buildUp;
     }
 
     public String getBaseUrl()
@@ -192,44 +195,44 @@ public class Graph
     @Override
     public String toString()
     {
-        String b = "";
-        b += baseUrl + "\n\n";
-        b += "NODES\t-> " + numNodes + " <-\n";
+        String buildUp = "";
+        buildUp += baseUrl + "\n\n";
+        buildUp += "NODES\t-> " + numNodes + " <-\n";
         for (int i = 0; i < numNodes; i++)
         {
-            b += nodes.get(i) + "\n";
+            buildUp += nodes.get(i) + "\n";
         }
-        b += "\nEDGES\t-> " + numEdges + " <-\n";
+        buildUp += "\nEDGES\t-> " + numEdges + " <-\n";
         for (int i = 0; i < numEdges; i++)
         {
-            b += edges.get(i) + "\n";
+            buildUp += edges.get(i) + "\n";
         }
-        b += "----------------------";
-        return b;
+        buildUp += "----------------------";
+        return buildUp;
     }
 
     public String printNodes()
     {
-        String b = "";
-        b += "NODES\t-> " + numNodes + " <-\n";
+        String buildUp = "";
+        buildUp += "NODES\t-> " + numNodes + " <-\n";
         for (int i = 0; i < numNodes; i++)
         {
-            b += nodes.get(i) + "\n";
+            buildUp += nodes.get(i) + "\n";
         }
-        b += "----------------------";
-        return b;
+        buildUp += "----------------------";
+        return buildUp;
     }
 
     public String printEdges()
     {
-        String b = "";
-        b += "EDGES\t-> " + numEdges + " <-\n";
+        String buildUp = "";
+        buildUp += "EDGES\t-> " + numEdges + " <-\n";
         for (int i = 0; i < numEdges; i++)
         {
-            b += edges.get(i) + "\n";
+            buildUp += edges.get(i) + "\n";
         }
-        b += "----------------------";
-        return b;
+        buildUp += "----------------------";
+        return buildUp;
     }
 
     public Node getNode(int id)
@@ -242,39 +245,6 @@ public class Graph
         return edges.get(id);
     }
 
-    /*
-    public String mayanArtillery(String filename)
-    {
-        String[] names = new String[numScenarios];
-        int[] weights = new int[numScenarios];
-
-        for (int i = 0; i < numScenarios; i++)
-        {
-            names[i] = "Test" + i;
-            weights[i] = 1;
-        }
-
-        String ma = "";
-        ma += generateConfig();
-        ma += generateScenarios(names, weights);
-
-        try
-        {
-            String filema = ma.substring(0, ma.length() - 1);
-            String nl = System.getProperty("line.separator");
-            filema = filema.replace("\n", nl);
-
-            new File("gen/artillery/" + filename.substring(0, filename.indexOf("."))).mkdirs();
-            PrintWriter writer = new PrintWriter("gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + filename, "UTF-8");
-            writer.print(filema);
-            writer.close();
-        } catch (IOException e)
-        {
-            System.out.println("Problem with writing to file: " + e);
-        }
-
-        return ma;
-    }*/
     public String mayanArtillery(String filename)
     {
         //make sure the artillery file is there/create itt
@@ -286,24 +256,24 @@ public class Graph
         }
 
         //generate the big file, after, do the small ones from the scenarios made in the big
-        String[] names = new String[numScensToGenerate];
-        int[] weights = new int[numScensToGenerate];
+        String[] scenarioCountNames = new String[numScensToGenerate];
+        int[] defaultWeights = new int[numScensToGenerate];
 
         for (int i = 0; i < numScensToGenerate; i++)
         {
-            names[i] = "Test" + i;
-            weights[i] = 1;
+            scenarioCountNames[i] = "Test" + i;
+            defaultWeights[i] = 1;
         }
 
-        String ma = "";
-        ma += generateConfigMain();
-        ma += generateScenarios(names, weights);
+        String mayanArtillery = "";
+        mayanArtillery += generateConfigMain();
+        mayanArtillery += generateScenarios(scenarioCountNames, defaultWeights);
 
         try
         {
-            String filema = ma.substring(0, ma.length() - 1);
-            String nl = System.getProperty("line.separator");
-            filema = filema.replace("\n", nl);
+            String filema = mayanArtillery.substring(0, mayanArtillery.length() - 1);
+            String seperator = System.getProperty("line.separator");
+            filema = filema.replace("\n", seperator);
 
             PrintWriter writer = new PrintWriter("gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + filename, "UTF-8");
             writer.print(filema);
@@ -316,23 +286,22 @@ public class Graph
         //do the small ones now
         try
         {
-            String temp, config = generateConfigSingle();
-            String ls = System.getProperty("line.separator");
+            String tempBuildUp, config = generateConfigSingle();
+            String seperator = System.getProperty("line.separator");
             PrintWriter writer;
             Scenario s;
             for (int i = 0; i < numScens; i++)
             {
                 s = scens.get(i);
-                temp = config;
-                temp += "scenarios:\n";
-                temp += s.getArtilleryRepresentation();
-                //System.out.println(scens.get(i));
-                temp = temp.substring(0, temp.length() - 1);
-                temp = temp.replace("\n", ls);
+                tempBuildUp = config;
+                tempBuildUp += "scenarios:\n";
+                tempBuildUp += s.getArtilleryRepresentation();
 
-                //new File("gen/artillery/" + filename.substring(0, filename.indexOf("."))).mkdirs();
+                tempBuildUp = tempBuildUp.substring(0, tempBuildUp.length() - 1);
+                tempBuildUp = tempBuildUp.replace("\n", seperator);
+
                 writer = new PrintWriter("gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + s.getQuick() + ".txt", "UTF-8");
-                writer.print(temp);
+                writer.print(tempBuildUp);
                 writer.close();
             }
             System.out.println("NUMBER OF UNIQUE SCENARIOS GENERATED: " + numScens);
@@ -340,35 +309,9 @@ public class Graph
         {
             System.out.println("Problem with writing to file: " + e);
         }
-        return ma;
+        return mayanArtillery;
     }
 
-    /*
-    public void runArtillery(String ma, String filename)
-    {
-        try
-        {
-            Runtime rt = Runtime.getRuntime();
-
-            new File("gen/runs/" + filename.substring(0, filename.indexOf("."))).mkdirs();
-            //System.out.println("cmd /c artillery run gen/artillery/" + filename + " > gen/runs/" + filename);
-            Process pr = rt.exec("cmd /c artillery run gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + filename + " > gen/runs/" + filename.substring(0, filename.indexOf(".")) + "/" + filename);
-
-            BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
-            String line = null;
-            while ((line = input.readLine()) != null)
-            {
-                System.out.println(line);
-            }
-
-            int exitVal = pr.waitFor();
-
-        } catch (Exception e)
-        {
-            System.out.println(e.toString());
-        }
-    }
-     */
     public void runArtillery(String ma, String filename, boolean runMain, boolean runSingle, boolean runAverages)
     {
         try
@@ -383,14 +326,12 @@ public class Graph
                 {
                     if (runMain)
                     {
-                        //System.out.println("deleting main!");
                         file.delete();
                     }
                 } else
                 {
                     if (runSingle)
                     {
-                        //System.out.println("deleting single!");
                         file.delete();
                     }
                 }
@@ -413,7 +354,7 @@ public class Graph
                         {
                             for (int k = 0; k < averageNumber; k++)
                             {
-                                System.out.print(count + ": Running " + fn.substring(0, fn.indexOf(".")) + "___" + k + ".txt" + "... ");
+                                System.out.print(java.time.LocalTime.now() + "->\t" + count + ": Running " + fn.substring(0, fn.indexOf(".")) + "___" + k + ".txt" + "... ");
                                 Process pr = rt.exec("cmd /c artillery run gen/artillery/" + filename.substring(0, filename.indexOf(".")) + "/" + fn + " > gen/runs/" + filename.substring(0, filename.indexOf(".")) + "/" + fn.substring(0, fn.indexOf(".")) + "___" + k + ".txt");
 
                                 BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
@@ -445,9 +386,6 @@ public class Graph
                             count++;
                         }
 
-                    } else
-                    {
-                        //System.out.println("Main file, do not run");
                     }
 
                 }
@@ -479,54 +417,43 @@ public class Graph
 
     public String generateConfigMain()
     {
-        String c = "config:\n";
-        c += "  target: '" + baseUrl + "'\n";
-        c += "  phases:\n";
+        String buildUp = "config:\n";
+        buildUp += "  target: '" + baseUrl + "'\n";
+        buildUp += "  phases:\n";
         for (int i = 0; i < durArrMain.size(); i++)
         {
-            c += "    - duration: " + durArrMain.get(i) + "\n      arrivalRate: " + arrArrMain.get(i) + "\n";
+            buildUp += "    - duration: " + durArrMain.get(i) + "\n      arrivalRate: " + arrArrMain.get(i) + "\n";
         }
-        return c;
+        return buildUp;
     }
 
     public String generateConfigSingle()
     {
-        String c = "config:\n";
-        c += "  target: '" + baseUrl + "'\n";
-        c += "  phases:\n";
+        String buildUp = "config:\n";
+        buildUp += "  target: '" + baseUrl + "'\n";
+        buildUp += "  phases:\n";
         for (int i = 0; i < durArrSingle.size(); i++)
         {
-            c += "    - duration: " + durArrSingle.get(i) + "\n      arrivalRate: " + arrArrSingle.get(i) + "\n";
+            buildUp += "    - duration: " + durArrSingle.get(i) + "\n      arrivalRate: " + arrArrSingle.get(i) + "\n";
         }
-        return c;
+        return buildUp;
     }
 
     public String generateScenarios(String[] names, int[] weights)
     {
-        String s = "scenarios:\n";
+        String buildUp = "scenarios:\n";
         scens.clear();
         numScens = 0;
         for (int i = 0; i < names.length; i++)
         {
             //the function below should add this scenario, but also check if the same scenario has been created already, for grouping
-            s += generateScenario(names[i], weights[i]);
+            buildUp += generateScenario(names[i], weights[i]);
         }
-        //
-        return s;
+        return buildUp;
     }
 
     public String generateScenario(String name, int weight)
     {
-        /*
-        Scenario scen = new Scenario(name, "", "");
-        String s = "  - name: '" + name + "'\n";
-        s += "    weight: " + weight + "\n";
-        s += "    flow:\n";
-        s += "      - log: '" + name + "'\n";
-        s += generateFlowSteps(scen);
-        return s;
-         */
-
         Scenario scen = new Scenario(name);
         generateFlowSteps(scen);
 
@@ -541,7 +468,6 @@ public class Graph
             scens.get(index).incrementWeight();
         }
 
-        //System.out.println(scen.getQuick());
         return scen.getArtilleryRepresentation();
     }
 
@@ -558,69 +484,69 @@ public class Graph
 
     public String exportGraph(String filename)
     {
-        String b = "{";
-        b += "\"baseUrl\": \"" + baseUrl + "\", ";
+        String buildUp = "{";
+        buildUp += "\"baseUrl\": \"" + baseUrl + "\", ";
 
-        b += "\"phasesMain\": [";
+        buildUp += "\"phasesMain\": [";
         if (durArrMain.isEmpty())
         {
-            b += "{\"duration\": " + 1 + ", \"arrivalRate\": " + 1 + "}, ";
+            buildUp += "{\"duration\": " + 1 + ", \"arrivalRate\": " + 1 + "}, ";
         }
         for (int i = 0; i < durArrMain.size(); i++)
         {
-            b += "{\"duration\": " + durArrMain.get(i) + ", \"arrivalRate\": " + arrArrMain.get(i) + "}, ";
+            buildUp += "{\"duration\": " + durArrMain.get(i) + ", \"arrivalRate\": " + arrArrMain.get(i) + "}, ";
         }
-        b = b.substring(0, b.length() - 2) + "], ";
+        buildUp = buildUp.substring(0, buildUp.length() - 2) + "], ";
 
-        b += "\"phasesSingle\": [";
+        buildUp += "\"phasesSingle\": [";
         if (durArrSingle.isEmpty())
         {
             //warm up phase
-            b += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 1 + "}, ";
+            buildUp += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 1 + "}, ";
             //steadily increasing phase
-            b += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 1 + "}, ";
-            b += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 2 + "}, ";
-            b += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 3 + "}, ";
-            b += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 4 + "}, ";
-            b += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 5 + "}, ";
+            buildUp += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 1 + "}, ";
+            buildUp += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 2 + "}, ";
+            buildUp += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 3 + "}, ";
+            buildUp += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 4 + "}, ";
+            buildUp += "{\"duration\": " + 10 + ", \"arrivalRate\": " + 5 + "}, ";
         }
         for (int i = 0; i < durArrSingle.size(); i++)
         {
-            b += "{\"duration\": " + durArrSingle.get(i) + ", \"arrivalRate\": " + arrArrSingle.get(i) + "}, ";
+            buildUp += "{\"duration\": " + durArrSingle.get(i) + ", \"arrivalRate\": " + arrArrSingle.get(i) + "}, ";
         }
-        b = b.substring(0, b.length() - 2) + "], ";
+        buildUp = buildUp.substring(0, buildUp.length() - 2) + "], ";
 
-        b += "\"numScenarios\": \"" + numScensToGenerate + "\", ";
-        b += "\"numNodes\": \"" + numNodes + "\", ";
-        b += "\"nodes\": [";
+        buildUp += "\"numScenarios\": \"" + numScensToGenerate + "\", ";
+        buildUp += "\"numNodes\": \"" + numNodes + "\", ";
+        buildUp += "\"nodes\": [";
         for (int i = 0; i < numNodes; i++)
         {
-            b += nodes.get(i).exportNode() + ", ";
+            buildUp += nodes.get(i).exportNode() + ", ";
         }
-        b = b.substring(0, b.length() - 2) + "], ";
-        b += "\"numEdges\": \"" + numEdges + "\", ";
-        b += "\"edges\": [";
+        buildUp = buildUp.substring(0, buildUp.length() - 2) + "], ";
+        buildUp += "\"numEdges\": \"" + numEdges + "\", ";
+        buildUp += "\"edges\": [";
         for (int i = 0; i < numEdges; i++)
         {
-            b += edges.get(i).exportEdge() + ", ";
+            buildUp += edges.get(i).exportEdge() + ", ";
         }
-        b = b.substring(0, b.length() - 2) + "]}";
+        buildUp = buildUp.substring(0, buildUp.length() - 2) + "]}";
 
         try
         {
-            String fileb = b;
+            String fileText = buildUp;
             String nl = System.getProperty("line.separator");
-            fileb = fileb.replace("\n", nl);
+            fileText = fileText.replace("\n", nl);
 
             PrintWriter writer = new PrintWriter("gen/graphs/" + filename, "UTF-8");
-            writer.print(fileb);
+            writer.print(fileText);
             writer.close();
         } catch (IOException e)
         {
             System.out.println("Problem with writing to file: " + e);
         }
 
-        return b;
+        return buildUp;
     }
 
     public void importGraph(String filename) throws IOException
@@ -701,11 +627,11 @@ public class Graph
         return false;
     }
 
-    public boolean edgeTaken(String title, String s, String e)
+    public boolean edgeTaken(String title, String startID, String endID)
     {
         for (int i = 0; i < numEdges; i++)
         {
-            if (edges.get(i).getTitle().equals(title) && edges.get(i).getStart().getId() == Integer.parseInt(s) && edges.get(i).getEnd().getId() == Integer.parseInt(e))
+            if (edges.get(i).getTitle().equals(title) && edges.get(i).getStart().getId() == Integer.parseInt(startID) && edges.get(i).getEnd().getId() == Integer.parseInt(endID))
             {
                 return true;
             }
@@ -745,11 +671,11 @@ public class Graph
         {
             count += durArrMain.get(i);
         }
-        int h = count / (60 * 60);
+        int hours = count / (60 * 60);
         count %= (60 * 60);
-        int m = count / 60;
+        int minutes = count / 60;
         count %= 60;
-        return "" + h + "h:" + m + "m:" + count + "s";
+        return "" + hours + "h:" + minutes + "m:" + count + "s";
     }
 
     public String requestTotalSingleTime()
@@ -760,14 +686,14 @@ public class Graph
             each += durArrSingle.get(i);
         }
         int count = each * numScens;
-        int h = count / (60 * 60);
+        int hours = count / (60 * 60);
         count %= (60 * 60);
-        int m = count / 60;
+        int minutes = count / 60;
         count %= 60;
-        return "" + h + "h:" + m + "m:" + count + "s";
+        return "" + hours + "h:" + minutes + "m:" + count + "s";
     }
 
-    //for averagees
+    //for averages
     public String requestTotalSingleTime(boolean flag)
     {
         int each = 0;
@@ -777,10 +703,10 @@ public class Graph
         }
         int count = each * numScens;
         count *= 3;
-        int h = count / (60 * 60);
+        int hours = count / (60 * 60);
         count %= (60 * 60);
-        int m = count / 60;
+        int minutes = count / 60;
         count %= 60;
-        return "" + h + "h:" + m + "m:" + count + "s";
+        return "" + hours + "h:" + minutes + "m:" + count + "s";
     }
 }

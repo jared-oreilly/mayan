@@ -200,28 +200,26 @@ public class Node
 
     public double fetchRemainingProb()
     {
-        double count = 0;
+        double remainingProb = 0;
         for (int i = 0; i < numEdges; i++)
         {
-            count += edges.get(i).getProb();
+            remainingProb += edges.get(i).getProb();
         }
-        count = 1 - count;
-        count = count * 1000;
-        count = Math.round(count);
-        count = count / 1000.0;
-        return count;
+        remainingProb = 1 - remainingProb;
+        remainingProb = remainingProb * 1000;
+        remainingProb = Math.round(remainingProb);
+        remainingProb = remainingProb / 1000.0;
+        return remainingProb;
     }
     
     public String getQuickRepresentation()
     {
         if(type.equals("GET"))
         {
-            //return url.replace("/", "-").replace(".", "!").replace("?", "!").replace("%", "!") + "~0";
             return title + "~0";
         }
         else
         {
-            //return url.replace("/", "-").replace(".", "!").replace("?", "!").replace("%", "!") + "~1";
             return title + "~0";
         }
         

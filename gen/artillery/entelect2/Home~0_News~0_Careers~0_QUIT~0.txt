@@ -1,0 +1,38 @@
+config:
+  target: 'http://www.entelect.co.za'
+  phases:
+    - duration: 5
+      arrivalRate: 1
+    - duration: 5
+      arrivalRate: 2
+    - duration: 10
+      arrivalRate: 1
+    - duration: 10
+      arrivalRate: 2
+    - duration: 10
+      arrivalRate: 3
+    - duration: 10
+      arrivalRate: 4
+    - duration: 10
+      arrivalRate: 5
+scenarios:
+  - name: 'Home~0_News~0_Careers~0_QUIT~0'
+    weight: 4
+    flow:
+      - log: 'Home~0_News~0_Careers~0_QUIT~0'
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/News/NewsWithCategoriesSideBar.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/DirectoryDisplay/CareersDirectory.aspx'
+          headers:
+            Cookie: ''
+      - get:
+          url: '/Default.aspx'
+          headers:
+            Cookie: ''

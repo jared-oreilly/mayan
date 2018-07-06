@@ -1,0 +1,295 @@
+Started phase 0, duration: 5s @ 09:41:19(+0200) 2018-07-06
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Started phase 1, duration: 5s @ 09:41:24(+0200) 2018-07-06
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Report @ 09:41:29(+0200) 2018-07-06
+  Scenarios launched:  14
+  Scenarios completed: 12
+  Requests completed:  52
+  RPS sent: 6.01
+  Request latency:
+    min: 7.2
+    max: 786.3
+    median: 42.3
+    p95: 712.7
+    p99: 785.4
+  Codes:
+    200: 25
+    303: 27
+
+Started phase 2, duration: 10s @ 09:41:29(+0200) 2018-07-06
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Report @ 09:41:39(+0200) 2018-07-06
+  Scenarios launched:  10
+  Scenarios completed: 12
+  Requests completed:  44
+  RPS sent: 4.2
+  Request latency:
+    min: 9
+    max: 1089.1
+    median: 357
+    p95: 789.6
+    p99: 1089.1
+  Codes:
+    200: 23
+    303: 21
+
+Started phase 3, duration: 10s @ 09:41:39(+0200) 2018-07-06
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Report @ 09:41:49(+0200) 2018-07-06
+  Scenarios launched:  20
+  Scenarios completed: 18
+  Requests completed:  78
+  RPS sent: 8
+  Request latency:
+    min: 7.3
+    max: 1664.8
+    median: 327.9
+    p95: 841.7
+    p99: 1454.8
+  Codes:
+    200: 38
+    303: 40
+
+Started phase 4, duration: 10s @ 09:41:49(+0200) 2018-07-06
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Report @ 09:41:59(+0200) 2018-07-06
+  Scenarios launched:  30
+  Scenarios completed: 29
+  Requests completed:  117
+  RPS sent: 11.81
+  Request latency:
+    min: 5.7
+    max: 862.2
+    median: 79.3
+    p95: 647.6
+    p99: 803.5
+  Codes:
+    200: 58
+    303: 59
+
+Started phase 5, duration: 10s @ 09:41:59(+0200) 2018-07-06
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Report @ 09:42:09(+0200) 2018-07-06
+  Scenarios launched:  40
+  Scenarios completed: 38
+  Requests completed:  156
+  RPS sent: 15.82
+  Request latency:
+    min: 6.7
+    max: 822.8
+    median: 100.7
+    p95: 712.2
+    p99: 799.2
+  Codes:
+    200: 77
+    303: 79
+
+Started phase 6, duration: 10s @ 09:42:09(+0200) 2018-07-06
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Home~0_QUIT~0
+Report @ 09:42:19(+0200) 2018-07-06
+  Scenarios launched:  50
+  Scenarios completed: 48
+  Requests completed:  195
+  RPS sent: 19.66
+  Request latency:
+    min: 6.2
+    max: 945.2
+    median: 136.4
+    p95: 824.3
+    p99: 891.9
+  Codes:
+    200: 97
+    303: 98
+
+Home~0_QUIT~0
+Report @ 09:42:20(+0200) 2018-07-06
+  Scenarios launched:  1
+  Scenarios completed: 8
+  Requests completed:  18
+  RPS sent: 7.33
+  Request latency:
+    min: 6.2
+    max: 767.5
+    median: 591.9
+    p95: 738.6
+    p99: 767.5
+  Codes:
+    200: 12
+    303: 6
+
+All virtual users finished
+Summary report @ 09:42:20(+0200) 2018-07-06
+  Scenarios launched:  165
+  Scenarios completed: 165
+  Requests completed:  660
+  RPS sent: 10.9
+  Request latency:
+    min: 5.7
+    max: 1664.8
+    median: 354.7
+    p95: 767.2
+    p99: 905
+  Scenario counts:
+    Home~0_QUIT~0: 165 (100%)
+  Codes:
+    200: 330
+    303: 330
+

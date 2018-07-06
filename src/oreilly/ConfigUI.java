@@ -5,12 +5,12 @@ import javax.swing.JOptionPane;
 public class ConfigUI extends javax.swing.JFrame
 {
 
-    Graph m;
+    Graph graph;
 
     public ConfigUI(Graph m)
     {
         initComponents();
-        this.m = m;
+        this.graph = m;
         txfBaseURL.setText(m.getBaseUrl());
         txfScenarios.setText(m.getNumScenariosToGenerate() + "");
         fillInPhaseBoxMain();
@@ -19,9 +19,9 @@ public class ConfigUI extends javax.swing.JFrame
 
     private void fillInPhaseBoxMain()
     {
-        int s = m.getNumPhasesMain();
+        int numPhases = graph.getNumPhasesMain();
         cbxDeletePhase.removeAllItems();
-        for (int i = 0; i < s; i++)
+        for (int i = 0; i < numPhases; i++)
         {
             cbxDeletePhase.addItem((Integer) i);
         }
@@ -32,14 +32,14 @@ public class ConfigUI extends javax.swing.JFrame
         {
 
         }
-        txaPhases.setText(m.getPhasesMain());
+        txaPhases.setText(graph.getPhasesMain());
     }
     
     private void fillInPhaseBoxSingle()
     {
-        int s = m.getNumPhasesSingle();
+        int numPhases = graph.getNumPhasesSingle();
         cbxDeletePhase1.removeAllItems();
-        for (int i = 0; i < s; i++)
+        for (int i = 0; i < numPhases; i++)
         {
             cbxDeletePhase1.addItem((Integer) i);
         }
@@ -50,7 +50,7 @@ public class ConfigUI extends javax.swing.JFrame
         {
 
         }
-        txaPhases1.setText(m.getPhasesSingle());
+        txaPhases1.setText(graph.getPhasesSingle());
     }
 
     /**
@@ -315,10 +315,10 @@ public class ConfigUI extends javax.swing.JFrame
 
     private void btnChangeActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnChangeActionPerformed
     {//GEN-HEADEREND:event_btnChangeActionPerformed
-        String t = txfBaseURL.getText().trim();
-        if (!t.equals(""))
+        String baseURL = txfBaseURL.getText().trim();
+        if (!baseURL.equals(""))
         {
-            m.setBaseUrl(txfBaseURL.getText());
+            graph.setBaseUrl(txfBaseURL.getText());
         } else
         {
             JOptionPane.showMessageDialog(null, "URL required!");
@@ -327,12 +327,12 @@ public class ConfigUI extends javax.swing.JFrame
 
     private void btnAddPhaseActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnAddPhaseActionPerformed
     {//GEN-HEADEREND:event_btnAddPhaseActionPerformed
-        String d = txfDuration.getText().trim();
-        String a = txfArrival.getText().trim();
-        if (!d.equals("") && !a.equals(""))
+        String duration = txfDuration.getText().trim();
+        String arrivalRate = txfArrival.getText().trim();
+        if (!duration.equals("") && !arrivalRate.equals(""))
         {
-            m.addPhaseMain(Integer.parseInt(d), Integer.parseInt(a));
-            txaPhases.setText(m.getPhasesMain());
+            graph.addPhaseMain(Integer.parseInt(duration), Integer.parseInt(arrivalRate));
+            txaPhases.setText(graph.getPhasesMain());
             fillInPhaseBoxMain();
         } else
         {
@@ -342,10 +342,10 @@ public class ConfigUI extends javax.swing.JFrame
 
     private void btnScenariosActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnScenariosActionPerformed
     {//GEN-HEADEREND:event_btnScenariosActionPerformed
-        String s = txfScenarios.getText().trim();
-        if (!s.equals(""))
+        String numScenariosToGenerate = txfScenarios.getText().trim();
+        if (!numScenariosToGenerate.equals(""))
         {
-            m.setNumScenariosToGenerate(Integer.parseInt(s));
+            graph.setNumScenariosToGenerate(Integer.parseInt(numScenariosToGenerate));
         } else
         {
             JOptionPane.showMessageDialog(null, "Number of scenarios missing!");
@@ -356,8 +356,8 @@ public class ConfigUI extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btnDeletePhaseActionPerformed
         if (cbxDeletePhase.getSelectedItem() != null)
         {
-            int id = (Integer) cbxDeletePhase.getSelectedItem();
-            m.deletePhaseMain(id);
+            int phaseID = (Integer) cbxDeletePhase.getSelectedItem();
+            graph.deletePhaseMain(phaseID);
             fillInPhaseBoxMain();
         } else
         {
@@ -367,12 +367,12 @@ public class ConfigUI extends javax.swing.JFrame
 
     private void btnAddPhase1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnAddPhase1ActionPerformed
     {//GEN-HEADEREND:event_btnAddPhase1ActionPerformed
-        String d = txfDuration1.getText().trim();
-        String a = txfArrival1.getText().trim();
-        if (!d.equals("") && !a.equals(""))
+        String duration = txfDuration1.getText().trim();
+        String arrivalRate = txfArrival1.getText().trim();
+        if (!duration.equals("") && !arrivalRate.equals(""))
         {
-            m.addPhaseSingle(Integer.parseInt(d), Integer.parseInt(a));
-            txaPhases1.setText(m.getPhasesSingle());
+            graph.addPhaseSingle(Integer.parseInt(duration), Integer.parseInt(arrivalRate));
+            txaPhases1.setText(graph.getPhasesSingle());
             fillInPhaseBoxSingle();
         } else
         {
@@ -384,8 +384,8 @@ public class ConfigUI extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btnDeletePhase1ActionPerformed
         if (cbxDeletePhase1.getSelectedItem() != null)
         {
-            int id = (Integer) cbxDeletePhase1.getSelectedItem();
-            m.deletePhaseSingle(id);
+            int phaseID = (Integer) cbxDeletePhase1.getSelectedItem();
+            graph.deletePhaseSingle(phaseID);
             fillInPhaseBoxSingle();
         } else
         {

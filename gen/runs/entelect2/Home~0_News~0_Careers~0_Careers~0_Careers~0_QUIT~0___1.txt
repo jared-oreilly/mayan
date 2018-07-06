@@ -1,0 +1,295 @@
+Started phase 0, duration: 5s @ 09:22:18(+0200) 2018-07-06
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Started phase 1, duration: 5s @ 09:22:23(+0200) 2018-07-06
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Report @ 09:22:28(+0200) 2018-07-06
+  Scenarios launched:  14
+  Scenarios completed: 7
+  Requests completed:  125
+  RPS sent: 14.7
+  Request latency:
+    min: 6.4
+    max: 1487.1
+    median: 48.8
+    p95: 1177.8
+    p99: 1481.3
+  Codes:
+    200: 59
+    303: 66
+
+Started phase 2, duration: 10s @ 09:22:28(+0200) 2018-07-06
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Report @ 09:22:38(+0200) 2018-07-06
+  Scenarios launched:  10
+  Scenarios completed: 15
+  Requests completed:  148
+  RPS sent: 14.29
+  Request latency:
+    min: 5.6
+    max: 1654.8
+    median: 150.5
+    p95: 1202.3
+    p99: 1653.7
+  Codes:
+    200: 77
+    303: 71
+
+Started phase 3, duration: 10s @ 09:22:38(+0200) 2018-07-06
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Report @ 09:22:48(+0200) 2018-07-06
+  Scenarios launched:  20
+  Scenarios completed: 15
+  Requests completed:  206
+  RPS sent: 21.1
+  Request latency:
+    min: 5.5
+    max: 1791.4
+    median: 34.4
+    p95: 1490.2
+    p99: 1756.7
+  Codes:
+    200: 100
+    303: 106
+
+Started phase 4, duration: 10s @ 09:22:48(+0200) 2018-07-06
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Report @ 09:22:58(+0200) 2018-07-06
+  Scenarios launched:  30
+  Scenarios completed: 21
+  Requests completed:  292
+  RPS sent: 30
+  Request latency:
+    min: 5.5
+    max: 3151.8
+    median: 39.8
+    p95: 2389.3
+    p99: 2822.2
+  Codes:
+    200: 142
+    303: 150
+
+Started phase 5, duration: 10s @ 09:22:58(+0200) 2018-07-06
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Report @ 09:23:08(+0200) 2018-07-06
+  Scenarios launched:  40
+  Scenarios completed: 29
+  Requests completed:  403
+  RPS sent: 41.34
+  Request latency:
+    min: 5.3
+    max: 3214.5
+    median: 195.6
+    p95: 2850.3
+    p99: 3113.1
+  Codes:
+    200: 197
+    303: 206
+
+Started phase 6, duration: 10s @ 09:23:08(+0200) 2018-07-06
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Report @ 09:23:18(+0200) 2018-07-06
+  Scenarios launched:  50
+  Scenarios completed: 43
+  Requests completed:  554
+  RPS sent: 56.36
+  Request latency:
+    min: 5.5
+    max: 3395.8
+    median: 288.3
+    p95: 2883.1
+    p99: 3234.1
+  Codes:
+    200: 272
+    303: 282
+
+Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0
+Report @ 09:23:24(+0200) 2018-07-06
+  Scenarios launched:  1
+  Scenarios completed: 35
+  Requests completed:  252
+  RPS sent: 36.27
+  Request latency:
+    min: 6.7
+    max: 3260.1
+    median: 282.3
+    p95: 2995.1
+    p99: 3173.9
+  Codes:
+    200: 143
+    303: 109
+
+All virtual users finished
+Summary report @ 09:23:24(+0200) 2018-07-06
+  Scenarios launched:  165
+  Scenarios completed: 165
+  Requests completed:  1980
+  RPS sent: 30.41
+  Request latency:
+    min: 5.3
+    max: 3395.8
+    median: 161.1
+    p95: 2653.7
+    p99: 3122
+  Scenario counts:
+    Home~0_News~0_Careers~0_Careers~0_Careers~0_QUIT~0: 165 (100%)
+  Codes:
+    200: 990
+    303: 990
+

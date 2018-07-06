@@ -92,7 +92,6 @@ public class Scenario
         String s = "name: '" + name + "'\n";
         s += "weight: " + weight + "\n";
         s += "quick: " + getQuick() + "\n";
-        //s += "flow: " + flow + "\n";
         return s;
     }
     

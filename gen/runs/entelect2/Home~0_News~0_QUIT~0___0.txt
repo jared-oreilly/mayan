@@ -1,0 +1,295 @@
+Started phase 0, duration: 5s @ 09:36:28(+0200) 2018-07-06
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Started phase 1, duration: 5s @ 09:36:33(+0200) 2018-07-06
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Report @ 09:36:38(+0200) 2018-07-06
+  Scenarios launched:  14
+  Scenarios completed: 9
+  Requests completed:  69
+  RPS sent: 8.26
+  Request latency:
+    min: 6.1
+    max: 1611.2
+    median: 42.8
+    p95: 1547.3
+    p99: 1605
+  Codes:
+    200: 32
+    303: 37
+
+Started phase 2, duration: 10s @ 09:36:38(+0200) 2018-07-06
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Report @ 09:36:48(+0200) 2018-07-06
+  Scenarios launched:  10
+  Scenarios completed: 14
+  Requests completed:  72
+  RPS sent: 6.81
+  Request latency:
+    min: 6.6
+    max: 1846.2
+    median: 395.3
+    p95: 1490.8
+    p99: 1814.5
+  Codes:
+    200: 38
+    303: 34
+
+Started phase 3, duration: 10s @ 09:36:48(+0200) 2018-07-06
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Report @ 09:36:58(+0200) 2018-07-06
+  Scenarios launched:  20
+  Scenarios completed: 14
+  Requests completed:  105
+  RPS sent: 11.01
+  Request latency:
+    min: 6.4
+    max: 2165.4
+    median: 44.3
+    p95: 1680.1
+    p99: 2144.4
+  Codes:
+    200: 50
+    303: 55
+
+Started phase 4, duration: 10s @ 09:36:58(+0200) 2018-07-06
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Report @ 09:37:08(+0200) 2018-07-06
+  Scenarios launched:  30
+  Scenarios completed: 23
+  Requests completed:  158
+  RPS sent: 16.62
+  Request latency:
+    min: 6
+    max: 3002.9
+    median: 48.5
+    p95: 2480.1
+    p99: 2866
+  Codes:
+    200: 75
+    303: 83
+
+Started phase 5, duration: 10s @ 09:37:08(+0200) 2018-07-06
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Report @ 09:37:18(+0200) 2018-07-06
+  Scenarios launched:  40
+  Scenarios completed: 33
+  Requests completed:  216
+  RPS sent: 22.16
+  Request latency:
+    min: 6.1
+    max: 3256.8
+    median: 59.8
+    p95: 2917.3
+    p99: 3212.5
+  Codes:
+    200: 105
+    303: 111
+
+Started phase 6, duration: 10s @ 09:37:18(+0200) 2018-07-06
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Home~0_News~0_QUIT~0
+Report @ 09:37:28(+0200) 2018-07-06
+  Scenarios launched:  50
+  Scenarios completed: 45
+  Requests completed:  286
+  RPS sent: 29.17
+  Request latency:
+    min: 5.7
+    max: 3298.1
+    median: 71
+    p95: 3058.9
+    p99: 3232.2
+  Codes:
+    200: 140
+    303: 146
+
+Home~0_News~0_QUIT~0
+Report @ 09:37:32(+0200) 2018-07-06
+  Scenarios launched:  1
+  Scenarios completed: 27
+  Requests completed:  84
+  RPS sent: 12.89
+  Request latency:
+    min: 5.6
+    max: 3319.4
+    median: 945.2
+    p95: 3247
+    p99: 3310.2
+  Codes:
+    200: 55
+    303: 29
+
+All virtual users finished
+Summary report @ 09:37:32(+0200) 2018-07-06
+  Scenarios launched:  165
+  Scenarios completed: 165
+  Requests completed:  990
+  RPS sent: 15.58
+  Request latency:
+    min: 5.6
+    max: 3319.4
+    median: 243.9
+    p95: 2931.1
+    p99: 3232.2
+  Scenario counts:
+    Home~0_News~0_QUIT~0: 165 (100%)
+  Codes:
+    200: 495
+    303: 495
+

@@ -1,12 +1,12 @@
 package oreilly;
 
-public class WeightedScenario
+public class WeightedScenarioNotUsed
 {
     //only use for HashSet
     private int weight;
     private Scenario scenario;
 
-    public WeightedScenario(int weight, Scenario scenario)
+    public WeightedScenarioNotUsed(int weight, Scenario scenario)
     {
         this.weight = weight;
         this.scenario = scenario;
