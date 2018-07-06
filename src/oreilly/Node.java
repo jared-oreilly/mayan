@@ -216,11 +216,13 @@ public class Node
     {
         if(type.equals("GET"))
         {
-            return url.replace("/", "-") + "~0";
+            //return url.replace("/", "-").replace(".", "!").replace("?", "!").replace("%", "!") + "~0";
+            return title + "~0";
         }
         else
         {
-            return url.replace("/", "-") + "~1";
+            //return url.replace("/", "-").replace(".", "!").replace("?", "!").replace("%", "!") + "~1";
+            return title + "~0";
         }
         
     }
